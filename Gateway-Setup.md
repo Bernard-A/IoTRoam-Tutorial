@@ -79,6 +79,7 @@ For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step 
      ```sh
           sudo apt-get install chirpstack-gateway-bridge 
      ```
+* Update the MQTT connection details so that ChirpStack Gateway Bridge is able to connect to your MQTT broker. You will find the configuration file in the ```/var/config/chirpstack-gateway-bridge/chirpstack-gateway-bridge.toml``` directory.
 * Start the latest chirpstack-gateway-bridge depending on your system uses ```init.d``` or ```systemd```
     * init.d    
     ```sh
@@ -88,21 +89,18 @@ For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step 
     ```sh
         systemctl [start|stop|restart|status] chirpstack-gateway-bridge
     ```
-     
-    * Now that the .ipk package is stored on the Conduit, you can install it using the opkg package-manager utility. Example (assuming the same .ipk file):
-     ```sh
-          opkg install chirpstack-gateway-bridge_3.1.0-r1_arm926ejste.ipk
-     ```
-    * Update the MQTT connection details so that ChirpStack Gateway Bridge is able to connect to your MQTT broker. You will find the configuration file in the ```/var/config/chirpstack-gateway-bridge/chirpstack-gateway-bridge.toml``` directory.
-    * Start ChirpStack Gateway Bridge and ensure it will be started on boot. Example:
-     ```sh
-      /etc/init.d/chirpstack-gateway-bridge start
-      update-rc.d chirpstack-gateway-bridge defaults
-     ```
-
+    
 ## Post Sanity check
 
-
+All logs are written to /var/log/chirpstack-gateway-bridge/chirpstack-gateway-bridge.log. To verify that the GW bridge is receiving data from the packet forwarder, view and follow this logfile depending on your system:
+* init.d
+```sh
+   tail -f /var/log/chirpstack-gateway-bridge/chirpstack-gateway-bridge.log
+```
+* systemd
+ ```sh
+   journalctl -u chirpstack-gateway-bridge -f -n 50
+```
 
 
 [For detailed information follow the Quick Start Guide]: https://www.multitech.com/documents/publications/quick-start-guides/82101452L-Conduit-Quick-Start.pdf 
