@@ -223,7 +223,7 @@ systemd
 sudo systemctl [start|stop|restart|status] chirpstack-application-server
 ```
 
-###	Verifying the Functioning of the ChirpStack Network Server
+###	Verifying the Functioning of the ChirpStack Application Server
 
 init.d
 ```sh
