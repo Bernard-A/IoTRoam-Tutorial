@@ -1,6 +1,6 @@
 # Multitech RGW Setup
 
-This page covers the following operating systems:
+This page covers setting up the RGW which are detailed in different sections as follows:
 
  * [Hardware Setup]
  * [Accessing the RGW]
