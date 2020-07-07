@@ -3,6 +3,7 @@ This page provides an introduction to the Join Server (JS), JoinEUI and configur
  * [JS Brief Intro]
  * [Configuring NS to enable DNS resolution]
  * [Generating Certificates for secure TLS Communication between NS<->AS/JS]
+ * [Deploying Certificates for secure TLS Communication between NS<->AS/JS]
  
  ## JS Brief Intro
  
@@ -88,11 +89,14 @@ As mentioned earlier, We assume that the JS and the AS are in the same machine
 
 7.	Run ```$ make``` from the ```$ chirpstack-certificates``` directory
 
+The above command will generate certificates for the NS, AS and the JS. Each certificate configuration file generates 3 files (csr file, key.pem file and .pem file). The software also signs all certificate using a single ca accessible in the certs files when the program is run.
 
+## Deploying Certificates for secure TLS Communication between NS<->AS/JS
 
 
 
 [Configuring NS to enable DNS resolution]: #configuring-ns-to-enable-dns-resolution
 [JS Brief Intro]: #js-brief-intro
 [Generating Certificates for secure TLS Communication between NS<->AS/JS]: #generating-certificates-for-secure-tls-communication-between-ns-asjs
+[Deploying Certificates for secure TLS Communication between NS<->AS/JS]
 [CFSSL]: https://cfssl.org/
