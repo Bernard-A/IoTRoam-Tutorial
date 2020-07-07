@@ -33,3 +33,6 @@ To provision the information in the DNS (Currently only the JoinEUI info)
 <p align="center">
   <img width="760" height="75" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig13.png?raw=true">
 </p>
+
+[ Why the DNS infrastructure is required in the LoRaWAN set up?]: #Install-and-Configuring-the-Packet-Forwarder
+[How to Provision NetIDs and JoinEUIs in the DNS for OTAA and Roaming?]: #Install-and-Configuring-the-Packet-Forwarder
