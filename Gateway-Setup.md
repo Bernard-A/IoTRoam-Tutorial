@@ -5,7 +5,7 @@ This page covers setting up the RGW which are detailed in different sections as 
  * [Hardware Setup]
  * [Accessing the RGW]
  * [Install and Configuring the Packet Forwarder]
- * [Install and Configuring the  Chirpstack Gateway(GW) bridge]
+ * [Install and Configuring the  Chirpstack Gateway bridge]
  * [Post Sanity check]
 
 
@@ -180,7 +180,7 @@ When you do not see any data appear when your device sends data, then make sure 
 [Hardware Setup]: #Hardware-Setup
 [Accessing the RGW]: #Accessing-the-RGW
 [Install and Configuring the Packet Forwarder]: #Install-and-Configuring-the-Packet-Forwarder
-[Install and Configuring the  Chirpstack Gateway(GW) bridge]: #Install-and-Configuring-the-Chirpstack-Gateway-bridge
+[Install and Configuring the  Chirpstack Gateway bridge]: #Install-and-Configuring-the-Chirpstack-Gateway-bridge
 [Post Sanity check]: #Post-Sanity-check
 
 
