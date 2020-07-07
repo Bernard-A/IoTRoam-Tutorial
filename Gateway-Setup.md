@@ -20,7 +20,7 @@ For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted
  
 ## Accessing the RGW
  
-There are multiple interfaces available to access the device - Serial ports, Ethernet and Cellular (if you buy the Multitech Conduit with Cellular antenna). Assuming that you are able to access (by watching the Mulitech links above or you have or solved your selves) to your RGW by an SSH connection, the steps to follow are detailed in the following sections:
+There are multiple interfaces available to access the device - Serial ports, Ethernet and Cellular (if you buy the Multitech Conduit with Cellular antenna). Assuming that you are able to access (by watching the Mulitech links above or you have or solved your selves) to your RGW by an **SSH** and the **Web Interface**, the steps to follow are detailed in the following sections:
 
 If you relate to the [Architecture] page, our focus is on the two components as shown in the figure below: 
 
@@ -28,7 +28,41 @@ If you relate to the [Architecture] page, our focus is on the two components as 
   <img width="300" height="150" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig8.png?raw=true">
 </p>
 
-The function of **Packet Forwarder** is to forward the received LoRa Packet from the ED to the NS (which is identified by a ixed IP address and port). The function of the **GW bridge** is to pack the data sent by the packet forwarder into a specified format (e.g. JSON) nd upload to the NS.
+The function of **Packet Forwarder** is to forward the received LoRa Packet from the ED to the NS (which is identified by a fixed IP address and port). The function of the **GW bridge** is to pack the data sent by the packet forwarder into a specified format (e.g. JSON) and upload to the NS.
+
+## Install and Configuring the Packet Forwarder
+
+*The packet forwarder is a program running on the RGW that forwards RF packets receive by the concentrator to the NS through a IP/UDP link.*
+
+```*The source for the information below is :(https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-packet-forwarder)*```
+
+The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet forwarder option. 
+
+ * We are using AEP version of the Multitech RGW. Hence we can enable this option once connected to the web interface 
+    *	 On the left menu, select “Setup”, and then “LoRa Network Server” from the submenu.
+    *	In the “LoRa Configuration” window:
+    *	At the top of the left column, check “Enabled”.
+    *	At the top of the right column, set “Mode” to be “PACKET FORWARDER”.
+    *	In the “Config” text box, copy and paste the configuration data for your MTAC LoRa card and region. In addition, you will want to modify/add the following configuration details in the gateway_conf section. Leave any other settings in this section as they are. The ref_* fields should be set for the gateway. (Altitude is specified in meters.):
+
+    {
+        ...
+        "gateway_conf": {
+            ...
+            "server_address": "localhost",
+            "serv_port_up": 1700,
+            "serv_port_down": 1700,
+            "fake_gps": true,
+            "ref_latitude": 39.9570133,
+            "ref_longitude": -105.1603241,
+            "ref_altitude": 1664
+        }
+    }
+    
+Note that the serv_port_up and serv_port_down represent the ports used to communicate with the chirpstack-gateway-bridge, usually on localhost (the server_address parameter). See the image above.
+Select “Submit”.
+
+Select the “Save and Restart” option on the left menu.
 
 ## Install and Configuring the  Chirpstack Gateway(GW) bridge
   
@@ -55,12 +89,6 @@ For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step 
       update-rc.d chirpstack-gateway-bridge defaults
      ```
 
-## Install and Configuring the Chirpstack Packet Forwarder
-
-*The packet forwarder is a program running on the RGW that forwards RF packets receive by the concentrator to the NS through a IP/UDP link.*
-
-The Mltitech RGW has a default Packet Forwarder. We have to disable that Packet forwarder and set up the Chirpstack Packet Forwarder. 
-```*The source for the information below is :(https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-packet-forwarder)*```
 
 
 
