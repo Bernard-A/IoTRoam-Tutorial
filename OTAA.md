@@ -50,13 +50,14 @@ If your AS is not hosted on the same server as your NS, you will also need to ch
    
  ## Adding Certificates for secure TLS Communication between NS<->AS/JS
  
-The idea is to generate Certificates for both the NS and the AS:
+The idea is to generate Certificates for both the NS and the AS. Follow the 7 steps as follows: 
+
 1. For this platform set up, following the Chirpstack process, we need to install the [CFSSL] tool. This installation could be done in your local computer or the NS ot the AS:
 ```sh
  sudo apt-get install -y golang-cfssl
 ```
-* 2. Clone the repository ```https://github.com/brocaar/chirpstack-certificates```
-* 3. Fom the ```$ chirpstack-certificates``` directory
+2. Clone the repository ```https://github.com/brocaar/chirpstack-certificates```
+3. Fom the ```$ chirpstack-certificates``` directory
 
 ### 4. Configuration in the NS files 
  * Modify ```$ config/loraserver/api/server/certificate.json``` to fit your NS deployment
