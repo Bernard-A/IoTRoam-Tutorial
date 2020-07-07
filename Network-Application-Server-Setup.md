@@ -238,3 +238,7 @@ A successful start of the Network Server will have the following Output in the l
 <p align="center">
   <img width="600" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig10.png?raw=true">
 </p>
+
+
+[Network Server Setup]: #network-server-setup
+[application Server Setup]: #application-server-setup
