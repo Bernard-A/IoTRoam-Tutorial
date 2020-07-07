@@ -25,7 +25,7 @@ resolve_join_eui=true
 resolve_domain_suffix=”.joineuis.iotreg.net”
 ```
    
-If your AS is not hosted on the same server as your NS, you will also need to change the ```[join_server.default.server]``` parameter with the IP address of your LoRa Application Server:
+If your AS is not hosted on the same server as your NS, you will also need to change the ```[join_server.default.server]``` parameter with the IP address of your AS
 
 ```sh
 [join_server]
