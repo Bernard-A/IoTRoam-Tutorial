@@ -11,7 +11,7 @@ This document is structured and one can follow it in the chronological order:
  * [Setting up the Packet Forwarder and the Radio Gateway Bridge]
  * [Installing and Configuring the Network Server and the Application Server]
  * [Setting up the DNS infrastructure]
- * [OTAA configuration for resolution via DNS]
+ * [OTAA via DNS]
  * [Passive roaming via DNS]
  
 
