@@ -1,4 +1,8 @@
-# Why the DNS infrastructure is required in the LoRaWAN set up
+This page covers the following: 
+Why DNS? 
+How to Provision in the DNS for OTAA and Roaming?
+
+# Why the DNS infrastructure is required in the LoRaWAN set up?
 
 As per the LoRaWAN Backend specifications, the DNS infrastructure is used for the following operations:
 
@@ -10,5 +14,11 @@ Two types of identifiers are provisioned in the DNS - 1. NetIDS for Roaming and 
 
 <p align="center">
   <img width="760" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig11.png?raw=true">
+</p>
+
+As of now, the LoRa DNS service is not operational. Hence, for the Academic LoRaWAN roaming purposes we have a separate zone called ```iotreg.net``` where the NetIDs and JoinEUIs could be provisioned as shown in the figure below:
+
+<p align="center">
+  <img width="760" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig12.png?raw=true">
 </p>
 
