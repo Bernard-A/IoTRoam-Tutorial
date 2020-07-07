@@ -94,5 +94,5 @@ As mentioned earlier, We assume that the JS and the AS are in the same machine
 
 [Configuring NS to enable DNS resolution]: #configuring-ns-to-enable-dns-resolution
 [JS Brief Intro]: #js-brief-intro
-[Generating Certificates for secure TLS Communication between NS<->AS]: #adding-certificates-for-secure-tls-communication-between-ns-as
+[Generating Certificates for secure TLS Communication between NS<->AS/JS]: #adding-certificates-for-secure-tls-communication-between-ns-as
 [CFSSL]: https://cfssl.org/
