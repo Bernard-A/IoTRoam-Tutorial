@@ -57,6 +57,8 @@ The idea is to generate Certificates for both the NS and the AS.
 ```
 * Clone the repository ```https://github.com/brocaar/chirpstack-certificates```
 * Fom the ```$ chirpstack-certificates``` directory
+
+### Configuration in the NS files 
     * Modify ```$ config/loraserver/api/server/certificate.json``` to fit your NS deployment
         * ```“CN”:”network-server-afnic``` => (You can put whatever you want in the place of network-server-afnic)
         * "hosts": [YOUR_NETWORK_SERVER_HOST_IP_ADDRESSES]``` => (by default : ["127.0.0.1","localhost"], we added in our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.4"] )
@@ -67,8 +69,12 @@ The idea is to generate Certificates for both the NS and the AS.
         * "hosts": [YOUR_APPLICATION_SERVER_HOST_IP_ADDRESSES]``` => (by default : ["127.0.0.1","localhost"], we added in our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.5"] )
     * Modify ```$ config/lora-app-server/api/client/certificate.json``` to fit your NS deployment
         * ``“CN”:”Copy the net_id under the section [network_server] in the file  ```chirpstack-network-server.toml ```  in the network server here" 
-        
-o	"hosts": [YOUR_NETWORK_SERVER_HOST_IP_ADDRESSES], (by default : ["127.0.0.1","localhost"], we added our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.4"] )
+   * Modify ```$ config/lora-app-server/api/server/certificate.json``` to fit your AS deployment        
+        * ```“CN”:”app-server-afnic``` => (You can put whatever you want in the place of app-server-afnic)
+        * "hosts": [YOUR_APPLICATION_SERVER_HOST_IP_ADDRESSES]``` => (by default : ["127.0.0.1","localhost"], we added in our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.5"] )
+    * Modify ```$ config/lora-app-server/api/client/certificate.json``` to fit your NS deployment
+        * ``“CN”:”Copy the net_id under the section [network_server] in the file  ```chirpstack-network-server.toml ```  in the network server here" 
+
 
 •	
 4.	Run $ make from the $ chirpstack-certificates directory
