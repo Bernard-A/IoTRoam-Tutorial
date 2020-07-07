@@ -1,5 +1,13 @@
 # Multitech RGW Setup
 
+This page covers the following operating systems:
+
+ * [Hardware Setup]
+ * [Installation on Debian]
+ * [Installation on FreeBSD]
+ * [Installation on Ubuntu]
+
+
 ## Hardware Setup
 
 For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted into one of the two RF slots of the Multitech MultiConnect Conduit as illustrated in Figure 2
