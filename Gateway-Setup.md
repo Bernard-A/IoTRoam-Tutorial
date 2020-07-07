@@ -20,16 +20,29 @@ For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted
  
  ## Accessing the RGW
  
- There are multiple interfaces available to access the device - Serial ports, Ethernet and Cellular (if you buy the Multitech Conduit with Cellular antenna). Assuming that you are able to access (by watching the Mulitech links above or you have or solved your selves) to your RGW by an SSH connection, the steps to follow are detailed in the following subsections:
+There are multiple interfaces available to access the device - Serial ports, Ethernet and Cellular (if you buy the Multitech Conduit with Cellular antenna). Assuming that you are able to access (by watching the Mulitech links above or you have or solved your selves) to your RGW by an SSH connection, the steps to follow are detailed in the following subsections:
  
-  ### Install and Configure the  Chirpstack GW bridge
+  ### Install and Configure the  Chirpstack Gateway(GW) bridge
   
-  For this roaming tutorial we use the Open Source ["Chirpstack"]
+For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step is to install Chirpstack GW bridge software in the RGW.
  
-ChirpStack Gateway Bridge is a service which converts LoRa® Packet Forwarder protocols into a ChirpStack Network Server common data-format (JSON and Protobuf). This component is part of the ChirpStack open-source LoRaWAN® Network Server stack.
+ChirpStack GW Bridge is a service which converts LoRa® Packet Forwarder protocols into a ChirpStack Network Server common data-format (JSON and Protobuf). This component is part of the ChirpStack open-source LoRaWAN® Network Server stack.
 
-
-
+ * In the RGW, install Chirpstack WG bridge
+    * Log in o the RGW using SSH or use the USB to serial interface.
+    * Download the latest chirpstack-gateway-bridge .ipk package from: https://artifacts.chirpstack.io/vendor/multitech/conduit/. Example (assuming you want to install chirpstack-gateway-bridge_3.1.0-r1_arm926ejste.ipk):
+```sh
+   wget https://artifacts.chirpstack.io/vendor/multitech/conduit/chirpstack-gateway-bridge_3.1.0-r1_arm926ejste.ipk 
+```
+    * Now that the .ipk package is stored on the Conduit, you can install it using the opkg package-manager utility. Example (assuming the same .ipk file):
+```sh
+   opkg install chirpstack-gateway-bridge_3.1.0-r1_arm926ejste.ipk
+```
+    * Update the MQTT connection details so that ChirpStack Gateway Bridge is able to connect to your MQTT broker. You will find the configuration file in the /var/config/chirpstack-gateway-bridge directory.
+    * Start ChirpStack Gateway Bridge and ensure it will be started on boot. Example:
+```sh
+   /etc/init.d/chirpstack-gateway-bridge start
+```
 
 
 [For detailed information follow the Quick Start Guide]: https://www.multitech.com/documents/publications/quick-start-guides/82101452L-Conduit-Quick-Start.pdf 
