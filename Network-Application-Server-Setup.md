@@ -127,10 +127,112 @@ systemd
 ```sh
 journalctl -u chirpstack-network-server -f -n 50
 ```
-A successful start of the Network Server will have the following O/P in the log file
+A successful start of the Network Server will have the following Output in the log file
 
 <p align="center">
   <img width="500" height="100" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig9.png?raw=true">
 </p>
 
 
+##	Application Server 
+
+### Prerequisites
+
+1.	A VM or Physical instance installed with Debian or Ubuntu accessible via the Internet
+2.	MQTT Broker (e.g. Mosquitto)
+3.	Persistent Database (e.g. PostgreSQL)
+4.	Non-persistent Database (e.g. Redis)
+
+### Installing the Prerequisites
+```sh
+sudo apt-get install mosquitto postgresql redis-server
+```
+
+###	Setting up the Prerequisites
+
+Setup your PostgreSQL database for your ChirpStack Network Server
+```sh
+$ sudo -u postgres psql
+> create role chirpstack_as with login password 'dbaspassword';
+> create database chirpstack_as with owner chirpstack_as;
+      > \c chirpstack_as
+      > create extension pg_trgm;
+      > create extension hstore;
+> \q
+```
+
+Verify the set up
+```sh
+$ psql -h localhost -U chirpstack_as -W chirpstack_as
+```
+
+###	Obtaining and Installing the ChirpStack Application Server
+The binary for ChirpStack Application Server is accessible following the link: https://www.chirpstack.io/application-server/overview/downloads/
+Setup the Application Server, either using the binary from the link above, or by using Debian package manager. To install from the package manager, you will also need “apt-transport-https” to connect to the repository
+
+```sh
+$ sudo apt install apt-transport-https
+$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1CE2AFD36DBCCA00
+$ sudo echo "deb https://artifacts.chirpstack.io/packages/3.x/deb stable main" | sudo tee /etc/apt/sources.list.d/chirpstack.list
+$ sudo apt-get update
+$ sudo apt-get install chirpstack-application-server
+```
+
+###	Configuration for the ChirpStack Application Server
+The configuration file is located in the chirpstack-application-server folder in /etc. It is a “toml“ file.
+
+```sh
+$ /etc/chirpstack-network-server/chirpstack-application-server.toml
+```
+ChirpStack recommends checking to following parameters in the above .toml file when setting up a ChirpStack Application Server:
+1.	postgresql.dsn  
+2.	postgresql.automigrate
+3.	redis
+4.	metrics.timezone
+
+1.	Update the “dsn” parameter with the parameters you provided when setting up your own PostgreSQL database:
+
+```sh
+[postgresql]
+.
+.
+dsn="postgres://chirpstack_as:dbnspassword@localhost/chirpstack_as?sslmode=disable"
+```
+
+2.	The following parameter in the default configuration file is “postgresql.automigrate” which is useful when upgrading ChirpStack. Set it as you wish :
+
+```sh
+[postgresql]
+.
+.
+automigrate=true
+```
+
+3.	In the “redis” section. If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the redis.url parameter
+
+
+###	Starting the ChirpStack Application Server
+To (re)start and stop ChirpStack Application Server depends on if your distribution uses “init.d” or “systemd”:
+init.d
+```sh
+sudo /etc/init.d/chirpstack-application-server [start|stop|restart|status]
+```
+systemd
+```sh
+sudo systemctl [start|stop|restart|status] chirpstack-application-server
+```
+
+###	Verifying the Functioning of the ChirpStack Network Server
+init.d
+```sh
+tail -f /var/log/chirpstack-network-server/chirpstack-application-server.log
+```
+systemd
+```sh
+journalctl -u chirpstack-application-server -f -n 50
+```
+A successful start of the Network Server will have the following Output in the log file
+
+<p align="center">
+  <img width="500" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig10.png?raw=true">
+</p>
