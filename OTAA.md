@@ -127,7 +127,7 @@ These are the certificates for the server-side of the API. These certificates ar
 ```
 These are the client-side certificates (used by LoRa Server) to connect to the LoRa Server Join API.
 
- * Step 3: One needs to copy-paste the content of the following files in the web interface:
+ * Step 3: These are the client-side certificates (used by LoRa App Server) to connect to the LoRa Server API. One needs to copy-paste the content of the following files in the web interface:
     * CA certificate content of certs/ca/ca.pem
     * TLS certificate content of certs/loraserver/api/client/loraserver-api-client.pem
     * TLS key content of certs/loraserver/api/client/loraserver-api-client-key.pem
@@ -146,11 +146,37 @@ Then, add the three files mentioned in ```Step 3```  under *Certificates for LoR
     
 ### Configuring the AS with the certificates
 
-* Step 3: 
+* Step 1: On the application Server, one need to copy the  ```ca.pem ``` file, the  ```lora-app-server-api-server.pem``` file and the  ```lora-app-server-api-server-key.pem``` file to a specific directory. Then update the  ```[network_server.api]``` section in the ```lora-app-server.toml``` file by adding the following required lines : 
+ ```sh
+[application_server]
+.
+.
+   [application_server.api]
+   .
+   .
+   ca_cert="certs/ca/ca.pem"
+   tls_cert="certs/lora-app-server/api/server/lora-app-server-api-server.pem"
+   tls_key="certs/lora-app-server/api/server/lora-app-server-api-server-key.pem" 
+```
+These certificates are for securing the LoRa App Server API which is by default listening on port 8001 (see lora-app-server.toml). This is not the REST API!
 
+ * Step 2:  On the Network Server, one need to copy the  ```ca.pem ``` file,the ```lora-app-server-join-api-client.pem``` file and the ```lora-app-server-join-api-client-key.pem``` file to a specific directory. Then update the  ```[join_server.default] ``` section in the ```loraserver.toml``` file by adding the following required lines : 
+ ```sh 
+ [join_server]
+.
+.
+js_ca_cert="certs/ca/ca.pem"
+js_tls_cert="certs/lora-app-server/join-api/server/lora-app-server-join-api-server.pem"
+js_tls_key="certs/lora-app-server/join-api/server/lora-app-server-join-api-server-key.pem"
+```
+These certificates are for securing the LoRa App Server Join API which is by default listening on port 8003
 
+ * Step 3: These are the client-side certificates (used by LoRa Server) to connect to the LoRa App Server API. One needs to copy-paste the content of the following files in the web interface:
+    * CA certificate content of certs/ca/ca.pem
+    * TLS certificate content of certs/lora-app-server/api/client/lora-app-server-api-client.pem
+    * TLS key content of certs/lora-app-server/api/client/lora-app-server-api-client-key.pem
 
-### Configuring the JS with the certificates
+Then, add the three files mentioned in ```Step 3```  under *Certificates for LoRa Server to LoRa App Server connection* using the web interface as indicated above.
 
 
 [Configuring NS to enable DNS resolution]: #configuring-ns-to-enable-dns-resolution
