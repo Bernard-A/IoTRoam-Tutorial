@@ -35,4 +35,4 @@ To provision the information in the DNS (Currently only the JoinEUI info)
 </p>
 
 [ Why the DNS infrastructure is required in the LoRaWAN set up?]: #why-the-dns-infrastructure-is-required-in-the-lorawan-set-up
-[How to Provision NetIDs and JoinEUIs in the DNS for OTAA and Roaming?]: #Install-and-Configuring-the-Packet-Forwarder
+[How to Provision NetIDs and JoinEUIs in the DNS for OTAA and Roaming?]: #how-to-provision-netids-and-joineuis-in-the-dns-for-otaa-and-roaming
