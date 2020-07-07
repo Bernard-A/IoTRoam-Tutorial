@@ -2,7 +2,7 @@
 
 ## Hardware Setup
 
-We are using Multitech mDoT (https://www.multitech.com/brands/multiconnect-mdot). The mDot is fixed to the Micro Developer Kit (https://www.multitech.com/brands/micro-mdot-devkit). One has to connect the LoRa Antenna to mDot. Then connect a USB wire to the Micro developer Kit
+We are using [Multitech mDoT]. The mDot is fixed to the [Micro Developer Kit]. One has to connect the LoRa Antenna to mDot. Then connect a USB wire to the Micro developer Kit
 as shown in the Figure 1:
 
 <p align="center">
@@ -36,3 +36,6 @@ In the other screen terminal, you should be able to type the command ```at``` an
 
 ## Footnotes
 [1) The example here is for Fedora. You install ‘screen’ if you don’t have according to your Linux distro requirements
+
+[Multitech mDoT]: https://www.multitech.com/brands/multiconnect-mdot
+[Micro Developer Kit]: https://www.multitech.com/brands/micro-mdot-devkit
