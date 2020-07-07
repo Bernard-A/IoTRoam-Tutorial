@@ -30,3 +30,6 @@ To provision the information in the DNS (Currently only the JoinEUI info)
  * Send your JoinEUI information to  sandoche.balakrichenan@afnic.fr AND antoine.bernard@afnic.fr 
  * Once the information is updated to the DNS, one can verify whether the information is updated properly by reversing the JoinEUI, delimiting by ‘.’ and adding the suffix “joineuis.iotreg.net” as shown inthe figure:
 
+<p align="center">
+  <img width="760" height="150" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig13.png?raw=true">
+</p>
