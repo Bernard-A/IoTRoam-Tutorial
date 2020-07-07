@@ -14,9 +14,9 @@ In this document, We have used Multitech products for ED and the RGW. If you are
 different Hardware you have to follow those Hardware specific details to set up the 
 ED and RGW. The scenario as per Fig 1 is as follows:
 
-•	Multitech Conduit Gateway (Packet-forwarder + LoRa Gateway Bridge)
-•	NS should have MQTT + Redis + PostgreSQL as pre-requisites
-•	AS should have MQTT + Redis + PostgreSQL as pre-requisites
+ *	Multitech Conduit Gateway (Packet-forwarder + LoRa Gateway Bridge)
+ *	NS should have MQTT + Redis + PostgreSQL as pre-requisites
+ *	AS should have MQTT + Redis + PostgreSQL as pre-requisites
 
 
 These are the ports you need to take into account for the firewall rules:
