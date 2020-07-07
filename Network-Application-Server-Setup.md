@@ -1,5 +1,5 @@
 
-# Installing the Network Server and Application Server using ChirpStack in Debian/Ubuntu
+# Installing and Configuring the Network Server and Application Server using ChirpStack (Debian/Ubuntu)
 
 This page covers setting up the Network and Application Server which are detailed in different sections as follows:
 
