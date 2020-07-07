@@ -44,7 +44,7 @@ The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet f
     *	At the top of the left column, check “Enabled”.
     *	At the top of the right column, set “Mode” to be “PACKET FORWARDER”.
     *	In the “Config” text box, copy and paste the configuration data for your MTAC LoRa card and region. In addition, you will want to modify/add the following configuration details in the gateway_conf section. Leave any other settings in this section as they are. The ref_* fields should be set for the gateway. (Altitude is specified in meters.):
-
+   ```sh
     {
         ...
         "gateway_conf": {
@@ -58,6 +58,7 @@ The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet f
             "ref_altitude": 1664
         }
     }
+   ```
     
 Note that the serv_port_up and serv_port_down represent the ports used to communicate with the chirpstack-gateway-bridge, usually on localhost (the server_address parameter). See the image above.
 Select “Submit”.
