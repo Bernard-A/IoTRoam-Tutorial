@@ -20,7 +20,7 @@ For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted
  
 ## Accessing the RGW
  
-There are multiple interfaces available to access the device - Serial ports, Ethernet and Cellular (if you buy the Multitech Conduit with Cellular antenna). Assuming that you are able to access (by watching the Mulitech links above or you have or solved your selves) to your RGW by an **SSH** and the **Web Interface**, the steps to follow are detailed in the following sections:
+There are multiple interfaces available to access the device - Serial ports, Ethernet and Cellular (if you buy the Multitech Conduit with Cellular antenna). Assuming that you are able to access (by watching the Mulitech links above or you have  solved your selves) to your RGW by an **SSH** and the **Web Interface**, the steps to follow are detailed in the following sections:
 
 If you relate to the [Architecture] page, our focus is on the two components as shown in the figure below: 
 
@@ -34,7 +34,7 @@ The function of **Packet Forwarder** is to forward the received LoRa Packet from
 
 *The packet forwarder is a program running on the RGW that forwards RF packets receive by the concentrator to the NS through a IP/UDP link.*
 
-```*The source for the information below is :(https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-packet-forwarder)*```
+```The source for the information below is :(https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-packet-forwarder)```
 
 The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet forwarder option. 
 
@@ -43,7 +43,7 @@ The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet f
     *	In the “LoRa Configuration” window:
     *	At the top of the left column, check “Enabled”.
     *	At the top of the right column, set “Mode” to be “PACKET FORWARDER”.
-    *	In the “Config” text box, copy and paste the configuration data for your MTAC LoRa card and region. In addition, you will want to modify/add the following configuration details in the gateway_conf section. Leave any other settings in this section as they are. The ref_* fields should be set for the gateway. (Altitude is specified in meters.):
+    *	In the “Config” text box, modify/add the following configuration details in the gateway_conf section.):
    ```sh
     {
         ...
@@ -52,18 +52,13 @@ The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet f
             "server_address": "localhost",
             "serv_port_up": 1700,
             "serv_port_down": 1700,
-            "fake_gps": true,
-            "ref_latitude": 39.9570133,
-            "ref_longitude": -105.1603241,
-            "ref_altitude": 1664
+             ... 
         }
     }
-   ```
-    
-Note that the serv_port_up and serv_port_down represent the ports used to communicate with the chirpstack-gateway-bridge, usually on localhost (the server_address parameter). See the image above.
-Select “Submit”.
-
-Select the “Save and Restart” option on the left menu.
+   ```    
+``` Note that the serv_port_up and serv_port_down represent the ports used to communicate with the chirpstack-gateway-bridge, usually on localhost (the server_address parameter). See the image above.```
+ * Select “Submit”.
+ * Select the “Save and Restart” option on the left menu.
 
 ## Install and Configuring the  Chirpstack Gateway(GW) bridge
   
