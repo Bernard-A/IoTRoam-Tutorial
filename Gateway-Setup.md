@@ -13,6 +13,6 @@ For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted
  *	Power the Conduit by plugging in the provided AC-DC converter
  *	Check the LEDs in the Conduit
     *	PWR = Power
-  *	Status = LED blinks when the OS is fully loaded
-  *	LS = Link Status
+    *	Status = LED blinks when the OS is fully loaded
+    *	LS = Link Status
 
