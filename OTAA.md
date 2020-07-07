@@ -50,6 +50,10 @@ If your AS is not hosted on the same server as your NS, you will also need to ch
    
  ## Adding Certificates for secure TLS Communication between NS<->AS
  
- [Configuring NS to enable DNS resolution]: #configuring-ns-to-enable-dns-resolution
- [JS Brief Intro]: #js-brief-intro
- [Adding Certificates for secure TLS Communication between NS<->AS]: #
+The idea is to generate Certificates for both the NS and the AS. For this platform set up, following the Chirpstack process, we need to install the CFSSL tool
+ 
+ 
+[Configuring NS to enable DNS resolution]: #configuring-ns-to-enable-dns-resolution
+[JS Brief Intro]: #js-brief-intro
+[Adding Certificates for secure TLS Communication between NS<->AS]: #adding-certificates-for-secure-tls-communication-between-ns-as
+[CFSSL]: https://cfssl.org/
