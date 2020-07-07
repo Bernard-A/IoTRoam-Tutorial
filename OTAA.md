@@ -56,9 +56,9 @@ The idea is to generate Certificates for both the NS and the AS.
  sudo apt-get install -y golang-cfssl
 ```
 * Clone the repository ```https://github.com/brocaar/chirpstack-certificates```
-* Fom the ```$ chirpstack-certificates directory```
+* Fom the ```$ chirpstack-certificates``` directory
     * Modify ```$ config/loraserver/api/server/certificate.json``` to fit your NS ployment
-o	“CN”:”network-server-afnic” => (You can put whatever you want in the place of network-server
+        * ``` “CN”:”network-server-afnic``` => (You can put whatever you want in the place of network-server)
 o	"hosts": [YOUR_NETWORK_SERVER_HOST_IP_ADDRESSES], (by default : ["127.0.0.1","localhost"], we added our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.4"] )
 •	Modify “$ config/loraserver/api/client/certificate.json” to fit your Application Server deployment
 o	“CN”:”network-server-afnic” => (You can put whatever you want in the place of network-server
