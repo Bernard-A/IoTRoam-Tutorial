@@ -102,9 +102,7 @@ One need to deploy each certificate in the respective servers configuration file
 [network_server]
 .
 .
-.
    [network_server.api]
-   .
    .
    .
    ca_cert="PATH_TO_CA/ca.pem"
