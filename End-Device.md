@@ -6,10 +6,9 @@ We are using Multitech mDoT (https://www.multitech.com/brands/multiconnect-mdot)
 as shown in the Figure 1:
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig2.png?raw=true">
+  <img width="560" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig2.png?raw=true">
 </p>
 
-![alt text](https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig2.png?raw=true)
 
 Before your Connect the other end of the USB connector to the computer and if you are using a Linux Distribution, type ```ls /dev/tty*``` in your terminal. Have a look at the existing tty serial connections.
 
