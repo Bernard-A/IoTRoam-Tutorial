@@ -24,6 +24,9 @@ screen /dev/ttyACM1 115200
 
 The DEBUG screen terminal is the one that shows debug commands such as in Figure 2
 
+<p align="center">
+  <img width="360" height="200" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig3.png?raw=true">
+</p>
 
 
 ## Footnotes
