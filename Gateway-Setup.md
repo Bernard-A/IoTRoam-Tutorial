@@ -91,12 +91,42 @@ For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step 
     ```
     
 ## Post Sanity check
+```The source for the information below is :(https://www.chirpstack.io/guides/troubleshooting/gateway/)```
 
 To verify the set up, we have to check the following:
 
 * If the Packet Forwarder is receiving device data
 * If the ChirpStack Gateway Bridge is receiving data from the packet-forwarder
 * If ChirpStack Gateway Bridge is publishing the data to the MQTT broker
+
+### Packet Forwarder is receiving and Sending data
+
+When the ChirpStack Gateway Bridge is running on the gateway itself, then you need to run the following command on the gateway (it will monitor the loopback interface):
+ ```sh
+  sudo tcpdump -AUq -i lo port 1700
+```
+When the ChirpStack Gateway Bridge is installed on a separate machine / server, the you need to run the following command:
+ ```sh
+  sudo tcpdump -AUq port 1700
+```
+Expected Output 
+```sh
+  ...
+  11:42:00.114726 IP localhost.34268 > localhost.1700: UDP, length 12
+  E..(..@.@."................'.....UZ.....
+  11:42:00.130292 IP localhost.1700 > localhost.34268: UDP, length 4
+  E.. ..@.@.".....................
+  11:42:10.204723 IP localhost.34268 > localhost.1700: UDP, length 12
+  E..(.&@.@..................'.x...UZ.....
+  ...
+```
+What we see in this log:
+```sh
+  localhost.130292 > localhost.1700: packet sent from the packet-forwarder to the ChirpStack Gateway Bridge
+  localhost.1700 > localhost.130292: packet sent from the ChirpStack Gateway Bridge to the Packet Forwarder
+```
+
+### ChirpStack Gateway Bridge is receiving data from the packet-forwarder
 
 
 All logs are written to /var/log/chirpstack-gateway-bridge/chirpstack-gateway-bridge.log. To verify that the GW bridge is receiving data from the packet forwarder, view and follow this logfile depending on your system:
