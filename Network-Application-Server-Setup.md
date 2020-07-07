@@ -248,7 +248,7 @@ A successful start of the Network Server will have the following Output in the l
 The objective in this section is to verify the communication between the RGW->NS (2) and the NS->AS (3) shown in the figure:
 
 <p align="center">
-  <img width="760" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig14.png?raw=true">
+  <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig14.png?raw=true">
 </p>
 
 ### Verify whether the NS receives data from the RGW
