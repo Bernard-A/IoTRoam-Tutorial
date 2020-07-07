@@ -12,7 +12,7 @@ For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted
  *	Attach the cellular antenna to the Conduit’s CELL port. If there are two antennas, connect the second one in the place where it is written ‘Aux’
  *	Power the Conduit by plugging in the provided AC-DC converter
  *	Check the LEDs in the Conduit
-  *	PWR = Power
+    *	PWR = Power
   *	Status = LED blinks when the OS is fully loaded
   *	LS = Link Status
 
