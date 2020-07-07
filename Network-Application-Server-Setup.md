@@ -82,15 +82,18 @@ dsn="postgres://chirpstack_ns:dbnspassword@localhost/chirpstack_ns?sslmode=disab
 automigrate=true
 ```
 
-3.	In the “redis” section. If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the redis.url parameter
+#### 3.	In the “redis” section. If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the ```redis.url``` parameter
 
-4.	In the “network_server” section, you may set your LoRaWAN NetID (if you have one).  The net_id parameter may be set to “000000” or “000001” for experimental network. But such a network won’t allow passive roaming:
+#### 4.	In the “network_server” section, you may set your LoRaWAN NetID (if you have one).  The net_id parameter may be set to “000000” or “000001” for experimental network. But such a network won’t allow passive roaming:
+```sh
 [network_server]
 .
 .
 net_id=123456
+```
 
-5.	Also check out if your LoRaWAN transmission band is consistent with the regulation for the region you live in (As we are located in Europe and use the 868MHz band, we set it in the configuration (other possible values are indicated in the default configuration file)
+#### 5.	Also check out if your LoRaWAN transmission band is consistent with the regulation for the region you live in (As we are located in Europe and use the 868MHz band, we set it in the configuration (other possible values are indicated in the default configuration file)
+```sh
 [network_server]
 .
 .
@@ -98,13 +101,19 @@ net_id=123456
    .
    .
    name=”EU_863_870”
+```
 
-6.	In the “metrics” section, you can use either “local” for the system local time zone or use settings such as “Europe/Paris”
+#### 6.	In the “metrics” section, you can use either “local” for the system local time zone or use settings such as ```“Europe/Paris”```
 
-1.6	Starting the ChirpStack Network Server
+### 	Starting the ChirpStack Network Server
 To (re)start and stop ChirpStack Network Server depends on if your distribution uses “init.d” or “systemd”:
 init.d
+```sh
 sudo /etc/init.d/chirpstack-network-server [start|stop|restart|status]
+```
 systemd
+```sh
 sudo systemctl [start|stop|restart|status] chirpstack-network-server
+```
+
 
