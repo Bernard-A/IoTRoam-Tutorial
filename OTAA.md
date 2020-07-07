@@ -37,4 +37,4 @@ If your AS is not hosted on the same server as your NS, you will also need to ch
    server=http://10.1.86.48:8003
    ```
  
- [Configuring NS to enable DNS resolution]: #network-server-setup
+ [Configuring NS to enable DNS resolution]: #configuring-ns-to-enable-dns-resolution
