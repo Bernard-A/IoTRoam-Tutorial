@@ -125,7 +125,19 @@ These are the certificates for the server-side of the API. These certificates ar
    js_tls_cert="certs/lora-app-server/join-api/client/lora-app-server-join-api-client.pem"
    js_tls_key="certs/lora-app-server/join-api/client/lora-app-server-join-api-client-key.pem"
 ```
+These are the client-side certificates (used by LoRa Server) to connect to the LoRa Server Join API.
 
+ * Step 3: One needs to copy-paste the content of the following files in the web interface:
+    * CA certificate content of certs/ca/ca.pem
+    * TLS certificate content of certs/loraserver/api/client/loraserver-api-client.pem
+    * TLS key content of certs/loraserver/api/client/loraserver-api-client-key.pem
+    
+    To do this first connect to the NS web interface and set it up as shown in the figure below:
+    
+<p align="center">
+  <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig15.png?raw=true">
+</p>
+    
 ### Configuring the AS with the certificates
 
 * Step 3: 
