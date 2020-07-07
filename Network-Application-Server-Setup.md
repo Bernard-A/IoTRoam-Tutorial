@@ -188,9 +188,8 @@ ChirpStack recommends checking to following parameters in the above .toml file w
 1.	postgresql.dsn  
 2.	postgresql.automigrate
 3.	redis
-4.	metrics.timezone
 
-1.	Update the “dsn” parameter with the parameters you provided when setting up your own PostgreSQL database:
+### 1.	Update the “dsn” parameter with the parameters you provided when setting up your own PostgreSQL database:
 
 ```sh
 [postgresql]
@@ -199,7 +198,7 @@ ChirpStack recommends checking to following parameters in the above .toml file w
 dsn="postgres://chirpstack_as:dbnspassword@localhost/chirpstack_as?sslmode=disable"
 ```
 
-2.	The following parameter in the default configuration file is “postgresql.automigrate” which is useful when upgrading ChirpStack. Set it as you wish :
+### 2.	The following parameter in the default configuration file is “postgresql.automigrate” which is useful when upgrading ChirpStack. Set it as you wish :
 
 ```sh
 [postgresql]
@@ -208,11 +207,13 @@ dsn="postgres://chirpstack_as:dbnspassword@localhost/chirpstack_as?sslmode=disab
 automigrate=true
 ```
 
-3.	In the “redis” section. If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the redis.url parameter
+### 3.	In the “redis” section. If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the ```redis.url``` parameter
 
 
 ###	Starting the ChirpStack Application Server
+
 To (re)start and stop ChirpStack Application Server depends on if your distribution uses “init.d” or “systemd”:
+
 init.d
 ```sh
 sudo /etc/init.d/chirpstack-application-server [start|stop|restart|status]
@@ -223,6 +224,7 @@ sudo systemctl [start|stop|restart|status] chirpstack-application-server
 ```
 
 ###	Verifying the Functioning of the ChirpStack Network Server
+
 init.d
 ```sh
 tail -f /var/log/chirpstack-network-server/chirpstack-application-server.log
@@ -234,5 +236,5 @@ journalctl -u chirpstack-application-server -f -n 50
 A successful start of the Network Server will have the following Output in the log file
 
 <p align="center">
-  <img width="500" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig10.png?raw=true">
+  <img width="600" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig10.png?raw=true">
 </p>
