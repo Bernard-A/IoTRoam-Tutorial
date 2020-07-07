@@ -139,6 +139,21 @@ All logs are written to /var/log/chirpstack-gateway-bridge/chirpstack-gateway-br
    journalctl -u chirpstack-gateway-bridge -f -n 50
 ```
 
+Expected Output
+
+When the Packet Forwarder sends data to the ChirpStack Gateway Bridge (this could be a “ping”), you will see the following logs:
+```sh
+  INFO[0013] mqtt: subscribing to topic qos=0 topic=gateway/7276ff002e062c18/command/#
+```
+When your device sends an uplink message, you will see something like:
+
+```sh
+  INFO[0267] mqtt: publishing message qos=0 topic=gateway/7276ff002e062c18/event/up
+```
+If you see these logs, then this indicates that the ChirpStack Gateway Bridge components receives the data sent by the packet-forwarder.
+
+
+
 
 [For detailed information follow the Quick Start Guide]: https://www.multitech.com/documents/publications/quick-start-guides/82101452L-Conduit-Quick-Start.pdf 
 [A video tutorial could be found here]: https://www.multitech.net/developer/software/lora/getting-started-with-lora-conduit-aep/
