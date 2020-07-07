@@ -2,7 +2,7 @@
 
 This page covers the following operating systems:
 
- * [Hardware Setup]
+ * [Hardware_Setup]
  * [Accessing the RGW]
  * [Install and Configuring the Packet Forwarder]
  * [Install and Configuring the  Chirpstack Gateway(GW) bridge]
