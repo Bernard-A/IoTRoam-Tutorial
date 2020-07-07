@@ -21,3 +21,7 @@ screen /dev/ttyACM1 115200
 
 The DEBUG screen terminal is the one that shows debug commands such as in Figure 2
 
+
+
+## Footnotes
+[1) The example here is for Fedora. You install ‘screen’ if you don’t have according to your Linux distro requirements
