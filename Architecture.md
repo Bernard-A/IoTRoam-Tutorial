@@ -28,4 +28,4 @@ These are the ports you need to take into account for the firewall rules:
 
 Additionally, you probably want to expose the following ports too:
  *	From your computer to AS web-interface (default is port 8080)
- *	From your computer to NS and AS MQTT (so that you can subscribe to the MQTT messages) (default is port 1883)
+ *	From your computer to NS and AS (so that you can subscribe to the MQTT messages) (default is port 1883)
