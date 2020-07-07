@@ -20,7 +20,14 @@ For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted
  
 ## Accessing the RGW
  
-There are multiple interfaces available to access the device - Serial ports, Ethernet and Cellular (if you buy the Multitech Conduit with Cellular antenna). Assuming that you are able to access (by watching the Mulitech links above or you have or solved your selves) to your RGW by an SSH connection, the steps to follow are detailed in the following subsections:
+There are multiple interfaces available to access the device - Serial ports, Ethernet and Cellular (if you buy the Multitech Conduit with Cellular antenna). Assuming that you are able to access (by watching the Mulitech links above or you have or solved your selves) to your RGW by an SSH connection, the steps to follow are detailed in the following sections:
+
+If you relate to the [Architecture] page, our focus is on the two components as shown in the figure below: 
+
+<p align="center">
+  <img width="300" height="200" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig8.png?raw=true">
+</p>
+
  
 ## Install and Configuring the  Chirpstack Gateway(GW) bridge
   
@@ -40,7 +47,7 @@ For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step 
      ```sh
           opkg install chirpstack-gateway-bridge_3.1.0-r1_arm926ejste.ipk
      ```
-    * Update the MQTT connection details so that ChirpStack Gateway Bridge is able to connect to your MQTT broker. You will find the configuration file in the ```/var/config/chirpstack-gateway-bridge``` directory.
+    * Update the MQTT connection details so that ChirpStack Gateway Bridge is able to connect to your MQTT broker. You will find the configuration file in the ```/var/config/chirpstack-gateway-bridge/chirpstack-gateway-bridge.toml``` directory.
     * Start ChirpStack Gateway Bridge and ensure it will be started on boot. Example:
      ```sh
       /etc/init.d/chirpstack-gateway-bridge start
@@ -61,3 +68,4 @@ The Mltitech RGW has a default Packet Forwarder. We have to disable that Packet 
 [For detailed information follow the Quick Start Guide]: https://www.multitech.com/documents/publications/quick-start-guides/82101452L-Conduit-Quick-Start.pdf 
 [A video tutorial could be found here]: https://www.multitech.net/developer/software/lora/getting-started-with-lora-conduit-aep/
 ["Chirpstack"]: https://www.chirpstack.io
+[Architecture]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
