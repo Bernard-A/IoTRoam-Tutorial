@@ -177,6 +177,6 @@ When you do not see any data appear when your device sends data, then make sure 
 [A video tutorial could be found here]: https://www.multitech.net/developer/software/lora/getting-started-with-lora-conduit-aep/
 ["Chirpstack"]: https://www.chirpstack.io
 [Architecture]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
-[Hardware Setup]: ## Hardware Setup
+[Hardware Setup]: ## Hardware-Setup
 
 
