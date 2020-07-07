@@ -92,6 +92,13 @@ For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step 
     
 ## Post Sanity check
 
+To verify the set up, we have to check the following:
+
+* If the Packet Forwarder is receiving device data
+* If the ChirpStack Gateway Bridge is receiving data from the packet-forwarder
+* If ChirpStack Gateway Bridge is publishing the data to the MQTT broker
+
+
 All logs are written to /var/log/chirpstack-gateway-bridge/chirpstack-gateway-bridge.log. To verify that the GW bridge is receiving data from the packet forwarder, view and follow this logfile depending on your system:
 * init.d
 ```sh
