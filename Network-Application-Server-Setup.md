@@ -242,8 +242,28 @@ A successful start of the Network Server will have the following Output in the l
 
 *For now, if you followed all the above indications. You should have a running ChirpStack stack. Running the Network Server and Application Server with this configuration should give you access to the web-interface accessible using your Application Server’s IP default port (http://A.B.C.D:8080) or if you are running locally http://localhost:8080*
 
+
 ## Verify Communication from RGW->NS->AS Setup
 
+### Verify whether the NS receives data from the RGW
+
+Depending on your OS, one of the following commands will show you the logs:
+
+```sh
+journalctl -f -n 100 -u chirpstack-network-server
+tail -f -n 100 /var/log/chirpstack-network-server/chirpstack-network-server.log
+```
+Expected log output
+
+```sh
+INFO[0163] backend/gateway: uplink frame received
+INFO[0164] device gateway rx-info meta-data saved        dev_eui=0101010101010101
+INFO[0164] device-session saved                          dev_addr=018f5aa9 dev_eui=0101010101010101
+INFO[0164] finished client unary call                    grpc.code=OK grpc.method=HandleUplinkData grpc.service=as.ApplicationServerService grpc.time_ms=52.204 span.kind=client system=grpc
+In this log, ChirpStack Network Server has processed the uplink frame, and forwarded the application payload to the ApplicationServerService API (provided by ChirpStack Application Server).
+```
+
+In this log, the NS has processed the uplink frame from the RGW, and forwarded the application payload to the AS
 
 [Network Server Setup]: #network-server-setup
 [application Server Setup]: #application-server-setup
