@@ -134,7 +134,7 @@ A successful start of the Network Server will have the following Output in the l
 </p>
 
 
-##	Application Server 
+##	Application Server Setup
 
 ### Prerequisites
 
