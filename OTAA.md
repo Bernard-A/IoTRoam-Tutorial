@@ -138,6 +138,12 @@ These are the client-side certificates (used by LoRa Server) to connect to the L
   <img width="700" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig15.png?raw=true">
 </p>
     
+    Then, add the three files mentioned in ```Step 3```  under *Certificates for LoRa App Server to LoRa Server connection* as shown in the figure below :
+    
+<p align="center">
+  <img width="700" height="600" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig16.png?raw=true">
+</p>
+    
 ### Configuring the AS with the certificates
 
 * Step 3: 
