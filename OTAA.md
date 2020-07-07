@@ -48,7 +48,7 @@ If your AS is not hosted on the same server as your NS, you will also need to ch
    server=http://10.1.86.48:8003
    ```
    
- ## Adding Certificates for secure TLS Communication between NS<->AS
+ ## Adding Certificates for secure TLS Communication between NS<->AS/JS
  
 The idea is to generate Certificates for both the NS and the AS. 
 * For this platform set up, following the Chirpstack process, we need to install the [CFSSL] tool. This installation could be done in your local computer or the NS ot the AS:
@@ -59,8 +59,8 @@ The idea is to generate Certificates for both the NS and the AS.
 * Fom the ```$ chirpstack-certificates``` directory
 
 ### Configuration in the NS files 
-    * Modify ```$ config/loraserver/api/server/certificate.json``` to fit your NS deployment
-        * ```“CN”:”network-server-afnic``` => (You can put whatever you want in the place of network-server-afnic)
+ * Modify ```$ config/loraserver/api/server/certificate.json``` to fit your NS deployment
+     * ```“CN”:”network-server-afnic``` => (You can put whatever you want in the place of network-server-afnic)
         * "hosts": [YOUR_NETWORK_SERVER_HOST_IP_ADDRESSES]``` => (by default : ["127.0.0.1","localhost"], we added in our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.4"] )
     * Modify ```$ config/loraserver/api/client/certificate.json``` to fit your AS deployment
         * ``“CN”:”Copy the ID under the section [application_server] in the file  ```chirpstack-application-server.toml ```  in the application server here" 
