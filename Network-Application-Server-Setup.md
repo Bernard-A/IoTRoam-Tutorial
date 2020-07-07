@@ -1,7 +1,7 @@
 
 # Installing the Network Server and Application Server using ChirpStack in Debian/Ubuntu
 
-This page covers setting up the RGW which are detailed in different sections as follows:
+This page covers setting up the Network and Application Server which are detailed in different sections as follows:
 
  * [Network Server Setup]
  * [Application Server Setup]
