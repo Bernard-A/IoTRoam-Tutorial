@@ -129,4 +129,8 @@ journalctl -u chirpstack-network-server -f -n 50
 ```
 A successful start of the Network Server will have the following O/P in the log file
 
+<p align="center">
+  <img width="700" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig9.png?raw=true">
+</p>
+
 
