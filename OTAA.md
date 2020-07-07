@@ -50,40 +50,42 @@ If your AS is not hosted on the same server as your NS, you will also need to ch
    
  ## Adding Certificates for secure TLS Communication between NS<->AS/JS
  
-The idea is to generate Certificates for both the NS and the AS. 
-* For this platform set up, following the Chirpstack process, we need to install the [CFSSL] tool. This installation could be done in your local computer or the NS ot the AS:
+The idea is to generate Certificates for both the NS and the AS:
+* 1. For this platform set up, following the Chirpstack process, we need to install the [CFSSL] tool. This installation could be done in your local computer or the NS ot the AS:
 ```sh
  sudo apt-get install -y golang-cfssl
 ```
-* Clone the repository ```https://github.com/brocaar/chirpstack-certificates```
-* Fom the ```$ chirpstack-certificates``` directory
+* 2. Clone the repository ```https://github.com/brocaar/chirpstack-certificates```
+* 3. Fom the ```$ chirpstack-certificates``` directory
 
-### Configuration in the NS files 
+### 4. Configuration in the NS files 
  * Modify ```$ config/loraserver/api/server/certificate.json``` to fit your NS deployment
      * ```“CN”:”network-server-afnic``` => (You can put whatever you want in the place of network-server-afnic)
-        * "hosts": [YOUR_NETWORK_SERVER_HOST_IP_ADDRESSES]``` => (by default : ["127.0.0.1","localhost"], we added in our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.4"] )
-    * Modify ```$ config/loraserver/api/client/certificate.json``` to fit your AS deployment
-        * ``“CN”:”Copy the ID under the section [application_server] in the file  ```chirpstack-application-server.toml ```  in the application server here" 
+     * "hosts": [YOUR_NETWORK_SERVER_HOST_IP_ADDRESSES]``` => (by default : ["127.0.0.1","localhost"], we added in our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.4"] )
+ * Modify ```$ config/loraserver/api/client/certificate.json``` to fit your AS deployment
+     * ``“CN”:”Copy the ID under the section [application_server] in the file  ```chirpstack-application-server.toml ```  in the application server here" 
 
-### Configuration in the AS files 
-    * Modify ```$ config/lora-app-server/api/server/certificate.json``` to fit your AS deployment        
-        * ```“CN”:”app-server-afnic``` => (You can put whatever you want in the place of app-server-afnic)
-        * "hosts": [YOUR_APPLICATION_SERVER_HOST_IP_ADDRESSES]``` => (by default : ["127.0.0.1","localhost"], we added in our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.5"] )
-    * Modify ```$ config/lora-app-server/api/client/certificate.json``` to fit your NS deployment
-        * ``“CN”:”Copy the net_id under the section [network_server] in the file  ```chirpstack-network-server.toml ```  in the network server here" 
+### 5. Configuration in the AS files 
+ * Modify ```$ config/lora-app-server/api/server/certificate.json``` to fit your AS deployment        
+     * ```“CN”:”app-server-afnic``` => (You can put whatever you want in the place of app-server-afnic)
+     * "hosts": [YOUR_APPLICATION_SERVER_HOST_IP_ADDRESSES]``` => (by default : ["127.0.0.1","localhost"], we added in our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.5"] )
+ * Modify ```$ config/lora-app-server/api/client/certificate.json``` to fit your NS deployment
+     * ``“CN”:”Copy the net_id under the section [network_server] in the file  ```chirpstack-network-server.toml ```  in the network server here" 
         
-### Configuration for the JS 
+### 6. Configuration for the JS 
 As mentioned earlier, We assume that the JS and the AS are in the same machine
 
-   * Modify ```$ config/lora-app-server/api/server/certificate.json``` to fit your AS deployment        
-        * ```“CN”:”app-server-afnic``` => (You can put whatever you want in the place of app-server-afnic)
-        * "hosts": [YOUR_APPLICATION_SERVER_HOST_IP_ADDRESSES]``` => (by default : ["127.0.0.1","localhost"], we added in our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.5"] )
-    * Modify ```$ config/lora-app-server/api/client/certificate.json``` to fit your NS deployment
+ * Modify ```$ config/lora-app-server/join-api/server/certificate.json``` to fit your JS deployment (which is the AS also as per our set up)        
+        * ```“CN”:”join-server-afnic``` => (You can put whatever you want in the place of join-server-afnic)
+        * "hosts": [YOUR_APPLICATION_SERVER_HOST_IP_ADDRESSES]``` => (by default : ["127.0.0.1","localhost"], we added in our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.4"] )
+        * Add the JoinEUI's accepted by  the JS in the hosts section. Thus the hosts section would look as follows: 
+        ```sh
+              ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.4","3.4.5.6.7.2.D.F.D.7.4.D.F.G.F.1.joineuis.iotreg.net"]
+        ```
+  * Modify ```$ config/lora-app-server/join-api/client/certificate.json``` to fit your NS deployment
         * ``“CN”:”Copy the net_id under the section [network_server] in the file  ```chirpstack-network-server.toml ```  in the network server here" 
 
-
-•	
-4.	Run $ make from the $ chirpstack-certificates directory
+7.	Run ```$ make``` from the ```$ chirpstack-certificates``` directory
 
 
 
