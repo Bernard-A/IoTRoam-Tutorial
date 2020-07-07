@@ -7,3 +7,5 @@ Figure 1 shows the basic building blocks of a LoRaWAN Roaming infrastructure. Th
 4.	Application Server (AS)
 5.	Domain Naming System (DNS) Database 
 
+![alt text](https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig1.png?raw=true)
+
