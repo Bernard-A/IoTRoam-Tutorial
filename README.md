@@ -15,4 +15,4 @@ This document is structured as follows:
  * [Passive roaming via DNS]
  
 
-[Architecture]: https://github.com/sandoche2k/IoTRoam-Tutorial/Architecture.md
+[Architecture]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
