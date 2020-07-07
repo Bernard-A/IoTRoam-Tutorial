@@ -128,7 +128,6 @@ What we see in this log:
 
 ### ChirpStack Gateway Bridge is receiving data from the packet-forwarder
 
-
 All logs are written to /var/log/chirpstack-gateway-bridge/chirpstack-gateway-bridge.log. To verify that the GW bridge is receiving data from the packet forwarder, view and follow this logfile depending on your system:
 * init.d
 ```sh
@@ -152,6 +151,16 @@ When your device sends an uplink message, you will see something like:
 ```
 If you see these logs, then this indicates that the ChirpStack Gateway Bridge components receives the data sent by the packet-forwarder.
 
+
+### ChirpStack Gateway Bridge is publishing the data to the MQTT broker
+
+To validate that the ChirpStack Gateway Bridge is publishing LoRa® frames to the MQTT broker, you can subscribe to the gateway/# MQTT topic. When using the mosquitto_sub utility, you can execute the following command:
+
+```sh
+mosquitto_sub -v -t "gateway/#"
+```
+
+When you do not see any data appear when your device sends data, then make sure the ChirpStack Gateway Bridge is authorized to publish to the MQTT topic and the mosquitto_sub client is authorized to subscribe to the given MQTT topic. This issue usually happens when you have configured your MQTT broker so that clients need to authenticate when connecting.
 
 
 
