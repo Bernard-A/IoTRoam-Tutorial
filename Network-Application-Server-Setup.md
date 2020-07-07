@@ -5,7 +5,7 @@ This page covers setting up the Network and Application Server which are detaile
 
  * [Network Server Setup]
  * [Application Server Setup]
- * [Communication between RGW->NS->AS]
+ * [Verifying Communication between RGW->NS->AS]
 
 ## Network Server Setup
 
@@ -240,12 +240,11 @@ A successful start of the Network Server will have the following Output in the l
   <img width="600" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig10.png?raw=true">
 </p>
 
-
-[Network Server Setup]: #network-server-setup
-[application Server Setup]: #application-server-setup
-
 *For now, if you followed all the above indications. You should have a running ChirpStack stack. Running the Network Server and Application Server with this configuration should give you access to the web-interface accessible using your Application Server’s IP default port (http://A.B.C.D:8080) or if you are running locally http://localhost:8080*
 
 ## Verify Communication from RGW->NS->AS Setup
 
- [Communication between RGW->NS->AS]
+
+[Network Server Setup]: #network-server-setup
+[application Server Setup]: #application-server-setup
+[Verifying Communication between RGW->NS->AS]: 
