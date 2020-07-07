@@ -111,7 +111,25 @@ One need to deploy each certificate in the respective servers configuration file
 ```
 These are the certificates for the server-side of the API. These certificates are for securing the LoRa Server API which is by default listening on port 8000 
 
+ * Step 2:  On the Network Server, one need to copy the  ```ca.pem ``` file,the ```lora-app-server-join-api-client.pem``` file and the ```lora-app-server-join-api-client-key.pem``` file to a specific directory. Then update the  ```[join_server.default] ``` section in the ```loraserver.toml``` file by adding the following required lines : 
+ ```sh 
+ [join_server]
+.
+.
+.
+   [join_server.default]
+   .
+   .
+   .
+   js_ca_cert="certs/ca/ca.pem"
+   js_tls_cert="certs/lora-app-server/join-api/client/lora-app-server-join-api-client.pem"
+   js_tls_key="certs/lora-app-server/join-api/client/lora-app-server-join-api-client-key.pem"
+```
+
 ### Configuring the AS with the certificates
+
+* Step 3: 
+
 
 
 ### Configuring the JS with the certificates
