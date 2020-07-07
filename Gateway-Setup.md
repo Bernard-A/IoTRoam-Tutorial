@@ -72,8 +72,7 @@ For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step 
  * Activate the repository:
      ```sh
        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1CE2AFD36DBCCA00 
-       sudo echo "deb https://artifacts.chirpstack.io/packages/3.x/deb stable main" | sudo tee 
-       /etc/apt/sources.list.d/chirpstack.list
+       sudo echo "deb https://artifacts.chirpstack.io/packages/3.x/deb stable main" | sudo tee           /etc/apt/sources.list.d/chirpstack.list
        sudo apt-get update
      ```
 * Install the latest chirpstack-gateway-bridge 
