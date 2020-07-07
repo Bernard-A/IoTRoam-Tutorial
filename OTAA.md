@@ -135,7 +135,7 @@ These are the client-side certificates (used by LoRa Server) to connect to the L
     To do this first connect to the NS web interface and set it up as shown in the figure below:
     
 <p align="center">
-  <img width="700" height="200" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig15.png?raw=true">
+  <img width="700" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig15.png?raw=true">
 </p>
     
 ### Configuring the AS with the certificates
