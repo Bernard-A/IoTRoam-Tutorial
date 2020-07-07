@@ -7,14 +7,17 @@ as shown in the Figure 1:
 
 ![alt text](https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig2.png?raw=true)
 
-Before your Connect the other end of the USB connector to the computer and if you are
-using a Linux Distribution, type ```ls /dev/tty*``` in your terminal. Have a look at
-the existing tty serial connections.
-Now, connect the other end of the USB connector the computer, you will see red, blue LEDs in the micro developer kit. Now type ‘ls /dev/tty*’ in your terminal, you will see two new serial connections. Normally they will be of form ‘/dev/tty/ACM0, /dev/tty/ACM1’ or ‘/dev/ttyXRUSB0, /dev/tty/ACM0’
-Of the two serial connections, one is for “DEBUG” and another is for “Communicating with the device”
+Before your Connect the other end of the USB connector to the computer and if you are using a Linux Distribution, type ```ls /dev/tty*``` in your terminal. Have a look at the existing tty serial connections.
+
+Now, connect the other end of the USB connector the computer, you will see red, blue LEDs in the micro developer kit. Now type ```ls /dev/tty*``` in your terminal, you will see two new serial connections. Normally they will be of form ```/dev/tty/ACM0, /dev/tty/ACM1``` or ```/dev/ttyXRUSB0, /dev/tty/ACM0```.
+
+Of the two serial connections, one is for “DEBUG” and another is for “Communicating with the device”.
+
 Use the Serial console (https://tinyurl.com/uxtkgt2 ). Launch two serial consoles for both serial connections
+ ```sh
 screen /dev/ttyACM0 115200
 screen /dev/ttyACM1 115200
+  ```
 
 The DEBUG screen terminal is the one that shows debug commands such as in Figure 2
 
