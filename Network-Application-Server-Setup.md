@@ -245,6 +245,12 @@ A successful start of the Network Server will have the following Output in the l
 
 ## Verify Communication from RGW->NS->AS Setup
 
+The objective in this section is to verify the communication between the NS (2) and the AS (3) as shown in the figure:
+
+<p align="center">
+  <img width="760" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig14.png?raw=true">
+</p>
+
 ### Verify whether the NS receives data from the RGW
 
 Depending on your OS, one of the following commands will show you the logs:
