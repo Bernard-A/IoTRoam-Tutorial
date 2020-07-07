@@ -20,7 +20,7 @@ ED and RGW. The scenario as per Fig 1 is as follows:
  *	AS should have  as pre-requisites the following installed : MQTT, Redis and PostgreSQL
 
 These are the ports you need to take into account for the firewall rules:
- *	GW => NS  (default is Port 1883 for MQTT))
+ *	GW => NS  (default is Port 1883 for MQTT)
  *	NS => AS (default is Port 8001)
  *	AS => NS (default is Port 8000)
  *	NS => AS to (default is Port 8003) #This is required if your AS and Join Server (JS) 
