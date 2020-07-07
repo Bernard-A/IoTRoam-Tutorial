@@ -61,12 +61,12 @@ The idea is to generate Certificates for both the NS and the AS.
         * ```“CN”:”network-server-afnic``` => (You can put whatever you want in the place of network-server-afnic)
         * "hosts": [YOUR_NETWORK_SERVER_HOST_IP_ADDRESSES]``` => (by default : ["127.0.0.1","localhost"], we added in our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.4"] )
     * Modify ```$ config/loraserver/api/client/certificate.json``` to fit your AS deployment
-        * ``“CN”:”Copy the ID under the section [application_server] in the file chirpstack-application-server.toml  in the application server here" 
+        * ``“CN”:”Copy the ID under the section [application_server] in the file  ```chirpstack-application-server.toml ```  in the application server here" 
     * Modify ```$ config/lora-app-server/api/server/certificate.json``` to fit your AS deployment        
         * ```“CN”:”app-server-afnic``` => (You can put whatever you want in the place of app-server-afnic)
         * "hosts": [YOUR_APPLICATION_SERVER_HOST_IP_ADDRESSES]``` => (by default : ["127.0.0.1","localhost"], we added in our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.5"] )
     * Modify ```$ config/lora-app-server/api/client/certificate.json``` to fit your NS deployment
-        * ``“CN”:”Copy the net_id under the section [network_server] in the file chirpstack-network-server.toml  in the network server here" 
+        * ``“CN”:”Copy the net_id under the section [network_server] in the file  ```chirpstack-network-server.toml ```  in the network server here" 
         
 o	"hosts": [YOUR_NETWORK_SERVER_HOST_IP_ADDRESSES], (by default : ["127.0.0.1","localhost"], we added our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.4"] )
 
