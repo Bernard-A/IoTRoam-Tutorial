@@ -93,10 +93,34 @@ The above command will generate certificates for the NS, AS and the JS. Each cer
 
 ## Deploying Certificates for secure TLS Communication between NS<->AS/JS
 
+One need to deploy each certificate in the respective servers configuration files.
+
+### Configuring the NS with the certificates
+
+ * Step 1: On the Network Server, one need to copy the  ```ca.pem ``` file, the  ```loraserver-api-server.pem ``` file and the  ```loraserver-api-server-key.pem ``` file to a specific directory. Then update the  ```[network_server.api] ``` section in the ```loraserver.toml``` file by adding the followingrequired lines : 
+ ```sh
+[network_server]
+.
+.
+.
+   [network_server.api]
+   .
+   .
+   .
+   ca_cert="PATH_TO_CA/ca.pem"
+   tls_cert="PATH_TO_TLS_CERT/loraserver-api-server.pem"
+   tls_key="PATH_TO_TLS_KEY/loraserver-api-server-key.pem"
+```
+These are the certificates for the server-side of the API. These certificates are for securing the LoRa Server API which is by default listening on port 8000 
+
+### Configuring the AS with the certificates
+
+
+### Configuring the JS with the certificates
 
 
 [Configuring NS to enable DNS resolution]: #configuring-ns-to-enable-dns-resolution
 [JS Brief Intro]: #js-brief-intro
 [Generating Certificates for secure TLS Communication between NS<->AS/JS]: #generating-certificates-for-secure-tls-communication-between-ns-asjs
-[Deploying Certificates for secure TLS Communication between NS<->AS/JS]
+[Deploying Certificates for secure TLS Communication between NS<->AS/JS]: #deploying-certificates-for-secure-tls-communication-between-ns-asjs
 [CFSSL]: https://cfssl.org/
