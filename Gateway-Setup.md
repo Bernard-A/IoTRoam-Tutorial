@@ -30,7 +30,7 @@ ChirpStack GW Bridge is a service which converts LoRa® Packet Forwarder protoco
 
  * In the RGW, install Chirpstack GW bridge
     * Log in o the RGW using SSH or use the USB to serial interface.
-    * Download the latest chirpstack-gateway-bridge .ipk package from: https://artifacts.chirpstack.io/vendor/multitech/conduit/. Example (assuming you want to install chirpstack-gateway-bridge_3.1.0-r1_arm926ejste.ipk): [Download the package based upon your RGW vendor]
+    * Download the latest chirpstack-gateway-bridge .ipk package from: https://artifacts.chirpstack.io/vendor/multitech/conduit/. Example (assuming you want to install chirpstack-gateway-bridge_3.1.0-r1_arm926ejste.ipk): [```Download the package based upon your RGW vendor```]
      ```sh
           wget https://artifacts.chirpstack.io/vendor/multitech/conduit/chirpstack-gateway-bridge_3.1.0-r1_arm926ejste.ipk 
      ```
@@ -38,7 +38,7 @@ ChirpStack GW Bridge is a service which converts LoRa® Packet Forwarder protoco
      ```sh
           opkg install chirpstack-gateway-bridge_3.1.0-r1_arm926ejste.ipk
      ```
-    * Update the MQTT connection details so that ChirpStack Gateway Bridge is able to connect to your MQTT broker. You will find the configuration file in the /var/config/chirpstack-gateway-bridge directory.
+    * Update the MQTT connection details so that ChirpStack Gateway Bridge is able to connect to your MQTT broker. You will find the configuration file in the ```/var/config/chirpstack-gateway-bridge``` directory.
     * Start ChirpStack Gateway Bridge and ensure it will be started on boot. Example:
      ```sh
       /etc/init.d/chirpstack-gateway-bridge start
