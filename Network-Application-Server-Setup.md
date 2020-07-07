@@ -107,6 +107,7 @@ net_id=123456
 
 ### 	Starting the ChirpStack Network Server
 To (re)start and stop ChirpStack Network Server depends on if your distribution uses “init.d” or “systemd”:
+
 init.d
 ```sh
 sudo /etc/init.d/chirpstack-network-server [start|stop|restart|status]
@@ -115,5 +116,17 @@ systemd
 ```sh
 sudo systemctl [start|stop|restart|status] chirpstack-network-server
 ```
+
+### 	Verifying the Functioning of the ChirpStack Network Server
+
+init.d
+```sh
+tail -f /var/log/chirpstack-network-server/chirpstack-network-server.log
+```
+systemd
+```sh
+journalctl -u chirpstack-network-server -f -n 50
+```
+A successful start of the Network Server will have the following O/P in the log file
 
 
