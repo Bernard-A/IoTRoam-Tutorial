@@ -49,4 +49,4 @@ If your AS is not hosted on the same server as your NS, you will also need to ch
    
  
  [Configuring NS to enable DNS resolution]: #configuring-ns-to-enable-dns-resolution
- [JS Brief Intro]: 
+ [JS Brief Intro]: #js-brief-intro
