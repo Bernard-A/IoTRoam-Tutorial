@@ -24,7 +24,7 @@ For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted
  
   ### Install and Configure the  Chirpstack GW bridge
   
-  For this roaming tutorial we use the Open Source "Chirpstack"
+  For this roaming tutorial we use the Open Source ["Chirpstack"]
  
 ChirpStack Gateway Bridge is a service which converts LoRa® Packet Forwarder protocols into a ChirpStack Network Server common data-format (JSON and Protobuf). This component is part of the ChirpStack open-source LoRaWAN® Network Server stack.
 
@@ -33,4 +33,5 @@ ChirpStack Gateway Bridge is a service which converts LoRa® Packet Forwarder pr
 
 
 [For detailed information follow the Quick Start Guide]: https://www.multitech.com/documents/publications/quick-start-guides/82101452L-Conduit-Quick-Start.pdf 
- [A video tutorial could be found here]: https://www.multitech.net/developer/software/lora/getting-started-with-lora-conduit-aep/
+[A video tutorial could be found here]: https://www.multitech.net/developer/software/lora/getting-started-with-lora-conduit-aep/
+["Chirpstack"]: https://www.chirpstack.io
