@@ -16,7 +16,7 @@ For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted
     *	Status = LED blinks when the OS is fully loaded
     *	LS = Link Status
  * [For detailed information follow the Quick Start Guide] 
- * [A video tutorial could be found here] : https://www.multitech.net/developer/software/lora/getting-started-with-lora-conduit-aep/
+ * [A video tutorial could be found here] 
  
  ## Accessing the RGW
  
@@ -33,4 +33,4 @@ ChirpStack Gateway Bridge is a service which converts LoRa® Packet Forwarder pr
 
 
 [For detailed information follow the Quick Start Guide]: https://www.multitech.com/documents/publications/quick-start-guides/82101452L-Conduit-Quick-Start.pdf 
- [A video tutorial could be found here] : https://www.multitech.net/developer/software/lora/getting-started-with-lora-conduit-aep/
+ [A video tutorial could be found here]: https://www.multitech.net/developer/software/lora/getting-started-with-lora-conduit-aep/
