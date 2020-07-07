@@ -31,7 +31,7 @@ The DEBUG screen terminal is the one that shows debug commands such as in Figure
 In the other screen terminal, you should be able to type the command ```at``` and get an ```Ok``` as shown in the Figure 3. This tells that you have control over the LoRa end-device. 
 
 <p align="center">
-  <img width="150" height="100" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig3.png?raw=true">
+  <img width="150" height="100" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig4.png?raw=true">
 </p>
 
 ## Footnotes
