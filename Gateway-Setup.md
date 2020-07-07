@@ -34,6 +34,7 @@ ChirpStack GW Bridge is a service which converts LoRa® Packet Forwarder protoco
 ```sh
    wget https://artifacts.chirpstack.io/vendor/multitech/conduit/chirpstack-gateway-bridge_3.1.0-r1_arm926ejste.ipk 
 ```
+
     * Now that the .ipk package is stored on the Conduit, you can install it using the opkg package-manager utility. Example (assuming the same .ipk file):
 ```sh
    opkg install chirpstack-gateway-bridge_3.1.0-r1_arm926ejste.ipk
