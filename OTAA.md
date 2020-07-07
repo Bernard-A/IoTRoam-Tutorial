@@ -3,7 +3,7 @@ This page provides and introduction to the Join Server (JS), JoinEUI and configu
  * [JS Brief Intro]
  * [Configuring NS to enable DNS resolution]
  
- # JS Brief Intro
+ ## JS Brief Intro
  
 JS is used for authenticating the end-devices, is also identified by a 64-bit globally unique identifier termed as AppEUI/JoinEUI. The JS could be a separate server or same as the AS. In our set up the JS and AS functionalities runs in the same physical machine as shon in the figure below:
 
@@ -12,7 +12,7 @@ JS is used for authenticating the end-devices, is also identified by a 64-bit gl
 </p>
  
  
- # Configuring NS to enable DNS resolution
+ ## Configuring NS to enable DNS resolution
 
 The configuration file is located in the NS folder in ```/etc```. It is a ```toml``` file:
 
@@ -49,3 +49,4 @@ If your AS is not hosted on the same server as your NS, you will also need to ch
    
  
  [Configuring NS to enable DNS resolution]: #configuring-ns-to-enable-dns-resolution
+ [JS Brief Intro]: 
