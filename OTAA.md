@@ -2,7 +2,7 @@ This page provides an introduction to the Join Server (JS), JoinEUI and configur
 
  * [JS Brief Intro]
  * [Configuring NS to enable DNS resolution]
- * [Adding Certificates for secure TLS Communication between NS<->AS]
+ * [Generating Certificates for secure TLS Communication between NS<->AS/JS]
  
  ## JS Brief Intro
  
@@ -48,7 +48,7 @@ If your AS is not hosted on the same server as your NS, you will also need to ch
    server=http://10.1.86.48:8003
    ```
    
- ## Adding Certificates for secure TLS Communication between NS<->AS/JS
+ ## Generating Certificates for secure TLS Communication between NS<->AS/JS
  
 The idea is to generate Certificates for both the NS and the AS. Follow the 7 steps as follows: 
 
@@ -94,5 +94,5 @@ As mentioned earlier, We assume that the JS and the AS are in the same machine
 
 [Configuring NS to enable DNS resolution]: #configuring-ns-to-enable-dns-resolution
 [JS Brief Intro]: #js-brief-intro
-[Adding Certificates for secure TLS Communication between NS<->AS]: #adding-certificates-for-secure-tls-communication-between-ns-as
+[Generating Certificates for secure TLS Communication between NS<->AS]: #adding-certificates-for-secure-tls-communication-between-ns-as
 [CFSSL]: https://cfssl.org/
