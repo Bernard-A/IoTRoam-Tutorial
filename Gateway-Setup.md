@@ -60,7 +60,7 @@ The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet f
  * Select “Submit”.
  * Select the “Save and Restart” option on the left menu.
 
-## Install and Configuring the  Chirpstack Gateway(GW) bridge
+## Install and Configuring the  Chirpstack Gateway(GW) bridge (Debian/Ubuntu)
   
 For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step is to install Chirpstack GW bridge software in the RGW.
  
@@ -68,12 +68,28 @@ For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step 
 
 ```*The source for the information below is : (https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-chirpstack-gateway-bridge)*```
 
- * In the RGW, install Chirpstack GW bridge
-    * Log in o the RGW using SSH or use the USB to serial interface.
-    * Download the latest chirpstack-gateway-bridge .ipk package from: https://artifacts.chirpstack.io/vendor/multitech/conduit/. Example (assuming you want to install chirpstack-gateway-bridge_3.1.0-r1_arm926ejste.ipk): [```Download the package based upon your RGW vendor```]
+ * Log in o the RGW using SSH or use the USB to serial interface
+ * Activate the repository:
      ```sh
-          wget https://artifacts.chirpstack.io/vendor/multitech/conduit/chirpstack-gateway-bridge_3.1.0-r1_arm926ejste.ipk 
+       sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1CE2AFD36DBCCA00 
+       sudo echo "deb https://artifacts.chirpstack.io/packages/3.x/deb stable main" | sudo tee 
+       /etc/apt/sources.list.d/chirpstack.list
+       sudo apt-get update
      ```
+* Install the latest chirpstack-gateway-bridge 
+     ```sh
+          sudo apt-get install chirpstack-gateway-bridge 
+     ```
+* Start the latest chirpstack-gateway-bridge depending on your system uses ```init.d``` or ```systemd```
+    * init.d    
+    ```sh
+        sudo /etc/init.d/chirpstack-gateway-bridge [start|stop|restart|status]
+    ```
+    * systemd  
+    ```sh
+        systemctl [start|stop|restart|status] chirpstack-gateway-bridge
+    ```
+     
     * Now that the .ipk package is stored on the Conduit, you can install it using the opkg package-manager utility. Example (assuming the same .ipk file):
      ```sh
           opkg install chirpstack-gateway-bridge_3.1.0-r1_arm926ejste.ipk
