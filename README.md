@@ -18,3 +18,4 @@ This document is structured as follows:
 [Architecture]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 [Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
 [Setting up the Packet Forwarder and the Radio Gateway Bridge]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
+[Installing and Configuring the Network Server and the Application Server]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md
