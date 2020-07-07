@@ -28,7 +28,7 @@ For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step 
  
 *ChirpStack GW Bridge is a service which converts LoRa® Packet Forwarder protocols into a ChirpStack Network Server common data-format (JSON and Protobuf). This component is part of the ChirpStack open-source LoRaWAN® Network Server stack.*
 
-*The source for the information below is : (https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-chirpstack-gateway-bridge*
+*The source for the information below is : (https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-chirpstack-gateway-bridge)*
 
  * In the RGW, install Chirpstack GW bridge
     * Log in o the RGW using SSH or use the USB to serial interface.
@@ -51,7 +51,12 @@ For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step 
 
 *The packet forwarder is a program running on the RGW that forwards RF packets receive by the concentrator to the NS through a IP/UDP link.*
 
-The Mltitech RGW has a default Packet Forwarder. We have to disable that Packet forwarder and set up the Chirpstack Packet Forwarder.
+The Mltitech RGW has a default Packet Forwarder. We have to disable that Packet forwarder and set up the Chirpstack Packet Forwarder. 
+*The source for the information below is :(https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-packet-forwarder)*
+
+
+
+
 
 [For detailed information follow the Quick Start Guide]: https://www.multitech.com/documents/publications/quick-start-guides/82101452L-Conduit-Quick-Start.pdf 
 [A video tutorial could be found here]: https://www.multitech.net/developer/software/lora/getting-started-with-lora-conduit-aep/
