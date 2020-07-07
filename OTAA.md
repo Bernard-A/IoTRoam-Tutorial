@@ -1,6 +1,16 @@
-This page covers setting up the NS to enable DNS resolution:
+This page provides and introduction to the Join Server (JS), JoinEUI and configuring the NS to enable DNS resolution:
 
+ * [JS Brief Intro]
  * [Configuring NS to enable DNS resolution]
+ 
+ # JS Brief Intro
+ 
+JS is used for authenticating the end-devices, is also identified by a 64-bit globally unique identifier termed as AppEUI/JoinEUI. The JS could be a separate server or same as the AS. In our set up the JS and AS functionalities runs in the same physical machine as shon in the figure below:
+
+<p align="center">
+  <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig14.png?raw=true">
+</p>
+ 
  
  # Configuring NS to enable DNS resolution
 
@@ -36,5 +46,6 @@ If your AS is not hosted on the same server as your NS, you will also need to ch
    .  
    server=http://10.1.86.48:8003
    ```
+   
  
  [Configuring NS to enable DNS resolution]: #configuring-ns-to-enable-dns-resolution
