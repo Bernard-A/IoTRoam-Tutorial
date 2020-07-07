@@ -260,7 +260,6 @@ INFO[0163] backend/gateway: uplink frame received
 INFO[0164] device gateway rx-info meta-data saved        dev_eui=0101010101010101
 INFO[0164] device-session saved                          dev_addr=018f5aa9 dev_eui=0101010101010101
 INFO[0164] finished client unary call                    grpc.code=OK grpc.method=HandleUplinkData grpc.service=as.ApplicationServerService grpc.time_ms=52.204 span.kind=client system=grpc
-In this log, ChirpStack Network Server has processed the uplink frame, and forwarded the application payload to the ApplicationServerService API (provided by ChirpStack Application Server).
 ```
 
 In this log, the NS has processed the uplink frame from the RGW, and forwarded the application payload to the AS
