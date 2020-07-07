@@ -15,4 +15,12 @@ For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted
     *	PWR = Power
     *	Status = LED blinks when the OS is fully loaded
     *	LS = Link Status
-
+ * For detailed information follow the Quick Start Guide: https://www.multitech.com/documents/publications/quick-start-guides/82101452L-Conduit-Quick-Start.pdf 
+ * A video tutorial could be found here : https://www.multitech.net/developer/software/lora/getting-started-with-lora-conduit-aep/
+ 
+ ## Accessing the RGW
+ 
+ There are multiple interfaces available to access the device - Serial ports, Ethernet and Cellular (if you buy the Multitech Conduit with Cellular antenna). Assming that you have watched the Mulitech links above and you are able to access your RGW by an SSH connection, the steps to follow are detailed in the following subsections:
+ 
+  ## Install and Configure the RGW bridge
+ 
