@@ -178,5 +178,6 @@ When you do not see any data appear when your device sends data, then make sure 
 ["Chirpstack"]: https://www.chirpstack.io
 [Architecture]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 [Hardware Setup]: #Hardware-Setup
+[Accessing the RGW]: #Accessing-the-RGW
 
 
