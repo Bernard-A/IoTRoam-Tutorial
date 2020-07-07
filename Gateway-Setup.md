@@ -28,7 +28,8 @@ If you relate to the [Architecture] page, our focus is on the two components as 
   <img width="300" height="150" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig8.png?raw=true">
 </p>
 
- 
+The function of **Packet Forwarder** is to forward the received LoRa Packet from the ED to the NS (which is identified by a ixed IP address and port). The function of the **GW bridge** is to pack the data sent by the packet forwarder into a specified format (e.g. JSON) nd upload to the NS.
+
 ## Install and Configuring the  Chirpstack Gateway(GW) bridge
   
 For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step is to install Chirpstack GW bridge software in the RGW.
