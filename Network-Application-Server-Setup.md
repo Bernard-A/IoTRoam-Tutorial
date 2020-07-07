@@ -264,6 +264,22 @@ INFO[0164] finished client unary call                    grpc.code=OK grpc.metho
 
 In this log, the NS has processed the uplink frame from the RGW, and forwarded the application payload to the AS
 
+### Verify whether the AS receives data from the NS
+Depending on your OS, one of the following commands will show you the logs:
+
+```sh
+journalctl -f -n 100 -u chirpstack-application-server
+tail -f -n 100 /var/log/chirpstack-application-server/chirpstack-application-server.log
+```
+Expected log output
+
+```sh
+INFO[0186] handler/mqtt: publishing message              qos=0 topic=application/1/device/0101010101010101/rx
+INFO[0186] finished unary call with code OK              grpc.code=OK grpc.method=HandleUplinkData grpc.request.deadline="2018-09-24T10:54:37+02:00" grpc.service=as.ApplicationServerService grpc.start_time="2018-09-24T10:54:36+02:00" grpc.time_ms=6.989 peer.address="[::1]:63536" span.kind=server system=grpc
+```
+
+In this log, the AS received an uplink application-payload from the NS and published this payload to the application/1/device/0101010101010101/rx MQTT topic.
+
 [Network Server Setup]: #network-server-setup
 [application Server Setup]: #application-server-setup
 [Verifying Communication between RGW->NS->AS]: #verify-communication-from-rgw-ns-as-setup
