@@ -13,16 +13,16 @@ In this document, We have used Multitech products for ED and the RGW. If you are
 different Hardware you have to follow those Hardware specific details to set up the 
 ED and RGW. The scenario as per Fig 1 is as follows:
  *	Multitech Conduit Gateway (Packet-forwarder + LoRa Gateway Bridge)
- *	NS should have MQTT + Redis + PostgreSQL as pre-requisites
- *	AS should have MQTT + Redis + PostgreSQL as pre-requisites
+ *	NS should have  as pre-requisites the following installed : MQTT, Redis and PostgreSQL
+ *	AS should have  as pre-requisites the following installed : MQTT, Redis and PostgreSQL
 
 These are the ports you need to take into account for the firewall rules:
- *	GW to server A (MQTT) (default 1883)
- *	LoRa Server to LoRa App Server API (default 8001)
- *	LoRa App Server to LoRa Server API (default 8000)
- *	LoRa Server to LoRa App Server join-server API (default 8003)
-
+ *	GW => NS  (default is Port 1883 for MQTT))
+ *	NS => AS (default is Port 8001)
+ *	AS => NS (default is Port 8000)
+ *	NS => AS to (default is Port 8003) #This is required if your AS and Join Server (JS) 
+                                        are same machines
 
 Additionally, you probably want to expose the following ports too:
- *	From your machine to AS web-interface (default port 8080)
- *	From your machine to NS and AS MQTT (so that you can subscribe to the MQTT messages) (default port 1883)
+ *	From your computer to AS web-interface (default is port 8080)
+ *	From your computer to NS and AS MQTT (so that you can subscribe to the MQTT messages) (default is port 1883)
