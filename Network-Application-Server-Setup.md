@@ -32,8 +32,22 @@ $ sudo -u postgres psql
 > \q
 ```
 
-Verify the set up
+Verify that you are able to connect to the PSQL database
 
 ```sh
 $ psql -h localhost -U chirpstack_ns -W chirpstack_ns
+```
+
+###	Obtaining and Installing the ChirpStack Network Server
+
+The binary for ChirpStack Network Server is accessible following the link: https://www.chirpstack.io/network-server/overview/downloads/
+
+Setup the Network Server, either using the binary from the link above, or by using Debian package manager. To install from the package manager, you will also need “apt-transport-https” to connect to the repository.
+
+```sh
+$ sudo apt install apt-transport-https
+$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1CE2AFD36DBCCA00
+$ sudo echo "deb https://artifacts.chirpstack.io/packages/3.x/deb stable main" | sudo tee /etc/apt/sources.list.d/chirpstack.list
+$ sudo apt-get update
+$ sudo apt-get install chirpstack-network-server
 ```
