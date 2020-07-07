@@ -25,7 +25,7 @@ There are multiple interfaces available to access the device - Serial ports, Eth
 If you relate to the [Architecture] page, our focus is on the two components as shown in the figure below: 
 
 <p align="center">
-  <img width="300" height="200" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig8.png?raw=true">
+  <img width="300" height="150" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig8.png?raw=true">
 </p>
 
  
