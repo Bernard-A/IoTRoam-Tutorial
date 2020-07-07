@@ -180,7 +180,7 @@ When you do not see any data appear when your device sends data, then make sure 
 [Hardware Setup]: #Hardware-Setup
 [Accessing the RGW]: #Accessing-the-RGW
 [Install and Configuring the Packet Forwarder]: #Install-and-Configuring-the-Packet-Forwarder
-[Install and Configuring the  Chirpstack Gateway bridge]: #Install-and-Configuring-the-Chirpstack-Gateway-bridge
+[Install and Configuring the  Chirpstack Gateway bridge]: #install-and-configuring-the--chirpstack-gatewaygw-bridge-debianubuntu
 [Post Sanity check]: #Post-Sanity-check
 
 
