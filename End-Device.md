@@ -16,7 +16,7 @@ Now, connect the other end of the USB connector the computer, you will see red, 
 
 Of the two serial connections, one is for “DEBUG” and another is for “Communicating with the device”.
 
-Use the Serial console (https://tinyurl.com/uxtkgt2<sup>1</sup>. ). Launch two serial consoles for both serial connections assuming the serial connections are ``` ACM0 and ACM1 ```
+Use the [Serial console]. Launch two serial consoles for both serial connections assuming the serial connections are ``` ACM0 and ACM1 ```
  ```sh
 screen /dev/ttyACM0 115200
 screen /dev/ttyACM1 115200
@@ -39,3 +39,4 @@ In the other screen terminal, you should be able to type the command ```at``` an
 
 [Multitech mDoT]: https://www.multitech.com/brands/multiconnect-mdot
 [Micro Developer Kit]: https://www.multitech.com/brands/micro-mdot-devkit
+[Serial console]: https://tinyurl.com/uxtkgt2
