@@ -1,7 +1,8 @@
-This page provides and introduction to the Join Server (JS), JoinEUI and configuring the NS to enable DNS resolution:
+This page provides an introduction to the Join Server (JS), JoinEUI and configuring the NS to enable DNS resolution. To communicate securely between the NS and AS this page also explains how to configure the TLS certificates:
 
  * [JS Brief Intro]
  * [Configuring NS to enable DNS resolution]
+ * [Adding Certificates for secure TLS Communication between NS<->AS]
  
  ## JS Brief Intro
  
@@ -47,6 +48,8 @@ If your AS is not hosted on the same server as your NS, you will also need to ch
    server=http://10.1.86.48:8003
    ```
    
+ ## Adding Certificates for secure TLS Communication between NS<->AS
  
  [Configuring NS to enable DNS resolution]: #configuring-ns-to-enable-dns-resolution
  [JS Brief Intro]: #js-brief-intro
+ [Adding Certificates for secure TLS Communication between NS<->AS]: #
