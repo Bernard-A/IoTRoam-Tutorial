@@ -3,9 +3,10 @@
 This page covers the following operating systems:
 
  * [Hardware Setup]
- * [Installation on Debian]
- * [Installation on FreeBSD]
- * [Installation on Ubuntu]
+ * [Accessing the RGW]
+ * [Install and Configuring the Packet Forwarder]
+ * [Install and Configuring the  Chirpstack Gateway(GW) bridge]
+ * [Post Sanity check]
 
 
 ## Hardware Setup
