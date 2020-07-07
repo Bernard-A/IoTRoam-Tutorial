@@ -18,15 +18,17 @@ For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted
  * [For detailed information follow the Quick Start Guide] 
  * [A video tutorial could be found here] 
  
- ## Accessing the RGW
+## Accessing the RGW
  
 There are multiple interfaces available to access the device - Serial ports, Ethernet and Cellular (if you buy the Multitech Conduit with Cellular antenna). Assuming that you are able to access (by watching the Mulitech links above or you have or solved your selves) to your RGW by an SSH connection, the steps to follow are detailed in the following subsections:
  
-  ### Install and Configure the  Chirpstack Gateway(GW) bridge
+## Install and Configuring the  Chirpstack Gateway(GW) bridge
   
 For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step is to install Chirpstack GW bridge software in the RGW.
  
 *ChirpStack GW Bridge is a service which converts LoRa® Packet Forwarder protocols into a ChirpStack Network Server common data-format (JSON and Protobuf). This component is part of the ChirpStack open-source LoRaWAN® Network Server stack.*
+
+*The source for the information below is : (https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-chirpstack-gateway-bridge*
 
  * In the RGW, install Chirpstack GW bridge
     * Log in o the RGW using SSH or use the USB to serial interface.
@@ -42,9 +44,14 @@ For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step 
     * Start ChirpStack Gateway Bridge and ensure it will be started on boot. Example:
      ```sh
       /etc/init.d/chirpstack-gateway-bridge start
+      update-rc.d chirpstack-gateway-bridge defaults
      ```
 
+## Install and Configuring the Chirpstack Packet Forwarder
 
+*The packet forwarder is a program running on the RGW that forwards RF packets receive by the concentrator to the NS through a IP/UDP link.*
+
+The Mltitech RGW has a default Packet Forwarder. We have to disable that Packet forwarder and set up the Chirpstack Packet Forwarder.
 
 [For detailed information follow the Quick Start Guide]: https://www.multitech.com/documents/publications/quick-start-guides/82101452L-Conduit-Quick-Start.pdf 
 [A video tutorial could be found here]: https://www.multitech.net/developer/software/lora/getting-started-with-lora-conduit-aep/
