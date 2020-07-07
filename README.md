@@ -1,10 +1,10 @@
-# LoRaWAN Roaming Tutorial
+# LoRaWAN Roaming Platform Set up Tutorial
 This document describes the architecture, prerequisites, installation, post-install sanity
 checking for setting up an academic LoRaWAN Roaming platform
 
 ## Structure
 
-This document is structured as follows:
+This document is structured and one can follow it in the chronological order:
 
  * [Architecture]
  * [Setting up the End-Device]
