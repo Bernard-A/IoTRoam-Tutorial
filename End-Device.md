@@ -1,5 +1,7 @@
 # Multitech End-Device Setup
 
+This page explains setting up of the ED, so that it can send data over LoRa PHY 
+
 ## Hardware Setup
 
 We are using [Multitech mDoT]. The mDot is fixed to the [Micro Developer Kit]. One has to connect the LoRa Antenna to mDot. Then connect a USB wire to the Micro developer Kit
