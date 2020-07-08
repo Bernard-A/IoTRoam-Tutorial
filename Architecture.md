@@ -21,7 +21,7 @@ ED and RGW. The scenario as per Fig 1 is as follows:
  *	AS should have  as pre-requisites the following installed : MQTT, Redis and PostgreSQL
  *  NetIDs and JoinEUIs provisioned in the DNS and it is puvlic accessible over the Internet
 
-These are the ports you need to take into account for the firewall rules:
+To work effectively, one should also take into account for the firewall rules so that the ports are open between the different interfaces :
  *	GW => NS  (default is Port 1883 for MQTT)
  *	NS => AS (default is Port 8001)
  *	AS => NS (default is Port 8000)
