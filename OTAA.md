@@ -62,8 +62,11 @@ The idea is to generate Certificates for both the NS and the AS. Follow the 7 st
 
 ### 4. Configuration in the NS files 
  * Modify ```$ config/loraserver/api/server/certificate.json``` to fit your NS deployment
-     * ```“CN”:”network-server-afnic``` => (You can put whatever you want in the place of network-server-afnic)
-     * "hosts": [YOUR_NETWORK_SERVER_HOST_IP_ADDRESSES]``` => (by default : ["127.0.0.1","localhost"], we added in our server’s domain name and public IP here, ours is as follow : ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.4"] )
+     * ```“CN”:”network-server-afnic``` => (You can put whatever you want in the place of ```network-server-afnic```)
+     * "hosts": [YOUR_NETWORK_SERVER_HOST_IP_ADDRESSES]```. By default, it contains ```["127.0.0.1","localhost"]```. Our Configuration looks as follows:
+        ```sh
+               ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.4"] # We added our server’s domain name and public IP
+        ```
  * Modify ```$ config/loraserver/api/client/certificate.json``` to fit your AS deployment
      * ``“CN”:”Copy the ID under the section [application_server] in the file  ```chirpstack-application-server.toml ```  in the application server here" 
 
