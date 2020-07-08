@@ -68,7 +68,11 @@ The idea is to generate Certificates for both the NS and the AS. Follow the 7 st
                ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.4"] # We added our server’s domain name and public IP
         ```
  * Modify ```$ config/loraserver/api/client/certificate.json``` to fit your AS deployment
-     * ``“CN”:”Copy the ID under the section [application_server] in the file  ```chirpstack-application-server.toml ```  in the application server here" 
+     * ```“CN”:“01234567-0123-0123-0123-0123456789ab”```  
+        ```sh
+        Copy the ID under the section [application_server] in the file  'chirpstack-application-server.toml'  in the application server 
+        in the place of '01234567-0123-0123-0123-0123456789ab' 
+        ```
 
 ### 5. Configuration in the AS files 
  * Modify ```$ config/lora-app-server/api/server/certificate.json``` to fit your AS deployment        
