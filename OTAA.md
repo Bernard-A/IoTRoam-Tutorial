@@ -63,7 +63,7 @@ The idea is to generate Certificates for both the NS and the AS. Follow the 7 st
 ### 4. Configuration in the NS files 
  * Modify ```$ config/loraserver/api/server/certificate.json``` to fit your NS deployment
      * ```“CN”:”network-server-afnic``` => (You can put whatever you want in the place of ```network-server-afnic```)
-     * "hosts": [YOUR_NETWORK_SERVER_HOST_IP_ADDRESSES]```. By default, it contains ```["127.0.0.1","localhost"]```. Our Configuration looks as follows:
+     * ```"hosts": [YOUR_NETWORK_SERVER_HOST_IP_ADDRESSES]```. By default, it contains ```["127.0.0.1","localhost"]```. Our Configuration is updated as follows:
         ```sh
                ["127.0.0.1","localhost","vps***.ovh.net,1.2.3.4"] # We added our server’s domain name and public IP
         ```
