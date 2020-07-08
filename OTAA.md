@@ -70,8 +70,8 @@ The idea is to generate Certificates for both the NS and the AS. Follow the 7 st
  * Modify ```$ config/loraserver/api/client/certificate.json``` to fit your AS deployment
      * ```“CN”:“01234567-0123-0123-0123-0123456789ab”```  
         ```sh
-        Copy the ID under the section [application_server] in the file  'chirpstack-application-server.toml'  in the application server 
-        in the place of '01234567-0123-0123-0123-0123456789ab' 
+        Copy the "ID" under the section [application_server] in the file  'chirpstack-application-server.toml'  
+        in the application server in the place of '01234567-0123-0123-0123-0123456789ab' 
         ```
 
 ### 5. Configuration in the AS files 
