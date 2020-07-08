@@ -156,9 +156,9 @@ Setup your PostgreSQL database for your ChirpStack Network Server
 $ sudo -u postgres psql
 > create role chirpstack_as with login password 'dbaspassword';
 > create database chirpstack_as with owner chirpstack_as;
-      > \c chirpstack_as
-      > create extension pg_trgm;
-      > create extension hstore;
+> \c chirpstack_as
+> create extension pg_trgm;
+> create extension hstore;
 > \q
 ```
 
