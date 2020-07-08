@@ -19,6 +19,7 @@ ED and RGW. The scenario as per Fig 1 is as follows:
  *	RGW which needs to be set up with a *Packet-forwarder* and *GW Bridge*
  *	NS should have  as pre-requisites the following installed : MQTT, Redis and PostgreSQL
  *	AS should have  as pre-requisites the following installed : MQTT, Redis and PostgreSQL
+ *  NetIDs and JoinEUIs provisioned in the DNS and it is puvlic accessible over the Internet
 
 These are the ports you need to take into account for the firewall rules:
  *	GW => NS  (default is Port 1883 for MQTT)
