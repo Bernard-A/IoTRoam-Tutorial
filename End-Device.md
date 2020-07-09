@@ -18,6 +18,8 @@ We are using [Multitech mDoT]. The mDot is fixed to the [Micro Developer Kit]. O
 
 The Micro Developer Kit where the ED is fixed enables one to access the ED from one's computer. As shown in the Figure 1, the Micro Developer Kit is connected with a USB connection which can be connected to one's computer. 
 
+ ``` If one doesn't have an USB connector like in Figure 1, one can also directly connect the Micro Developer Kit to the Computer's USB port. ```
+
 Before your Connect the other end of the USB connector to the computer, if you are using a Linux Distribution, type ```ls /dev/tty*``` in your terminal. Have a look at the existing tty serial connections.
 
 Now, connect the other end of the USB connector the computer, you will see red, blue LEDs in the micro developer kit. Now type ```ls /dev/tty*``` in your terminal, you will see two new serial connections. Normally they will be of form ```/dev/tty/ACM0, /dev/tty/ACM1``` or ```/dev/ttyXRUSB0, /dev/tty/ACM0```.
