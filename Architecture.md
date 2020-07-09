@@ -13,7 +13,8 @@ Figure 1 shows the basic building blocks for setting up a Roaming LoRaWAN platef
 
 ```diff
 -           In this document, We have used Multitech products for ED and the RGW. If you are using a
--           different Hardware you have to follow those Hardware specific details to set up the ED and RGW. 
+-           different Hardware you have to follow those Hardware specific details to set up the ED and RGW.
++           Please follow the Pointer section 
 ```
 
 The scenario as per Fig 1 is as follows:
@@ -32,3 +33,10 @@ To work effectively, one should also take into account for the firewall rules so
 Additionally, you probably want to expose the following ports too:
  *	From your computer to AS web-interface (default is port 8080)
  *	From your computer to NS and AS (so that you can subscribe to the MQTT messages) (default is port 1883)
+ 
+ 
+## Pointer Section 
+Next section to follow: [Setting up the End-Device]
+
+[Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
+ 
