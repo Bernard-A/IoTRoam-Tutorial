@@ -6,7 +6,7 @@ Objective of this tutorial is to help users to set up a LoRaWAN as per the LoRaW
 
 ## Structure
 
-This document is structured and one can follow it in the chronological order:
+This document is structured and one can follow sequentially starting with ``` Architecture ```:
 
  * [Architecture]
  * [Setting up the End-Device]
@@ -16,6 +16,7 @@ This document is structured and one can follow it in the chronological order:
  * [OTAA via DNS]
  * [Passive roaming via DNS]
  
+ ``` At the end of each page, there will be a pointer section to guide you to the next section. ```
 
 [Architecture]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 [Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
