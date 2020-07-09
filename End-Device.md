@@ -24,6 +24,8 @@ Before your Connect the other end of the USB connector to the computer, if you a
 
 Now, connect the other end of the USB connector the computer, you will see red, blue LEDs in the micro developer kit. Now type ```ls /dev/tty*``` in your terminal, you will see two new serial connections. Normally they will be of form ```/dev/tty/ACM0, /dev/tty/ACM1``` or ```/dev/ttyXRUSB0, /dev/tty/ACM0```.
 
+*``` If the mDoT is not updated with the latest firmware, it needs to be [downloaded] to your computer ```
+
 Of the two serial connections, one is for ```DEBUG``` and another is for ```Communicating with the device```.
 
 Use the [Serial console]<sup>1</sup>. Launch two serial consoles for both serial connections assuming the serial connections are ``` ACM0 and ACM1 ```
@@ -61,3 +63,4 @@ In any case, If you want to go to the [previous page]
 [Serial console]: https://tinyurl.com/uxtkgt2
 [Next section to follow]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
 [previous page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
+[downloaded]: https://www.multitech.net/developer/downloads/
