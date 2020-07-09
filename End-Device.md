@@ -1,5 +1,5 @@
 ```diff
--           In this document, We have used Multitech products for ED. If you are using a different
+-           In this document, We have used Multitech products as ED. If you are using a different
 -           Hardware you have to follow those Hardware specific details to set up the ED.
 +           Please follow the Pointer section for further details in this case
 ```
