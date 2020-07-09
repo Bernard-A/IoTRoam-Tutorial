@@ -6,7 +6,9 @@
 
 # Multitech RGW Setup
 
-This page covers setting up the RGW which are detailed in different sections as follows:
+This page covers setting up the RGW. The RGW recevies data from the ED over LoRa Radio Frequency. The RGW is responsible for transferring the received data to the NS over IP link in the required format. 
+
+The setting up og the RGW is detailed in different sections as follows:
 
  * [Hardware Setup]
  * [Accessing the RGW]
@@ -17,7 +19,7 @@ This page covers setting up the RGW which are detailed in different sections as 
 
 ## Hardware Setup
 
-For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted into one of the two RF slots of the Multitech MultiConnect Conduit as illustrated in Figure 2
+For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted into one of the two RF slots of the Multitech [MultiConnect Conduit] as illustrated in Figure 2
 
 <p align="center">
   <img width="400" height="150" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig7.png?raw=true">
@@ -188,5 +190,6 @@ When you do not see any data appear when your device sends data, then make sure 
 [Install and Configuring the Packet Forwarder]: #Install-and-Configuring-the-Packet-Forwarder
 [Install and Configuring the  Chirpstack Gateway bridge]: #install-and-configuring-the--chirpstack-gatewaygw-bridge-debianubuntu
 [Post Sanity check]: #Post-Sanity-check
+[MultiConnect Conduit]: https://www.multitech.com/brands/multiconnect-conduit
 
 
