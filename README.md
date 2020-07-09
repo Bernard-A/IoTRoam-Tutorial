@@ -24,5 +24,5 @@ This document is structured and one can follow it in the chronological order:
 [Installing and Configuring the Network Server and the Application Server]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md
 [Setting up the DNS infrastructure]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/DNS-Setup.md
 [OTAA via DNS]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/OTAA.md
-[provision]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/DNS-Setup.md
+[provision]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/DNS-Setup.md#how-to-provision-netids-and-joineuis-in-the-dns-for-otaa-and-roaming
 [certificates]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/OTAA.md
