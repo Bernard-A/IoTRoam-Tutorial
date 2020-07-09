@@ -191,6 +191,10 @@ If you see these logs, then this indicates that the ChirpStack Gateway Bridge co
 
 ### ChirpStack Gateway Bridge is publishing the data to the MQTT broker
 
+<p align="center">
+  <img width="400" height="150" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig17.png?raw=true">
+</p>
+
 To validate that the ChirpStack Gateway Bridge is publishing LoRa® frames to the MQTT broker, you can subscribe to the gateway/# MQTT topic. When using the mosquitto_sub utility, you can execute the following command:
 
 ```sh
