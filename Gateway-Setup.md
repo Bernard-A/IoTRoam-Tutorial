@@ -63,10 +63,6 @@ If you relate to the [Architecture] page, our focus is on the two components as 
 
 The function of **Packet Forwarder** is to forward the received LoRa Packet from the ED to the NS (which is identified by a fixed IP address and port). The function of the **GW bridge** is to pack the data sent by the packet forwarder into a specified format (e.g. JSON) and upload to the NS.
 
-
-
-
-
 *The packet forwarder is a program running on the RGW that forwards RF packets receive by the concentrator to the NS through a IP/UDP link.*
 
 ```The source for the information below is :(https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-packet-forwarder)```
@@ -104,15 +100,13 @@ We are using use the Open Source ["Chirpstack"]. The first step is to install Ch
 ```*The source for the information below is : (https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-chirpstack-gateway-bridge)*```
 
  * Log in o the RGW using  ```SSH ``` or use the  ```USB to serial interface ```
- * Activate the repository:
-     ```sh
-       sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1CE2AFD36DBCCA00 
-       sudo echo "deb https://artifacts.chirpstack.io/packages/3.x/deb stable main" | sudo tee  /etc/apt/sources.list.d/chirpstack.list
-       sudo apt-get update
-     ```
+ * Download the latest chirpstack-gateway-bridge ```.ipk``` package
+   ```sh
+       wget https://artifacts.chirpstack.io/vendor/multitech/conduit/chirpstack-gateway-bridge_(latest_version_number).ipk
+   ```
 * Install the latest chirpstack-gateway-bridge 
      ```sh
-          sudo apt-get install chirpstack-gateway-bridge 
+          opkg install chirpstack-gateway-bridge_(latest_version_number).ipk
      ```
 * Update the MQTT connection details so that ChirpStack Gateway Bridge is able to connect to your MQTT broker. You will find the configuration file in the ```/var/config/chirpstack-gateway-bridge/chirpstack-gateway-bridge.toml``` directory.
 * Start the latest chirpstack-gateway-bridge depending on your system uses ```init.d``` or ```systemd```
@@ -214,5 +208,6 @@ When you do not see any data appear when your device sends data, then make sure 
 [here]: https://www.chirpstack.io/gateway-bridge/gateway/multitech/
 [Conduit AEP model]: https://www.multitech.net/developer/products/multiconnect-conduit-platform/conduit/
 [Configure the AEP model]: https://www.thethingsnetwork.org/docs/gateways/multitech/aep.html
+[latest]: https://artifacts.chirpstack.io/vendor/multitech/conduit/
 
 
