@@ -24,7 +24,7 @@ Before your Connect the other end of the USB connector to the computer, if you a
 
 Now, connect the other end of the USB connector the computer, you will see red, blue LEDs in the micro developer kit. Now type ```ls /dev/tty*``` in your terminal, you will see two new serial connections. Normally they will be of form ```/dev/tty/ACM0, /dev/tty/ACM1``` or ```/dev/ttyXRUSB0, /dev/tty/ACM0```.
 
-*``` If the mDoT is not updated with the latest firmware, it needs to be [downloaded] to your computer ```
+*If the mDoT is not updated with the latest firmware, it needs to be [downloaded] to your computer*
 
 Of the two serial connections, one is for ```DEBUG``` and another is for ```Communicating with the device```.
 
