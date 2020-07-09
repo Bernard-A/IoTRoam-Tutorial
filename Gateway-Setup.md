@@ -97,7 +97,7 @@ The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet f
 
 ## Install and Configuring the  Chirpstack Gateway(GW) bridge (Debian/Ubuntu)
   
-For this roaming tutorial we use the Open Source ["Chirpstack"]. The first step is to install Chirpstack GW bridge software in the RGW.
+We are using use the Open Source ["Chirpstack"]. The first step is to install Chirpstack GW bridge software in the RGW.
  
 *ChirpStack GW Bridge is a service which converts LoRa® Packet Forwarder protocols into a ChirpStack Network Server common data-format (JSON and Protobuf). This component is part of the ChirpStack open-source LoRaWAN® Network Server stack.*
 
