@@ -12,8 +12,11 @@ Figure 1 shows the basic building blocks of a LoRaWAN Roaming infrastructure. Th
 </p>
 
 
-<span style="background-color: #FFFF00"> In this document, We have used Multitech products for ED and the RGW. If you are using a
-different Hardware you have to follow those Hardware specific details to set up the ED and RGW. </span>
+::: warning
+In this document, We have used Multitech products for ED and the RGW. If you are using a
+different Hardware you have to follow those Hardware specific details to set up the ED and RGW. 
+:::
+
 
 The scenario as per Fig 1 is as follows:
  *  The ED is capable of sending data over LoRa radio network
