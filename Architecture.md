@@ -13,8 +13,8 @@ Figure 1 shows the basic building blocks of a LoRaWAN Roaming infrastructure. Th
 
 
 ```diff
-- In this document, We have used Multitech products for ED and the RGW. If you are using a
-            different Hardware you have to follow those Hardware specific details to set up the ED and RGW. 
+-           In this document, We have used Multitech products for ED and the RGW. If you are using a
+-           different Hardware you have to follow those Hardware specific details to set up the ED and RGW. 
 ```
 
 The scenario as per Fig 1 is as follows:
