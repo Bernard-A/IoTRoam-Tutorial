@@ -18,9 +18,11 @@ This document is structured and one can follow sequentially starting with ``` Ar
  
  ``` At the end of each page, there will be a pointer section to guide you further ```
  
- ## Pointer Section 
+## Pointer Section 
  
- Next section to follow: [Architecture]
+Next section to follow: [Architecture]
+
+
 
 [Architecture]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 [Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
