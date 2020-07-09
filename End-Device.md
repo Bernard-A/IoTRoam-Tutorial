@@ -6,7 +6,7 @@
 
 # Multitech End-Device Setup
 
-This page explains setting up of the ED, so that it can send data over LoRa PHY 
+This page explains setting up of the ED, so that it can send data over LoRa Radio Frequency.
 
 ## Hardware Setup
 
