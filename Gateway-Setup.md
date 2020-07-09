@@ -92,8 +92,8 @@ The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet f
     }
    ```    
 ``` Note that the serv_port_up and serv_port_down represent the ports used to communicate with the chirpstack-gateway-bridge, usually on localhost (the server_address parameter). See the Figure above.```
- * Select “Submit”.
- * Select the “Save and Restart” option on the left menu.
+ * Select  ```Submit ```.
+ * Select the  ```Save and Restart ``` option on the left menu.
 
 ## Install and Configuring the  Chirpstack Gateway(GW) bridge (Debian/Ubuntu)
   
@@ -103,7 +103,7 @@ We are using use the Open Source ["Chirpstack"]. The first step is to install Ch
 
 ```*The source for the information below is : (https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-chirpstack-gateway-bridge)*```
 
- * Log in o the RGW using SSH or use the USB to serial interface
+ * Log in o the RGW using  ```SSH ``` or use the  ```USB to serial interface ```
  * Activate the repository:
      ```sh
        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1CE2AFD36DBCCA00 
