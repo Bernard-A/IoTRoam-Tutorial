@@ -11,12 +11,6 @@ Figure 1 shows the basic building blocks for setting up a Roaming LoRaWAN platef
   <img width="860" height="500" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig1.png?raw=true">
 </p>
 
-```diff
--           In this document, We have used Multitech products for ED and the RGW. If you are using a
--           different Hardware you have to follow those Hardware specific details to set up the ED and RGW.
-+           Please follow the Pointer section 
-```
-
 The scenario as per Fig 1 is as follows:
  *  The ED is capable of sending data over LoRa radio network
  *	RGW which needs to be set up with a *Packet-forwarder* and *GW Bridge*
