@@ -15,7 +15,7 @@ The setting up of the RGW is detailed in different sections as follows:
 
  * [Hardware Setup]
  * [Accessing the RGW]
- * [Install and Configuring the Packet Forwarder]
+ * [Configuring the Packet Forwarder]
  * [Install and Configuring the  Chirpstack Gateway bridge]
  * [Post Sanity check]
 
@@ -52,7 +52,7 @@ In addition, here is a brief pointer on the steps followed by us to access the M
  * [Configure the AEP model]. Depending on the firmware, the front end of the configuration process might slightly change.
 
 
-## Install and Configuring the Packet Forwarder
+## Configuring the Packet Forwarder
 
 
 If you relate to the [Architecture] page, our focus is on the two components as shown in the figure below: 
@@ -205,7 +205,7 @@ When you do not see any data appear when your device sends data, then make sure 
 [Architecture]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 [Hardware Setup]: #Hardware-Setup
 [Accessing the RGW]: #Accessing-the-RGW
-[Install and Configuring the Packet Forwarder]: #Install-and-Configuring-the-Packet-Forwarder
+[Configuring the Packet Forwarder]: #Configuring-the-Packet-Forwarder
 [Install and Configuring the  Chirpstack Gateway bridge]: #install-and-configuring-the--chirpstack-gatewaygw-bridge-debianubuntu
 [Post Sanity check]: #Post-Sanity-check
 [MultiConnect Conduit]: https://www.multitech.com/brands/multiconnect-conduit
