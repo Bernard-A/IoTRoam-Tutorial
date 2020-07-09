@@ -24,5 +24,5 @@ This document is structured and one can follow it in the chronological order:
 [Setting up the DNS infrastructure]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/DNS-Setup.md
 [OTAA via DNS]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/OTAA.md
 [provision]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/DNS-Setup.md#how-to-provision-netids-and-joineuis-in-the-dns-for-otaa-and-roaming
-[certificates]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/OTAA.md
+[certificates]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/OTAA.md#generating-certificates-for-secure-tls-communication-between-ns-asjs
 [EduRoam]: https://www.eduroam.org/
