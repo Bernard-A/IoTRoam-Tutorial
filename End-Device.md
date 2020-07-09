@@ -1,3 +1,9 @@
+```diff
+-           In this document, We have used Multitech products for ED. If you are using a different
+-           Hardware you have to follow those Hardware specific details to set up the ED.
++           Please follow the Pointer section for further details in this case
+```
+
 # Multitech End-Device Setup
 
 This page explains setting up of the ED, so that it can send data over LoRa PHY 
