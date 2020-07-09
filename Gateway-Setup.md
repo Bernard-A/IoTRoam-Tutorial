@@ -95,7 +95,7 @@ The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet f
  * Select  ```Submit ```.
  * Select the  ```Save and Restart ``` option on the left menu.
 
-## Install and Configuring the  Chirpstack Gateway(GW) bridge (Debian/Ubuntu)
+## Install and Configuring the  Chirpstack Gateway(GW) bridge 
   
 We are using use the Open Source ["Chirpstack"]. The first step is to install Chirpstack GW bridge software in the RGW.
  
@@ -206,7 +206,7 @@ When you do not see any data appear when your device sends data, then make sure 
 [Hardware Setup]: #Hardware-Setup
 [Accessing the RGW]: #Accessing-the-RGW
 [Configuring the Packet Forwarder]: #Configuring-the-Packet-Forwarder
-[Install and Configuring the  Chirpstack Gateway bridge]: #install-and-configuring-the--chirpstack-gatewaygw-bridge-debianubuntu
+[Install and Configuring the  Chirpstack Gateway bridge]: #install-and-configuring-the--chirpstack-gatewaygw-bridge
 [Post Sanity check]: #Post-Sanity-check
 [MultiConnect Conduit]: https://www.multitech.com/brands/multiconnect-conduit
 [End Device Hardware Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md#hardware-setup
