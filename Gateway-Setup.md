@@ -49,6 +49,7 @@ In addition, here is a brief pointer on the steps followed by us to access the M
  * Get the IP address are explained [here]
  * We are using the [Conduit AEP model] as firmware for the RGW. Hence it is possible to access the Web interface of the RGW connecting to the IP address from a web client.
  * If not done, do a [Firmware Upgrade] of the RGW  from the web interface
+ * [Configure the AEP model]. Depending on the firmware, the front end of the configuration process might slightly change.
 
 
 ## Install and Configuring the Packet Forwarder
@@ -212,5 +213,6 @@ When you do not see any data appear when your device sends data, then make sure 
 [Firmware Upgrade]: http://www.multitech.net/developer/downloads/#aep
 [here]: https://www.chirpstack.io/gateway-bridge/gateway/multitech/
 [Conduit AEP model]: https://www.multitech.net/developer/products/multiconnect-conduit-platform/conduit/
+[Configure the AEP model]: https://www.thethingsnetwork.org/docs/gateways/multitech/aep.html
 
 
