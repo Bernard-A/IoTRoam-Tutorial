@@ -17,8 +17,9 @@ as shown in the Figure 1:
   <img width="560" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig2.png?raw=true">
 </p>
 
+The Micro Developer Kit where the ED is fixed enables one to access the ED from one's computer. As shown in the Figure 1, the Micro Developer Kit is connected with a USB connection which can be connected to one's computer. 
 
-Before your Connect the other end of the USB connector to the computer and if you are using a Linux Distribution, type ```ls /dev/tty*``` in your terminal. Have a look at the existing tty serial connections.
+Before your Connect the other end of the USB connector to the computer, if you are using a Linux Distribution, type ```ls /dev/tty*``` in your terminal. Have a look at the existing tty serial connections.
 
 Now, connect the other end of the USB connector the computer, you will see red, blue LEDs in the micro developer kit. Now type ```ls /dev/tty*``` in your terminal, you will see two new serial connections. Normally they will be of form ```/dev/tty/ACM0, /dev/tty/ACM1``` or ```/dev/ttyXRUSB0, /dev/tty/ACM0```.
 
