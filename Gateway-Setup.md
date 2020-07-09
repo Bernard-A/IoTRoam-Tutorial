@@ -106,18 +106,14 @@ We are using use the Open Source ["Chirpstack"]. The first step is to install Ch
    ```
 * Install the latest chirpstack-gateway-bridge 
      ```sh
-          opkg install chirpstack-gateway-bridge_(latest_version_number).ipk
+          sudo opkg install chirpstack-gateway-bridge_(latest_version_number).ipk
      ```
 * Update the MQTT connection details so that ChirpStack Gateway Bridge is able to connect to your MQTT broker. You will find the configuration file in the ```/var/config/chirpstack-gateway-bridge/chirpstack-gateway-bridge.toml``` directory.
-* Start the latest chirpstack-gateway-bridge depending on your system uses ```init.d``` or ```systemd```
-    * init.d    
+* Start the latest chirpstack-gateway-bridge depending on your system 
     ```sh
-        sudo /etc/init.d/chirpstack-gateway-bridge [start|stop|restart|status]
+        sudo /etc/init.d/chirpstack-gateway-bridge start
     ```
-    * systemd  
-    ```sh
-        systemctl [start|stop|restart|status] chirpstack-gateway-bridge
-    ```
+ 
     
 ## Post Sanity check
 ```The source for the information below is :(https://www.chirpstack.io/guides/troubleshooting/gateway/)```
