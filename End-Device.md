@@ -26,23 +26,19 @@ We are using [Multitech mDoT]. The mDot is fixed to the [Micro Developer Kit].
  * Now, connect the other end of the USB connector or directly to the computer. You will see red, blue LEDs in the micro developer kit. Now type ```ls /dev/tty*``` in your terminal, you will see two new serial connections. Normally they will be of form ```/dev/tty/ACM0, /dev/tty/ACM1``` or ```/dev/ttyXRUSB0, /dev/tty/ACM0```.
 
  * *If the mDoT is not updated with the latest firmware, it needs to be [downloaded] to your computer and the [firmware upgrade] should be done*
+ * Of the two serial connections, one is for ```DEBUG``` and another is for ```Communicating with the device```. Use the [Serial console]<sup>1</sup>. Launch two serial consoles for both serial connections assuming the serial connections are ``` ACM0 and ACM1 ```
 
-Of the two serial connections, one is for ```DEBUG``` and another is for ```Communicating with the device```.
-
-Use the [Serial console]<sup>1</sup>. Launch two serial consoles for both serial connections assuming the serial connections are ``` ACM0 and ACM1 ```
-
- ```sh
-screen /dev/ttyACM0 115200
-screen /dev/ttyACM1 115200
-  ```
-
-The DEBUG screen terminal is the one that shows debug commands such as in Figure 2
+              ```sh
+                  screen /dev/ttyACM0 115200
+                  screen /dev/ttyACM1 115200
+              ```
+ * The ```DEBUG``` screen terminal is the one that shows debug commands such as in Figure 2
 
 <p align="center">
   <img width="300" height="100" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig3.png?raw=true">
 </p>
 
-In the other screen terminal, you should be able to type the command ```at``` and get an ```Ok``` as shown in the Figure 3. This tells that you have control over the LoRa end-device. 
+ * The other ```screen terminal``` could be used as interface with the ED. In this ```screen terminal``` you should be able to type the command ```at``` and get an ```Ok``` as shown in the Figure 3. This tells that you have control over the LoRa end-device. 
 
 <p align="center">
   <img width="150" height="100" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig4.png?raw=true">
