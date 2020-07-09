@@ -50,7 +50,7 @@ In the event of one using ED that is not Multitech mDoT, please make sure that y
 
 If you are using Multitech mDot and you have verified accessing the ED by following the page, [Next section to follow] 
 
-In any case, If you want to go to the [previous page]
+In any case, If you want to go back to the [Architecture page]
 
 ## Footnotes
 [1] The example to install screen is for Fedora. You install ‘screen’ if you don’t have according to your Linux distro requirements
@@ -59,6 +59,6 @@ In any case, If you want to go to the [previous page]
 [Micro Developer Kit]: https://www.multitech.com/brands/micro-mdot-devkit
 [Serial console]: https://tinyurl.com/uxtkgt2
 [Next section to follow]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
-[previous page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
+[Architecture page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 [downloaded]: https://www.multitech.net/developer/downloads/
 [firmware upgrade]: https://www.multitech.net/developer/software/mdot-software/mdot-firmware-upgrade/
