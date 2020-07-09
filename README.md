@@ -16,7 +16,7 @@ This document is structured and one can follow sequentially starting with ``` Ar
  * [OTAA via DNS]
  * [Passive roaming via DNS]
  
- ``` At the end of each page, there will be a pointer section to guide you to the next section. ```
+ ``` At the end of each page, there will be a pointer section to guide you further ```
 
 [Architecture]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 [Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
