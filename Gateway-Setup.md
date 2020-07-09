@@ -1,3 +1,9 @@
+```diff
+-           In this document, We have used Multitech products as RGW. If you are using a different
+-           Hardware you have to follow those Hardware specific details to set up the RGW.
++           Please follow the Pointer section below for further details in this case
+```
+
 # Multitech RGW Setup
 
 This page covers setting up the RGW which are detailed in different sections as follows:
