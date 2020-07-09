@@ -1,7 +1,7 @@
 ```diff
 -           In this document, We have used Multitech products as ED. If you are using a different
 -           Hardware you have to follow those Hardware specific details to set up the ED.
-+           Please follow the Pointer section for further details in this case
++           Please follow the Pointer section below for further details in this case
 ```
 
 # Multitech End-Device Setup
@@ -43,9 +43,19 @@ In the other screen terminal, you should be able to type the command ```at``` an
   <img width="150" height="100" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig4.png?raw=true">
 </p>
 
+## Pointer Section
+
+In the event of one using ED that is not Multitech mDoT, please make sure that you are able to access the device. Once verified, [Next section to follow] 
+
+If you are using Multitech mDot and you have verified accessing the ED by following the page, [Next section to follow] 
+
+In any case, If you want to go to the [previous page]
+
 ## Footnotes
 [1] The example to install screen is for Fedora. You install ‘screen’ if you don’t have according to your Linux distro requirements
 
 [Multitech mDoT]: https://www.multitech.com/brands/multiconnect-mdot
 [Micro Developer Kit]: https://www.multitech.com/brands/micro-mdot-devkit
 [Serial console]: https://tinyurl.com/uxtkgt2
+[Next section to follow]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
+[previous page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
