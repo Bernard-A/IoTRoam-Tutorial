@@ -21,11 +21,11 @@ We are using [Multitech mDoT]. The mDot is fixed to the [Micro Developer Kit].
 
  ``` If one doesn't have an USB connector like in Figure 1, one can also directly connect the Micro Developer Kit to the Computer's USB port. ```
 
-Before your Connect the other end of the USB connector to the computer, if you are using a Linux Distribution, type ```ls /dev/tty*``` in your terminal. Have a look at the existing tty serial connections.
+ * Before one Connect the other end of the USB connector to the computer or directly without the Connector, if you are using a Linux Distribution, type ```ls /dev/tty*``` in your terminal. Have a look at the existing tty serial connections.
 
-Now, connect the other end of the USB connector the computer, you will see red, blue LEDs in the micro developer kit. Now type ```ls /dev/tty*``` in your terminal, you will see two new serial connections. Normally they will be of form ```/dev/tty/ACM0, /dev/tty/ACM1``` or ```/dev/ttyXRUSB0, /dev/tty/ACM0```.
+ * Now, connect the other end of the USB connector or directly to the computer. You will see red, blue LEDs in the micro developer kit. Now type ```ls /dev/tty*``` in your terminal, you will see two new serial connections. Normally they will be of form ```/dev/tty/ACM0, /dev/tty/ACM1``` or ```/dev/ttyXRUSB0, /dev/tty/ACM0```.
 
-*If the mDoT is not updated with the latest firmware, it needs to be [downloaded] to your computer*
+ * *If the mDoT is not updated with the latest firmware, it needs to be [downloaded] to your computer and the [firmware upgrade] should be done*
 
 Of the two serial connections, one is for ```DEBUG``` and another is for ```Communicating with the device```.
 
@@ -65,3 +65,4 @@ In any case, If you want to go to the [previous page]
 [Next section to follow]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
 [previous page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 [downloaded]: https://www.multitech.net/developer/downloads/
+[firmware upgrade]: https://www.multitech.net/developer/software/mdot-software/mdot-firmware-upgrade/
