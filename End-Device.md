@@ -29,7 +29,7 @@ We are using [Multitech mDoT]. The mDot is fixed to the [Micro Developer Kit].
  * Of the two serial connections, one is for ```DEBUG``` and another is for ```Communicating with the device```. Use the [Serial console]<sup>1</sup>. Launch two serial consoles for both serial connections assuming the serial connections are ```ACM0 and ACM1```:
  
 ```sh              
-                   screen /dev/ttyACM0 115200
+                  screen /dev/ttyACM0 115200
                   screen /dev/ttyACM1 115200
  ```
  * The ```DEBUG``` screen terminal is the one that shows debug commands such as in Figure 2
