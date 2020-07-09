@@ -42,6 +42,18 @@ For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted
  
 There are multiple interfaces available to access the device - Serial ports, Ethernet and Cellular (if you buy the Multitech Conduit with Cellular antenna). Assuming that you are able to access (by watching the Mulitech links above or you have  solved your selves) to your RGW by an **SSH** and the **Web Interface**, the steps to follow are detailed in the following sections:
 
+In addition, here is a brief pointer on the steps followed by us to access the Multitech RGW:
+
+ * Connect to the USB device connection slot (found near the Antenna) in the Multitech Conduit RGW and then connect to your computer
+ * Similar to the [End Device Hardware Setup], identify and connect to the serial port from one's computer
+ * Get the IP address are explained [here]
+ * We are using the [Conduit AEP model] as firmware for the RGW. Hence it is possible to access the Web interface of the RGW connecting to the IP address from a web client.
+ * If not done, do a [Firmware Upgrade] of the RGW  from the web interface
+
+
+## Install and Configuring the Packet Forwarder
+
+
 If you relate to the [Architecture] page, our focus is on the two components as shown in the figure below: 
 
 <p align="center">
@@ -50,7 +62,9 @@ If you relate to the [Architecture] page, our focus is on the two components as 
 
 The function of **Packet Forwarder** is to forward the received LoRa Packet from the ED to the NS (which is identified by a fixed IP address and port). The function of the **GW bridge** is to pack the data sent by the packet forwarder into a specified format (e.g. JSON) and upload to the NS.
 
-## Install and Configuring the Packet Forwarder
+
+
+
 
 *The packet forwarder is a program running on the RGW that forwards RF packets receive by the concentrator to the NS through a IP/UDP link.*
 
@@ -194,5 +208,9 @@ When you do not see any data appear when your device sends data, then make sure 
 [Install and Configuring the  Chirpstack Gateway bridge]: #install-and-configuring-the--chirpstack-gatewaygw-bridge-debianubuntu
 [Post Sanity check]: #Post-Sanity-check
 [MultiConnect Conduit]: https://www.multitech.com/brands/multiconnect-conduit
+[End Device Hardware Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md#hardware-setup
+[Firmware Upgrade]: http://www.multitech.net/developer/downloads/#aep
+[here]: https://www.chirpstack.io/gateway-bridge/gateway/multitech/
+[Conduit AEP model]: https://www.multitech.net/developer/products/multiconnect-conduit-platform/conduit/
 
 
