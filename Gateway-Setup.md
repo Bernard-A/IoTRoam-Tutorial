@@ -8,7 +8,7 @@
 
 This page covers setting up the RGW. The RGW recevies data from the ED over LoRa Radio Frequency. The RGW is responsible for transferring the received data to the NS over IP link in the required format. 
 
-The setting up og the RGW is detailed in different sections as follows:
+The setting up of the RGW is detailed in different sections as follows:
 
  * [Hardware Setup]
  * [Accessing the RGW]
