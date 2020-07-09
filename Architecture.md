@@ -17,6 +17,11 @@ Figure 1 shows the basic building blocks of a LoRaWAN Roaming infrastructure. Th
 -           different Hardware you have to follow those Hardware specific details to set up the ED and RGW. 
 ```
 
+```diff
++ this text is highlighted in green
+- this text is highlighted in red
+```
+
 The scenario as per Fig 1 is as follows:
  *  The ED is capable of sending data over LoRa radio network
  *	RGW which needs to be set up with a *Packet-forwarder* and *GW Bridge*
