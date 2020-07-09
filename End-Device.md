@@ -48,7 +48,7 @@ We are using [Multitech mDoT]. The mDot is fixed to the [Micro Developer Kit].
 
 In the event of one using ED that is not Multitech mDoT, please make sure that you are able to access the device. Once verified, [Next section to follow] 
 
-If you are using Multitech mDot and you have verified accessing the ED by following the page, [Next section to follow] 
+If you are using Multitech mDot and you have verified accessing the ED by following the page, Next section to follow : [GW Setup]
 
 In any case, If you want to go back to the [Architecture page]
 
@@ -58,7 +58,7 @@ In any case, If you want to go back to the [Architecture page]
 [Multitech mDoT]: https://www.multitech.com/brands/multiconnect-mdot
 [Micro Developer Kit]: https://www.multitech.com/brands/micro-mdot-devkit
 [Serial console]: https://tinyurl.com/uxtkgt2
-[Next section to follow]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
+[GW Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
 [Architecture page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 [downloaded]: https://www.multitech.net/developer/downloads/
 [firmware upgrade]: https://www.multitech.net/developer/software/mdot-software/mdot-firmware-upgrade/
