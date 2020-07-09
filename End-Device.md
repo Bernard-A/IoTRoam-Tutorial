@@ -10,13 +10,14 @@ This page explains setting up of the ED, so that it can send data over LoRa Radi
 
 ## Hardware Setup
 
-We are using [Multitech mDoT]. The mDot is fixed to the [Micro Developer Kit]. One has to connect the LoRa Antenna to mDot. 
+We are using [Multitech mDoT]. The mDot is fixed to the [Micro Developer Kit]. 
+ * One has to connect the LoRa Antenna to mDot as shown in Figure 1 
 
 <p align="center">
   <img width="560" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig2.png?raw=true">
 </p>
 
-The Micro Developer Kit where the ED is fixed enables one to access the ED from one's computer. As shown in the Figure 1, the Micro Developer Kit is connected with a USB connection which can be connected to one's computer. 
+ * The Micro Developer Kit where the ED is fixed enables one to access the ED from one's computer. As shown in the Figure 1, the Micro Developer Kit is connected with a USB connection which can be connected to one's computer. 
 
  ``` If one doesn't have an USB connector like in Figure 1, one can also directly connect the Micro Developer Kit to the Computer's USB port. ```
 
