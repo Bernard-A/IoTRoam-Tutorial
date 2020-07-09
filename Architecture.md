@@ -20,8 +20,9 @@ The scenario as per Fig 1 is as follows:
 
 To work effectively, one should also take into account for the firewall rules so that the ports are open between the different interfaces :
  *	GW => NS  (default is Port 1883 for MQTT)
- *	NS => AS (default is Port 8001)
  *	AS => NS (default is Port 8000)
+ *  AS => NS (default is Port 1883 for MQTT) ``` As we used the NS as common MQTT brocker ```
+ *	NS => AS (default is Port 8001)
  *	NS => AS to (default is Port 8003)  ``` This is required if your AS and Join Server (JS) are same machines ```
 
 Additionally, you probably want to expose the following ports too:
