@@ -24,9 +24,7 @@ Now, connect the other end of the USB connector the computer, you will see red, 
 
 Of the two serial connections, one is for ```DEBUG``` and another is for ```Communicating with the device```.
 
-Use the [Serial console][^first]
-
-<sup>1</sup>. Launch two serial consoles for both serial connections assuming the serial connections are ``` ACM0 and ACM1 ```
+Use the [Serial console]<sup>1</sup>. Launch two serial consoles for both serial connections assuming the serial connections are ``` ACM0 and ACM1 ```
 
  ```sh
 screen /dev/ttyACM0 115200
@@ -46,7 +44,7 @@ In the other screen terminal, you should be able to type the command ```at``` an
 </p>
 
 ## Footnotes
-[^first]: The example to install screen is for Fedora. You install ‘screen’ if you don’t have according to your Linux distro requirements
+[1] The example to install screen is for Fedora. You install ‘screen’ if you don’t have according to your Linux distro requirements
 
 [Multitech mDoT]: https://www.multitech.com/brands/multiconnect-mdot
 [Micro Developer Kit]: https://www.multitech.com/brands/micro-mdot-devkit
