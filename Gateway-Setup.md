@@ -3,7 +3,8 @@
 -           Hardware you have to follow those Hardware specific details to set up the RGW
 -           We are using the Chirpstack Gateway Bridge as the source: https://www.chirpstack.io/gateway-bridge/overview/
 -           If you have a different source for the RGW set up, please follow the specific details
-+           Please follow the Pointer section below for further details if you are using HW or SW different from mentioned above
++           Please follow the Pointer section below for further details if you are using HW or SW different 
++           from mentioned above
 ```
 
 # Multitech RGW Setup
