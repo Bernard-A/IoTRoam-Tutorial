@@ -163,17 +163,19 @@ What we see in this log:
 
 ### ChirpStack Gateway Bridge is receiving data from the packet-forwarder
 
-All logs are written to /var/log/chirpstack-gateway-bridge/chirpstack-gateway-bridge.log. To verify that the GW bridge is receiving data from the packet forwarder, view and follow this logfile depending on your system:
-* init.d
+A log file could be added for the GW bridge by [customising]. Otherwise one could stop and start the GW bridge manually by pointing to the Config file as follows:
 ```sh
-   tail -f /var/log/chirpstack-gateway-bridge/chirpstack-gateway-bridge.log
+   /opt/chirpstack-gateway-bridge/chirpstack-gateway-bridge -c /var/config/chirpstack-gateway-bridge/chirpstack-gateway-bridge.toml
 ```
-* systemd
- ```sh
-   journalctl -u chirpstack-gateway-bridge -f -n 50
-```
+**Expected Output**
 
-Expected Output
+```sh
+INFO[0001] starting ChirpStack Gateway Bridge            docs="https://www.chirpstack.io/gateway-bridge/" version=3.4.0
+INFO[0001] backend/semtechudp: starting gateway udp listener  addr="0.0.0.0:1700"
+INFO[0001] integration/mqtt: connected to mqtt broker   
+INFO[0008] integration/mqtt: subscribing to topic        qos=0 topic="gateway/00800000a0000825/command/#"
+INFO[0075] integration/mqtt: publishing event            event=up qos=0 topic=gateway/00800000a0000825/event/up uplink_id=ef7a33fb-d83f-44d8-9e80-59c67427bbaa
+```
 
 When the Packet Forwarder sends data to the ChirpStack Gateway Bridge (this could be a “ping”), you will see the following logs:
 ```sh
@@ -182,7 +184,7 @@ When the Packet Forwarder sends data to the ChirpStack Gateway Bridge (this coul
 When your device sends an uplink message, you will see something like:
 
 ```sh
-  INFO[0267] mqtt: publishing message qos=0 topic=gateway/7276ff002e062c18/event/up
+INFO[0075] integration/mqtt: publishing event            event=up qos=0 topic=gateway/00800000a0000825/event/up uplink_id=ef7a33fb-d83f-44d8-9e80-59c67427bbaa
 ```
 If you see these logs, then this indicates that the ChirpStack Gateway Bridge components receives the data sent by the packet-forwarder.
 
@@ -215,5 +217,5 @@ When you do not see any data appear when your device sends data, then make sure 
 [Conduit AEP model]: https://www.multitech.net/developer/products/multiconnect-conduit-platform/conduit/
 [Configure the AEP model]: https://www.thethingsnetwork.org/docs/gateways/multitech/aep.html
 [latest]: https://artifacts.chirpstack.io/vendor/multitech/conduit/
-
+[customising]: https://forum.chirpstack.io/t/no-logfile-from-lora-gateway-bridge/2925/7
 
