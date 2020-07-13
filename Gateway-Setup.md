@@ -99,7 +99,7 @@ We are using use the Open Source ["Chirpstack"]. The first step is to install Ch
 
 ```*The source for the information below is : (https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-chirpstack-gateway-bridge)*```
 
- * Log in o the RGW using  ```SSH ``` or use the  ```USB to serial interface ```
+ * Log in to the RGW using  ```SSH``` or use the  ```USB to serial interface ```
  * Download the latest chirpstack-gateway-bridge ```.ipk``` package
    ```sh
        wget https://artifacts.chirpstack.io/vendor/multitech/conduit/chirpstack-gateway-bridge_(latest_version_number).ipk
