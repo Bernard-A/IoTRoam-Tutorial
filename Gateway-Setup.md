@@ -44,9 +44,9 @@ There are multiple interfaces available to access the device - Serial ports, Eth
 
 In addition, here is a brief pointer on the steps followed by us to access the Multitech RGW:
 
- * Connect to the USB device connection slot (found near the Antenna) in the Multitech Conduit RGW and then connect to your computer
- * Similar to the [End Device Hardware Setup], identify and connect to the serial port from one's computer
- * Get the IP address are explained [here]
+ * Connect to the USB device connection slot (found near the Antenna) in the Multitech Conduit RGW and then connect the other end to your computer
+ * Similar to the [End Device Hardware Setup], identify the serial port interface after physically connecting to the serial port from one's computer
+ * Once can get the IP address are explained [here], thus enabling to connect to the RGW via SSH or the Web interface
  * We are using the [Conduit AEP model] as firmware for the RGW. Hence it is possible to access the Web interface of the RGW connecting to the IP address from a web client.
  * If not done, do a [Firmware Upgrade] of the RGW  from the web interface
  * [Configure the AEP model]. Depending on the firmware, the front end of the configuration process might slightly change.
