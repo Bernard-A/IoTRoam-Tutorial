@@ -46,7 +46,7 @@ We are using [Multitech mDoT]. The mDot is fixed to the [Micro Developer Kit].
 
 ## Pointer Section
 
-In the event of one using ED that is not Multitech mDoT, please make sure that you are able to access the device. Once verified, [Next section to follow] 
+In the event of one using ED that is not Multitech mDoT, please make sure that you are able to access the device. Once verified, Next section to follow : [GW Setup] 
 
 If you are using Multitech mDot and you have verified accessing the ED by following the page, Next section to follow : [GW Setup]
 
