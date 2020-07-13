@@ -35,8 +35,8 @@ For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted
     *	PWR = Power
     *	Status = LED blinks when the OS is fully loaded
     *	LS = Link Status
- * [For detailed information follow the Quick Start Guide] 
- * [A video tutorial could be found here] 
+ * For detailed information follow the [Quick Start Guide] and a  [video tutorial]
+
  
 ## Accessing the RGW
  
@@ -205,8 +205,8 @@ When you do not see any data appear when your device sends data, then make sure 
 
 
 
-[For detailed information follow the Quick Start Guide]: https://www.multitech.com/documents/publications/quick-start-guides/82101452L-Conduit-Quick-Start.pdf 
-[A video tutorial could be found here]: https://www.multitech.net/developer/software/lora/getting-started-with-lora-conduit-aep/
+[Quick Start Guide]: https://www.multitech.com/documents/publications/quick-start-guides/82101452L-Conduit-Quick-Start.pdf 
+[video tutorial]: https://www.multitech.net/developer/software/lora/getting-started-with-lora-conduit-aep/
 ["Chirpstack"]: https://www.chirpstack.io
 [Architecture]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 [Hardware Setup]: #Hardware-Setup
