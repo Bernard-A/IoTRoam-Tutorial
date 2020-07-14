@@ -69,24 +69,16 @@ The function of **Packet Forwarder** is to forward the received LoRa Packet from
 
 The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet forwarder option. 
 
- * We are using AEP version of the Multitech RGW. Hence we can enable this option once connected to the web interface 
-    *	 On the left menu, select “Setup”, and then “LoRa Network Server” from the submenu.
-    *	In the “LoRa Configuration” window:
-    *	At the top of the left column, check “Enabled”.
-    *	At the top of the right column, set “Mode” to be “PACKET FORWARDER”.
-    *	In the “Config” text box, modify/add the following configuration details in the gateway_conf section.):
-   ```sh
-    {
-        ...
-        "gateway_conf": {
-            ...
-            "server_address": "localhost",
-            "serv_port_up": 1700,
-            "serv_port_down": 1700,
-             ... 
-        }
-    }
-   ```    
+ * We are using AEP version of the Multitech RGW. Hence we can enable this option once connected to the web interface. The options could change depending on the firmware version. For the RGW AEP Firmware version : 5.2.1, the steps are as follows: 
+    *	 On the left menu, select LoRaWAN.
+    *  Set “Mode” to “PACKET FORWARDER”.
+    *	Other options are as shown in the figure below:
+
+<p align="center">
+  <img width="500" height="700" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig19.png?raw=true">
+</p>
+
+
 ``` Note that the serv_port_up and serv_port_down represent the ports used to communicate with the chirpstack-gateway-bridge, usually on localhost (the server_address parameter). See the Figure above.```
  * Select  ```Submit ```.
  * Select the  ```Save and Restart ``` option on the left menu.
