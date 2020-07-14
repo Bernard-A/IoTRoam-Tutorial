@@ -75,7 +75,7 @@ The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet f
     *	Other options are as shown in the figure below:
 
 <p align="center">
-  <img width="500" height="700" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig18.png?raw=true">
+  <img width="500" height="600" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig18.png?raw=true">
 </p>
 
 
