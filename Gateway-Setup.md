@@ -108,7 +108,12 @@ We are using use the Open Source ["Chirpstack"]. The first step is to install Ch
      ```sh
           sudo opkg install chirpstack-gateway-bridge_(latest_version_number).ipk
      ```
-* Update the MQTT connection details so that ChirpStack Gateway Bridge is able to connect to your MQTT broker. You will find the configuration file in the ```/var/config/chirpstack-gateway-bridge/chirpstack-gateway-bridge.toml``` directory.
+* Update the MQTT<sup>1</sup> connection details so that ChirpStack Gateway Bridge is able to connect to your MQTT broker in your NS. The configuration file is ```/var/config/chirpstack-gateway-bridge/chirpstack-gateway-bridge.toml```. The modifications in the configuration file depends, but to minimum one has to provide the host IP and the port number of one's NS as follows: 
+ ```sh
+    [integration.mqtt.auth.generic]
+    # MQTT server (e.g. scheme://host:port where scheme is tcp, ssl or ws)
+    server="tcp://192.168.2.1:1883"   ## Add your NS IP address 
+  ```
 * Start the chirpstack-gateway-bridge and you should get the confirmation that the gateway has started
     ```sh
         sudo /etc/init.d/chirpstack-gateway-bridge start
@@ -203,6 +208,9 @@ mosquitto_sub -v -t "gateway/#"
 
 When you do not see any data appear when your device sends data, then make sure the ChirpStack Gateway Bridge is authorized to publish to the MQTT topic and the mosquitto_sub client is authorized to subscribe to the given MQTT topic. This issue usually happens when you have configured your MQTT broker so that clients need to authenticate when connecting.
 
+
+## Footnotes
+[1] Message Queuing Telemetry Transport protocol (MQTT) protocol, is a message transmission protocol based on the lightweight, publish-subscribe network model.  MQTT protocol is perfectly applied into the IoT solutions with very “Low-bandwidth and unreliable links”.  The RGW is MQTT enabled that support MQTT forwarding which runs over the TCP/IP and provides ordered, lossless, and bi-directional connections.
 
 
 [Quick Start Guide]: https://www.multitech.com/documents/publications/quick-start-guides/82101452L-Conduit-Quick-Start.pdf 
