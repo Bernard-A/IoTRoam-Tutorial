@@ -81,7 +81,7 @@ The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet f
 
 ``` Note that the serv_port_up and serv_port_down represent the ports used to communicate with the chirpstack-gateway-bridge, usually on localhost (the server_address parameter). See the Figure above.```
  * Select  ```Submit ```.
- * Select the  ```Save and Restart ``` option on the left menu.
+ * Select the  ```Save and Apply``` option on the left menu.
 
 ## Install and Configuring the  Chirpstack Gateway(GW) bridge 
   
