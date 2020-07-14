@@ -108,7 +108,7 @@ We are using use the Open Source ["Chirpstack"]. The first step is to install Ch
      ```sh
           sudo opkg install chirpstack-gateway-bridge_(latest_version_number).ipk
      ```
-* Update the MQTT<sup>1</sup> connection details so that ChirpStack Gateway Bridge is able to connect to your MQTT broker in your NS. The configuration file is ```/var/config/chirpstack-gateway-bridge/chirpstack-gateway-bridge.toml```. The modifications in the configuration file depends, but to minimum one has to provide the host IP and the port number of one's NS as follows: 
+* Update the MQTT<sup>[1](#myfootnote1)</sup> connection details so that ChirpStack Gateway Bridge is able to connect to your MQTT broker in your NS. The configuration file is ```/var/config/chirpstack-gateway-bridge/chirpstack-gateway-bridge.toml```. The modifications in the configuration file depends, but to minimum one has to provide the host IP and the port number of one's NS as follows: 
  ```sh
     [integration.mqtt.auth.generic]
     # MQTT server (e.g. scheme://host:port where scheme is tcp, ssl or ws)
@@ -210,7 +210,7 @@ When you do not see any data appear when your device sends data, then make sure 
 
 
 ## Footnotes
-[1] Message Queuing Telemetry Transport protocol (MQTT) protocol, is a message transmission protocol based on the lightweight, publish-subscribe network model.  MQTT protocol is perfectly applied into the IoT solutions with very “Low-bandwidth and unreliable links”.  The RGW is MQTT enabled that support MQTT forwarding which runs over the TCP/IP and provides ordered, lossless, and bi-directional connections.
+<a name="myfootnote1">1</a>: Message Queuing Telemetry Transport protocol (MQTT) protocol, is a message transmission protocol based on the lightweight, publish-subscribe network model.  MQTT protocol is perfectly applied into the IoT solutions with very “Low-bandwidth and unreliable links”.  The RGW is MQTT enabled that support MQTT forwarding which runs over the TCP/IP and provides ordered, lossless, and bi-directional connections.
 
 
 [Quick Start Guide]: https://www.multitech.com/documents/publications/quick-start-guides/82101452L-Conduit-Quick-Start.pdf 
