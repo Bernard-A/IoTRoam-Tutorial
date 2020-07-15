@@ -273,7 +273,7 @@ systemd
 ```sh
 journalctl -u chirpstack-application-server -f -n 50
 ```
-A successful start of the As will have the following Output in the log file
+A successful start of the AS will have the following Output in the log file
 
 ```sh
 Jul 15 21:33:43 vps323915 systemd[1]: Started ChirpStack Application Server.
@@ -292,6 +292,8 @@ Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15
 Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="integration/mqtt: subscribing to tx topic" qos=0 topic=application/+/device/+/tx
 Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="api/external: registering rest api handler and documentation endpoint" path=/api
 Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="api/js: starting join-server api" bind="0.0.0.0:8003" ca_cert= tls_cert= tls_key=
+...
+...
 ```
 
 *For now, if you followed all the above indications. You should have a running ChirpStack stack. Running the Network Server and Application Server with this configuration should give you access to the web-interface accessible using your AS’s IP default port (http://192.168.1.2:8080) or if you are running locally http://localhost:8080*
