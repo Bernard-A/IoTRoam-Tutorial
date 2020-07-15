@@ -97,7 +97,7 @@ If you changed the default port for redis or if you host redis on a different ma
 
 #### 4.	In the ```network_server``` section
 Y
-ou may set your LoRaWAN NetID (if you have one).  The net_id parameter may be set to “000000” or “000001” for experimental network. But such a network won’t allow passive roaming:
+ou may set your LoRaWAN NetID (if you have one).  The net_id parameter may be set to “000000” or “000001” for experimental network. But one need a NetID to do passive roaming:
 ```sh
 [network_server]
 .
