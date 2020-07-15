@@ -50,9 +50,9 @@ In the event of one using ED that is not Multitech mDoT, please make sure that y
 
 If you are using Multitech mDot and you have verified accessing the ED by following the page, Next section to follow : [GW Setup]
 
-In any case, If you want to go back to the [Architecture page]
+ * In any case, If you want to go back to the [Readme Page]
+ * In any case, If you want to go back to the [Architecture page]
 
-In any case, If you want to go back to the [Readme Page]
 
 ## Footnotes
 <a name="myfootnote1">1</a>: The example to install screen is for Fedora. You install ‘screen’ if you don’t have according to your Linux distro requirements
