@@ -146,10 +146,18 @@ journalctl -u chirpstack-network-server -f -n 50
 ```
 A successful start of the NS will have the following Output in the log file
 
-<p align="center">
-  <img width="500" height="150" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig9.png?raw=true">
-</p>
-
+```sh
+Jul 15 12:00:25 vps323914 systemd[1]: Started ChirpStack Network Server.
+Jul 15 12:00:25 vps323914 chirpstack-network-server[5420]: time="2020-07-15T12:00:25+02:00" level=info msg="starting ChirpStack Network Server" band=EU868 docs="https://www.chirpstack.io/" net_id=123456 version=3.9.0
+Jul 15 12:00:25 vps323914 chirpstack-network-server[5420]: time="2020-07-15T12:00:25+02:00" level=info msg="storage: setting up storage module"
+Jul 15 12:00:25 vps323914 chirpstack-network-server[5420]: time="2020-07-15T12:00:25+02:00" level=info msg="storage: setting up Redis client"
+Jul 15 12:00:25 vps323914 chirpstack-network-server[5420]: time="2020-07-15T12:00:25+02:00" level=info msg="storage: connecting to PostgreSQL"
+Jul 15 12:00:25 vps323914 chirpstack-network-server[5420]: time="2020-07-15T12:00:25+02:00" level=info msg="storage: applying PostgreSQL data migrations"
+Jul 15 12:00:25 vps323914 chirpstack-network-server[5420]: time="2020-07-15T12:00:25+02:00" level=info msg="storage: PostgreSQL data migrations applied" count=25
+Jul 15 12:00:25 vps323914 chirpstack-network-server[5420]: time="2020-07-15T12:00:25+02:00" level=info msg="gateway/mqtt: connecting to mqtt broker" server="tcp://localhost:1883"
+...
+...
+```
 
 ##	AS Setup
 
