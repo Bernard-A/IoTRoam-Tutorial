@@ -213,10 +213,10 @@ The configuration file is located as follows:
 $ /etc/chirpstack-application-server/chirpstack-application-server.toml
 ```
 ChirpStack recommends checking to following parameters in the above .toml file when setting up a ChirpStack Application Server:
-1.	postgresql.dsn  
-2.	postgresql.automigrate
-3.	redis
-4. JWT secret
+* 1.	postgresql.dsn  
+* 2.	postgresql.automigrate
+* 3.	redis
+* [4. application_server.external_api]
 
 #### 1.	In the ```postgresql``` section
 
@@ -337,8 +337,7 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [4.	network_server.net_id]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#4in-the-network_server-section
 [5.	network_server.band]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#5in-the-network_serverband-section
 [6.	metrics.timezone]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#6in-the-metrics-section
+[4. application_server.external_api]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#4in-the-application_serverexternal_api-section
 
-xc
 
 
-https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#6in-the-metrics-section
