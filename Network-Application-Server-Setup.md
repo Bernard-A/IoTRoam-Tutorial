@@ -62,7 +62,7 @@ The configuration file is located in the chirpstack-network-server folder in /et
 $ /etc/chirpstack-network-server/chirpstack-network-server.toml
 ```
 
-ChirpStack recommends checking to following parameters in the above .toml file when setting up a ChirpStack Network Server:
+ChirpStack recommends checking to following sections and modifying the parameters (if required) in the above .toml file when setting up a ChirpStack Network Server:
  * [1.	postgresql.dsn]
  * [2.	postgresql.automigrate]
  * [3.	redis]
