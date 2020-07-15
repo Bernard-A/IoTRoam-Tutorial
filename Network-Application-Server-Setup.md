@@ -338,7 +338,7 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [5.	network_server.band]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#5in-the-network_serverband-section
 [6.	metrics.timezone]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#6in-the-metrics-section
 
-
+xc
 
 
 https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#6in-the-metrics-section
