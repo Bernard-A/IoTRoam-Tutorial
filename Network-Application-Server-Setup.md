@@ -70,7 +70,9 @@ ChirpStack recommends checking to following parameters in the above .toml file w
 5.	network_server.band.name 
 6.	metrics.timezone
 
-#### 1. Update the ```dsn``` parameter with the parameters you provided when setting up your own PostgreSQL database:
+#### 1. In the ```postgresql``` section
+
+Update the ```dsn``` parameter with the parameters you provided when setting up your own PostgreSQL database:
 ```sh
 [postgresql]
 .
@@ -78,7 +80,10 @@ ChirpStack recommends checking to following parameters in the above .toml file w
 dsn="postgres://chirpstack_ns:dbnspassword@localhost/chirpstack_ns?sslmode=disable"
 ``` 
 
-#### 2.	The following parameter in the default configuration file is “postgresql.automigrate” which is useful when upgrading ChirpStack. Set it as you wish :
+#### 2.	In the ```postgresql``` section
+
+The following parameter in the default configuration file is “postgresql.automigrate” which is useful when upgrading ChirpStack. Set it as you wish :
+
 ```sh
 [postgresql]
 .
@@ -113,12 +118,12 @@ Also check out if your LoRaWAN transmission band is consistent with the regulati
    name=”EU_863_870”
 ```
 
-#### 6.	In the “metrics” section
+#### 6.	In the ```metrics``` section
 
 You can use either “local” for the system local time zone or use settings such as ```“Europe/Paris”```
 
-### 	Starting the ChirpStack Network Server
-To (re)start and stop ChirpStack Network Server depends on if your distribution uses “init.d” or “systemd”:
+### 	Starting the ChirpStack NS
+To (re)start and stop ChirpStack NS depends on if your distribution uses “init.d” or “systemd”:
 
 init.d
 ```sh
@@ -129,7 +134,7 @@ systemd
 sudo systemctl [start|stop|restart|status] chirpstack-network-server
 ```
 
-### 	Verifying the Functioning of the ChirpStack Network Server
+### 	Verifying the Functioning of the ChirpStack NS
 
 init.d
 ```sh
@@ -139,7 +144,7 @@ systemd
 ```sh
 journalctl -u chirpstack-network-server -f -n 50
 ```
-A successful start of the Network Server will have the following Output in the log file
+A successful start of the NS will have the following Output in the log file
 
 <p align="center">
   <img width="500" height="150" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig9.png?raw=true">
