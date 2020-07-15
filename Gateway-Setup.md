@@ -192,7 +192,7 @@ If you see these logs, then this indicates that the ChirpStack Gateway Bridge co
   <img width="300" height="150" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig17.png?raw=true">
 </p>
 
-To validate that the ChirpStack Gateway Bridge is publishing LoRa® frames to the MQTT broker, you can subscribe to the ```gateway/#``` MQTT topic. When using the mosquitto_sub utility, you can execute the following command:
+To validate that the ChirpStack Gateway Bridge is publishing LoRa® frames to the MQTT broker, you can subscribe to the ```gateway/#``` MQTT [topic]. When using the mosquitto_sub utility, you can execute the following command:
 
 ```sh
 mosquitto_sub -v -t "gateway/#"
@@ -222,4 +222,5 @@ When you do not see any data appear when your device sends data, then make sure 
 [Configure the AEP model]: https://www.thethingsnetwork.org/docs/gateways/multitech/aep.html
 [latest]: https://artifacts.chirpstack.io/vendor/multitech/conduit/
 [customising]: https://forum.chirpstack.io/t/no-logfile-from-lora-gateway-bridge/2925/7
+[topic]: https://www.chirpstack.io/gateway-bridge/integrate/generic-mqtt/
 
