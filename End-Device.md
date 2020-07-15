@@ -52,6 +52,8 @@ If you are using Multitech mDot and you have verified accessing the ED by follow
 
 In any case, If you want to go back to the [Architecture page]
 
+In any case, If you want to go back to the [Readme Page]
+
 ## Footnotes
 <a name="myfootnote1">1</a>: The example to install screen is for Fedora. You install ‘screen’ if you don’t have according to your Linux distro requirements
 
@@ -62,3 +64,4 @@ In any case, If you want to go back to the [Architecture page]
 [Architecture page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 [downloaded]: https://www.multitech.net/developer/downloads/
 [firmware upgrade]: https://www.multitech.net/developer/software/mdot-software/mdot-firmware-upgrade/
+[Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial 
