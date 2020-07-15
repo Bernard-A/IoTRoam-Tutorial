@@ -1,13 +1,15 @@
 
-# Installing and Configuring the Network Server and Application Server using ChirpStack (Debian/Ubuntu)
+# Installing and Configuring the Network Server (NS) and Application Server (AS) using ChirpStack (Debian/Ubuntu)
 
-This page covers setting up the Network and Application Server which are detailed in different sections as follows:
+In our set up, we have a dedicated NS Virtual Private Server and an AS Virtual Private Server which is accessible externally by distinct physical assress. 
 
- * [Network Server Setup]
- * [Application Server Setup]
+This page covers setting up the NS and AS which are detailed in different sections as follows:
+
+ * [NS Setup]
+ * [As Setup]
  * [Verifying Communication between RGW->NS->AS]
 
-## Network Server Setup
+## NS Setup
 
 ###	Prerequisites
 
@@ -135,7 +137,7 @@ A successful start of the Network Server will have the following Output in the l
 </p>
 
 
-##	Application Server Setup
+##	AS Setup
 
 ### Prerequisites
 
@@ -286,6 +288,6 @@ INFO[0186] finished unary call with code OK              grpc.code=OK grpc.metho
 
 In this log, the AS received an uplink application-payload from the NS and published this payload to the application/1/device/0101010101010101/rx MQTT topic.
 
-[Network Server Setup]: #network-server-setup
-[application Server Setup]: #application-server-setup
+[NS Setup]: #ns-setup
+[AS Setup]: #as-setup
 [Verifying Communication between RGW->NS->AS]: #verify-communication-from-rgw-ns-as-setup
