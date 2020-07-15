@@ -246,13 +246,9 @@ If you changed the default port for redis or if you host redis on a different ma
 
 #### 4.	In the ```application_server.external_api``` section
 
-Both the gRPC and the JSON REST interface are protected by an authentication and authorization mechanism
+ChirpStack Application Server provides two API interfaces (```gRPC``` interface and RESTful ```JSON``` interface) that can be used to integrate with ChirpStack Application Server. Both interfaces provide exactly the same functionality and Authentication mechanism.
 
-``` section
-
-If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the ```redis.url``` parameter
-
-
+Both the gRPC and the JSON REST interface are protected by an authentication and authorization mechanism.  For this ```JSON web-tokens``` are used, using the ```--jwt-secret / JWT_SECRET``` value for signing. One can use a pre-defined token or [generate one JWT]
 
 ###	Starting the ChirpStack AS
 
@@ -334,4 +330,4 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [Verifying Communication between RGW->NS->AS]: #verify-communication-from-rgw-ns-as-setup
 [binary]:  https://www.chirpstack.io/network-server/overview/downloads/
 [AS binary]: https://www.chirpstack.io/application-server/overview/downloads/
-[JWT Setup]: https://www.chirpstack.io/application-server/integrate/auth/
+[generate one JWT]: https://www.chirpstack.io/application-server/integrate/auth/
