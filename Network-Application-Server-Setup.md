@@ -216,6 +216,7 @@ ChirpStack recommends checking to following parameters in the above .toml file w
 1.	postgresql.dsn  
 2.	postgresql.automigrate
 3.	redis
+4. JWT secret
 
 #### 1.	In the ```postgresql``` section
 
@@ -242,6 +243,15 @@ automigrate=true
 #### 3.	In the ```redis``` section
 
 If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the ```redis.url``` parameter
+
+#### 4.	In the ```application_server.external_api``` section
+
+Both the gRPC and the JSON REST interface are protected by an authentication and authorization mechanism
+
+``` section
+
+If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the ```redis.url``` parameter
+
 
 
 ###	Starting the ChirpStack AS
@@ -324,3 +334,4 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [Verifying Communication between RGW->NS->AS]: #verify-communication-from-rgw-ns-as-setup
 [binary]:  https://www.chirpstack.io/network-server/overview/downloads/
 [AS binary]: https://www.chirpstack.io/application-server/overview/downloads/
+[JWT Setup]: https://www.chirpstack.io/application-server/integrate/auth/
