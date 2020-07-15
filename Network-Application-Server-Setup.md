@@ -175,7 +175,7 @@ sudo apt-get install mosquitto postgresql redis-server
 
 ###	Setting up the Prerequisites
 
-Setup your PostgreSQL database for your ChirpStack Network Server
+Setup your PostgreSQL database for your ChirpStack AS
 ```sh
 $ sudo -u postgres psql
 > create role chirpstack_as with login password 'dbaspassword';
@@ -191,9 +191,11 @@ Verify the set up
 $ psql -h localhost -U chirpstack_as -W chirpstack_as
 ```
 
-###	Obtaining and Installing the ChirpStack Application Server
-The binary for ChirpStack Application Server is accessible following the link: https://www.chirpstack.io/application-server/overview/downloads/
-Setup the Application Server, either using the binary from the link above, or by using Debian package manager. To install from the package manager, you will also need “apt-transport-https” to connect to the repository
+###	Obtaining and Installing the ChirpStack AS
+
+The binary for ChirpStack AS is accessible following the link: https://www.chirpstack.io/application-server/overview/downloads/
+
+Setup the As, either using the binary from the link above, or by using Debian package manager. To install from the package manager, you will also need “apt-transport-https” to connect to the repository
 
 ```sh
 $ sudo apt install apt-transport-https
@@ -203,7 +205,7 @@ $ sudo apt-get update
 $ sudo apt-get install chirpstack-application-server
 ```
 
-###	Configuration for the ChirpStack Application Server
+###	Configuration for the ChirpStack AS
 The configuration file is located in the chirpstack-application-server folder in /etc. It is a “toml“ file.
 
 ```sh
@@ -235,9 +237,9 @@ automigrate=true
 ### 3.	In the “redis” section. If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the ```redis.url``` parameter
 
 
-###	Starting the ChirpStack Application Server
+###	Starting the ChirpStack AS
 
-To (re)start and stop ChirpStack Application Server depends on if your distribution uses “init.d” or “systemd”:
+To (re)start and stop ChirpStack As depends on if your distribution uses “init.d” or “systemd”:
 
 init.d
 ```sh
@@ -248,7 +250,7 @@ systemd
 sudo systemctl [start|stop|restart|status] chirpstack-application-server
 ```
 
-###	Verifying the Functioning of the ChirpStack Application Server
+###	Verifying the Functioning of the ChirpStack AS
 
 init.d
 ```sh
@@ -258,13 +260,13 @@ systemd
 ```sh
 journalctl -u chirpstack-application-server -f -n 50
 ```
-A successful start of the Network Server will have the following Output in the log file
+A successful start of the As will have the following Output in the log file
 
 <p align="center">
   <img width="600" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig10.png?raw=true">
 </p>
 
-*For now, if you followed all the above indications. You should have a running ChirpStack stack. Running the Network Server and Application Server with this configuration should give you access to the web-interface accessible using your Application Server’s IP default port (http://A.B.C.D:8080) or if you are running locally http://localhost:8080*
+*For now, if you followed all the above indications. You should have a running ChirpStack stack. Running the Network Server and Application Server with this configuration should give you access to the web-interface accessible using your AS’s IP default port (http://A.B.C.D:8080) or if you are running locally http://localhost:8080*
 
 
 ## Verify Communication from RGW->NS->AS Setup
