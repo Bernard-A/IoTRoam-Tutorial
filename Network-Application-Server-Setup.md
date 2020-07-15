@@ -134,7 +134,7 @@ systemd
 sudo systemctl [start|stop|restart|status] chirpstack-network-server
 ```
 
-### 	Verifying the Functioning of the ChirpStack NS
+### 	Post Sanity Check for the ChirpStack NS
 
 init.d
 ```sh
