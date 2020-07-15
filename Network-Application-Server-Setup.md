@@ -26,7 +26,7 @@ sudo apt-get install mosquitto postgresql redis-server
 
 ### Setting up the Prerequisites
 
-Setup your PostgreSQL database for your ChirpStack Network Server
+Setup your PostgreSQL database for your ChirpStack NS
 
 ```sh
 $ sudo -u postgres psql
@@ -41,11 +41,11 @@ Verify that you are able to connect to the PSQL database
 $ psql -h localhost -U chirpstack_ns -W chirpstack_ns
 ```
 
-###	Obtaining and Installing the ChirpStack Network Server
+###	Obtaining and Installing the ChirpStack NS
 
-The binary for ChirpStack Network Server is accessible following the link: https://www.chirpstack.io/network-server/overview/downloads/
+Download the [binary] for ChirpStack NS.
 
-Setup the Network Server, either using the binary from the link above, or by using Debian package manager. To install from the package manager, you will also need “apt-transport-https” to connect to the repository.
+Setup the NS, either using the binary from the link above, or by using Debian package manager. To install from the package manager, you will also need “apt-transport-https” to connect to the repository.
 
 ```sh
 $ sudo apt install apt-transport-https
@@ -291,3 +291,4 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [NS Setup]: #ns-setup
 [AS Setup]: #as-setup
 [Verifying Communication between RGW->NS->AS]: #verify-communication-from-rgw-ns-as-setup
+[binary]:  https://www.chirpstack.io/network-server/overview/downloads/
