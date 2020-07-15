@@ -181,7 +181,7 @@ $ sudo -u postgres psql
 > create role chirpstack_as with login password 'dbaspassword';
 > create database chirpstack_as with owner chirpstack_as;
 > \c chirpstack_as
-> create extension pg_trgm;
+> create extension pg_trgm;  ## If you get error install "sudo apt install postgresql-contrib"
 > create extension hstore;
 > \q
 ```
