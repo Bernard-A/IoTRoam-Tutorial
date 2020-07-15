@@ -56,7 +56,7 @@ $ sudo apt-get update
 $ sudo apt-get install chirpstack-network-server
 ```
 
-### Configuration for the ChirpStack Network Server
+### Configuration for the ChirpStack NS
 The configuration file is located in the chirpstack-network-server folder in /etc. It is a “toml“ file.
 ```sh
 $ /etc/chirpstack-network-server/chirpstack-network-server.toml
@@ -70,7 +70,7 @@ ChirpStack recommends checking to following parameters in the above .toml file w
 5.	network_server.band.name 
 6.	metrics.timezone
 
-#### 1. Update the “dsn” parameter with the parameters you provided when setting up your own PostgreSQL database:
+#### 1. Update the ```dsn``` parameter with the parameters you provided when setting up your own PostgreSQL database:
 ```sh
 [postgresql]
 .
@@ -86,9 +86,13 @@ dsn="postgres://chirpstack_ns:dbnspassword@localhost/chirpstack_ns?sslmode=disab
 automigrate=true
 ```
 
-#### 3.	In the “redis” section. If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the ```redis.url``` parameter
+#### 3.	In the ```redis``` section
 
-#### 4.	In the “network_server” section, you may set your LoRaWAN NetID (if you have one).  The net_id parameter may be set to “000000” or “000001” for experimental network. But such a network won’t allow passive roaming:
+If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the ```redis.url``` parameter
+
+#### 4.	In the ```network_server``` section
+Y
+ou may set your LoRaWAN NetID (if you have one).  The net_id parameter may be set to “000000” or “000001” for experimental network. But such a network won’t allow passive roaming:
 ```sh
 [network_server]
 .
@@ -96,7 +100,9 @@ automigrate=true
 net_id=123456
 ```
 
-#### 5.	Also check out if your LoRaWAN transmission band is consistent with the regulation for the region you live in (As we are located in Europe and use the 868MHz band, we set it in the configuration (other possible values are indicated in the default configuration file)
+#### 5.	In the ```network_server.band``` section
+
+Also check out if your LoRaWAN transmission band is consistent with the regulation for the region you live in (As we are located in Europe and use the 868MHz band, we set it in the configuration (other possible values are indicated in the default configuration file)
 ```sh
 [network_server]
 .
@@ -107,7 +113,9 @@ net_id=123456
    name=”EU_863_870”
 ```
 
-#### 6.	In the “metrics” section, you can use either “local” for the system local time zone or use settings such as ```“Europe/Paris”```
+#### 6.	In the “metrics” section
+
+You can use either “local” for the system local time zone or use settings such as ```“Europe/Paris”```
 
 ### 	Starting the ChirpStack Network Server
 To (re)start and stop ChirpStack Network Server depends on if your distribution uses “init.d” or “systemd”:
