@@ -275,14 +275,29 @@ journalctl -u chirpstack-application-server -f -n 50
 ```
 A successful start of the As will have the following Output in the log file
 
-<p align="center">
-  <img width="600" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig10.png?raw=true">
-</p>
+```sh
+Jul 15 21:33:43 vps323915 systemd[1]: Started ChirpStack Application Server.
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="starting ChirpStack Application Server" docs="https://www.chirpstack.io/" version=3.10.0
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="storage: setting up storage package"
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="storage: setup metrics"
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="storage: setting up Redis client"
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="storage: connecting to PostgreSQL database"
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="storage: applying PostgreSQL data migrations"
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="storage: PostgreSQL data migrations applied" count=0
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="integration/mqtt: TLS config is empty"
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="integration/mqtt: connecting to mqtt broker" server="tcp://localhost:1883"
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="api/as: starting application-server api" bind="0.0.0.0:8001" ca_cert= tls_cert= tls_key=
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="api/external: starting api server" bind="0.0.0.0:8080" tls-cert= tls-key=
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="integration/mqtt: connected to mqtt broker"
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="integration/mqtt: subscribing to tx topic" qos=0 topic=application/+/device/+/tx
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="api/external: registering rest api handler and documentation endpoint" path=/api
+Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="api/js: starting join-server api" bind="0.0.0.0:8003" ca_cert= tls_cert= tls_key=
+```
 
-*For now, if you followed all the above indications. You should have a running ChirpStack stack. Running the Network Server and Application Server with this configuration should give you access to the web-interface accessible using your AS’s IP default port (http://A.B.C.D:8080) or if you are running locally http://localhost:8080*
+*For now, if you followed all the above indications. You should have a running ChirpStack stack. Running the Network Server and Application Server with this configuration should give you access to the web-interface accessible using your AS’s IP default port (http://192.168.1.2:8080) or if you are running locally http://localhost:8080*
 
 
-## Verify Communication from RGW->NS->AS Setup
+## Post Sanity Check from RGW->NS->AS Setup
 
 The objective in this section is to verify the communication between the RGW->NS (2) and the NS->AS (3) shown in the figure:
 
