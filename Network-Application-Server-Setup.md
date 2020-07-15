@@ -225,7 +225,7 @@ Update the “dsn” parameter with the parameters you provided when setting up 
 [postgresql]
 .
 .
-dsn="postgres://chirpstack_as:dbnspassword@localhost/chirpstack_as?sslmode=disable"
+dsn="postgres://chirpstack_as:dbaspassword@localhost/chirpstack_as?sslmode=disable"
 ```
 
 #### 2.	In the ```postgresql``` section
