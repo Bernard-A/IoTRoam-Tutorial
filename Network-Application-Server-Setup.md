@@ -45,7 +45,7 @@ $ psql -h localhost -U chirpstack_ns -W chirpstack_ns
 
 Download the [binary] for ChirpStack NS.
 
-Setup the NS, either using the binary from the link above, or by using Debian package manager. To install from the package manager, you will also need “apt-transport-https” to connect to the repository.
+Setup the NS, either using the binary from the link above, or by using Debian package manager. To install from the package manager, you will also need ```apt-transport-https``` to connect to the repository.
 
 ```sh
 $ sudo apt install apt-transport-https
