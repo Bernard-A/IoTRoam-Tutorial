@@ -63,12 +63,12 @@ $ /etc/chirpstack-network-server/chirpstack-network-server.toml
 ```
 
 ChirpStack recommends checking to following parameters in the above .toml file when setting up a ChirpStack Network Server:
-1.	postgresql.dsn
-2.	postgresql.automigrate
-3.	redis
-4.	network_server.net_id
-5.	network_server.band.name 
-6.	metrics.timezone
+[1.	postgresql.dsn]
+[2.	postgresql.automigrate]
+[3.	redis]
+[4.	network_server.net_id]
+[5.	network_server.band.name] 
+[6.	metrics.timezone]
 
 #### 1. In the ```postgresql``` section
 
