@@ -214,10 +214,10 @@ In the event of one using RGW that is not Multitech Conduit, please make sure th
 
 If you are using Multitech mDot and you have verified accessing the ED by following the page, Next section to follow : [Install NS and AS]
 
-In any case, If you want to go back to the [Readme Page]
-In any case, If you want to go back to the [Architecture page]
-In any case, If you want to go back to the [Setting up the End-Device]
-In any case, If you want to go back to the [GW Setup]
+ * In any case, If you want to go back to the [Readme Page]
+ * In any case, If you want to go back to the [Architecture page]
+ * In any case, If you want to go back to the [Setting up the End-Device]
+ * In any case, If you want to go back to the [GW Setup]
 
 
 ## Footnotes
@@ -246,4 +246,5 @@ In any case, If you want to go back to the [GW Setup]
 [Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
 [Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial 
 [GW Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
+[Architecture page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 
