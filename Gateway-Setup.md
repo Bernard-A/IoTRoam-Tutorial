@@ -104,7 +104,11 @@ We are using use the Open Source ["Chirpstack"]. The first step is to install Ch
  ```sh
     [integration.mqtt.auth.generic]
     # MQTT server (e.g. scheme://host:port where scheme is tcp, ssl or ws)
-    server="tcp://192.168.2.1:1883"   ## Add your NS IP address 
+    servers=[
+      "tcp://127.0.0.1:1883",    ## To authorize the Mosquito client ublish to the MQTT topic   
+                                 ## and the mosquitto_sub client is authorized to subscribe to the given MQTT topic
+      "tcp://149.202.57.54:1883" ## Add your NS IP address 
+    ]
   ```
 * Start the chirpstack-gateway-bridge and you should get the confirmation that the gateway has started
     ```sh
@@ -196,6 +200,9 @@ To validate that the ChirpStack Gateway Bridge is publishing LoRa® frames to th
 
 ```sh
 mosquitto_sub -v -t "gateway/#"
+```
+```sh
+gateway/00800000a0000825/event/up {"phyPayload":"APliDNaluVYV260AAAAAgABv6D9SA8I=","txInfo":{"frequency":868100000,"modulation":"LORA","loRaModulationInfo":{"bandwidth":125,"spreadingFactor":12,"codeRate":"4/5","polarizationInversion":false}},"rxInfo":{"gatewayID":"AIAAAKAACCU=","time":"2020-05-27T04:28:10.184600Z","timeSinceGPSEpoch":null,"rssi":-102,"loRaSNR":7.2,"channel":0,"rfChain":0,"board":0,"antenna":0,"location":null,"fineTimestampType":"NONE","context":"XcwXjA==","uplinkID":"B1Oy7C2EQbuBKyLBTHrNuQ=="}}
 ```
 
 When you do not see any data appear when your device sends data, then make sure the ChirpStack Gateway Bridge is authorized to publish to the MQTT topic and the mosquitto_sub client is authorized to subscribe to the given MQTT topic. This issue usually happens when you have configured your MQTT broker so that clients need to authenticate when connecting.
