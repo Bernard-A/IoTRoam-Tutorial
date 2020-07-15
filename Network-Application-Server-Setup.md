@@ -120,7 +120,7 @@ Also check out if your LoRaWAN transmission band is consistent with the regulati
 
 #### 6.	In the ```metrics``` section
 
-You can use either “local” for the system local time zone or use settings such as ```“Europe/Paris”```
+You can use either ```local``` for the system local time zone or use settings such as ```“Europe/Paris”```
 
 ### 	Starting the ChirpStack NS
 To (re)start and stop ChirpStack NS depends on if your distribution uses “init.d” or “systemd”:
