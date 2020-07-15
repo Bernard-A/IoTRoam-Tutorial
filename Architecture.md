@@ -30,9 +30,8 @@ Additionally, you probably want to expose the following ports too:
  
  
 ## Pointer Section 
-Next section to follow: [Setting up the End-Device]
-
-If you want to go back to the [Readme Page]
+ * Next section to follow: [Setting up the End-Device]
+ * If you want to go back to the [Readme Page]
 
 [Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
 [Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial 
