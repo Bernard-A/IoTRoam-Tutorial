@@ -208,6 +208,17 @@ gateway/00800000a0000825/event/up {"phyPayload":"APliDNaluVYV260AAAAAgABv6D9SA8I
 
 When you do not see any data appear when your device sends data, then make sure the ChirpStack Gateway Bridge is authorized to publish to the MQTT topic and the mosquitto_sub client is authorized to subscribe to the given MQTT topic. This issue usually happens when you have configured your MQTT broker so that clients need to authenticate when connecting.
 
+## Pointer Section
+
+In the event of one using RGW that is not Multitech Conduit, please make sure that you verify the [Post Sanity check] for your RGW. Once verified, Next section to follow : [GW Setup] 
+
+If you are using Multitech mDot and you have verified accessing the ED by following the page, Next section to follow : [Install NS and AS]
+
+In any case, If you want to go back to the [Readme Page]
+In any case, If you want to go back to the [Architecture page]
+In any case, If you want to go back to the [Setting up the End-Device]
+In any case, If you want to go back to the [GW Setup]
+
 
 ## Footnotes
 <a name="myfootnote1">1</a>: Message Queuing Telemetry Transport protocol (MQTT) protocol, is a message transmission protocol based on the lightweight, publish-subscribe network model.  MQTT protocol is perfectly applied into the IoT solutions with very “Low-bandwidth and unreliable links”.  The RGW is MQTT enabled that support MQTT forwarding which runs over the TCP/IP and provides ordered, lossless, and bi-directional connections.
@@ -231,4 +242,8 @@ When you do not see any data appear when your device sends data, then make sure 
 [latest]: https://artifacts.chirpstack.io/vendor/multitech/conduit/
 [customising]: https://forum.chirpstack.io/t/no-logfile-from-lora-gateway-bridge/2925/7
 [topic]: https://www.chirpstack.io/gateway-bridge/integrate/generic-mqtt/
+[Install NS and AS]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md
+[Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
+[Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial 
+[GW Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
 
