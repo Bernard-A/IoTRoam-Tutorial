@@ -213,9 +213,9 @@ The configuration file is located as follows:
 $ /etc/chirpstack-application-server/chirpstack-application-server.toml
 ```
 ChirpStack recommends checking to following parameters in the above .toml file when setting up a ChirpStack Application Server:
-* 1.	postgresql.dsn  
-* 2.	postgresql.automigrate
-* 3.	redis
+* [1.	postgresql.dsn]
+* [2.	postgresql.automigrate]
+* [3.	redis]
 * [4. application_server.external_api]
 
 #### 1.	In the ```postgresql``` section
