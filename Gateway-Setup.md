@@ -201,6 +201,7 @@ To validate that the ChirpStack Gateway Bridge is publishing LoRa® frames to th
 ```sh
 mosquitto_sub -v -t "gateway/#"
 ```
+As soon as the ED sends data, the output for the above command is as follows:
 ```sh
 gateway/00800000a0000825/event/up {"phyPayload":"APliDNaluVYV260AAAAAgABv6D9SA8I=","txInfo":{"frequency":868100000,"modulation":"LORA","loRaModulationInfo":{"bandwidth":125,"spreadingFactor":12,"codeRate":"4/5","polarizationInversion":false}},"rxInfo":{"gatewayID":"AIAAAKAACCU=","time":"2020-05-27T04:28:10.184600Z","timeSinceGPSEpoch":null,"rssi":-102,"loRaSNR":7.2,"channel":0,"rfChain":0,"board":0,"antenna":0,"location":null,"fineTimestampType":"NONE","context":"XcwXjA==","uplinkID":"B1Oy7C2EQbuBKyLBTHrNuQ=="}}
 ```
