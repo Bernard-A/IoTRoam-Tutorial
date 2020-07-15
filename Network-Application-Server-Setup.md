@@ -193,12 +193,13 @@ $ psql -h localhost -U chirpstack_as -W chirpstack_as
 
 ###	Obtaining and Installing the ChirpStack AS
 
-The binary for ChirpStack AS is accessible following the link: https://www.chirpstack.io/application-server/overview/downloads/
+Download the [AS binary].
 
-Setup the As, either using the binary from the link above, or by using Debian package manager. To install from the package manager, you will also need “apt-transport-https” to connect to the repository
+Setup the As, either using the binary from the link above, or by using Debian package manager. To install from the package manager, you will also need ```apt-transport-https``` to connect to the repository
 
 ```sh
 $ sudo apt install apt-transport-https
+$ sudo apt-get install dirmngr --install-recommends
 $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1CE2AFD36DBCCA00
 $ sudo echo "deb https://artifacts.chirpstack.io/packages/3.x/deb stable main" | sudo tee /etc/apt/sources.list.d/chirpstack.list
 $ sudo apt-get update
@@ -206,17 +207,19 @@ $ sudo apt-get install chirpstack-application-server
 ```
 
 ###	Configuration for the ChirpStack AS
-The configuration file is located in the chirpstack-application-server folder in /etc. It is a “toml“ file.
+The configuration file is located as follows:
 
 ```sh
-$ /etc/chirpstack-network-server/chirpstack-application-server.toml
+$ /etc/chirpstack-application-server/chirpstack-application-server.toml
 ```
 ChirpStack recommends checking to following parameters in the above .toml file when setting up a ChirpStack Application Server:
 1.	postgresql.dsn  
 2.	postgresql.automigrate
 3.	redis
 
-### 1.	Update the “dsn” parameter with the parameters you provided when setting up your own PostgreSQL database:
+#### 1.	In the ```postgresql``` section
+
+Update the “dsn” parameter with the parameters you provided when setting up your own PostgreSQL database:
 
 ```sh
 [postgresql]
@@ -225,7 +228,9 @@ ChirpStack recommends checking to following parameters in the above .toml file w
 dsn="postgres://chirpstack_as:dbnspassword@localhost/chirpstack_as?sslmode=disable"
 ```
 
-### 2.	The following parameter in the default configuration file is “postgresql.automigrate” which is useful when upgrading ChirpStack. Set it as you wish :
+#### 2.	In the ```postgresql``` section
+
+The following parameter in the default configuration file is “postgresql.automigrate” which is useful when upgrading ChirpStack. Set it as you wish :
 
 ```sh
 [postgresql]
@@ -234,7 +239,9 @@ dsn="postgres://chirpstack_as:dbnspassword@localhost/chirpstack_as?sslmode=disab
 automigrate=true
 ```
 
-### 3.	In the “redis” section. If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the ```redis.url``` parameter
+#### 3.	In the ```redis``` section
+
+If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the ```redis.url``` parameter
 
 
 ###	Starting the ChirpStack AS
@@ -316,3 +323,4 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [AS Setup]: #as-setup
 [Verifying Communication between RGW->NS->AS]: #verify-communication-from-rgw-ns-as-setup
 [binary]:  https://www.chirpstack.io/network-server/overview/downloads/
+[AS binary]: https://www.chirpstack.io/application-server/overview/downloads/
