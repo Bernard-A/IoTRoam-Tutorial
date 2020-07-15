@@ -210,14 +210,14 @@ When you do not see any data appear when your device sends data, then make sure 
 
 ## Pointer Section
 
-In the event of one using RGW that is not Multitech Conduit, please make sure that you verify the [Post Sanity check] for your RGW. Once verified, Next section to follow : [GW Setup] 
+In the event of one using RGW that is not Multitech Conduit, please make sure that you verify the [Post Sanity check] for your RGW. Once verified, Next section to follow : [Install NS and AS]
 
 If you are using Multitech mDot and you have verified accessing the ED by following the page, Next section to follow : [Install NS and AS]
 
  * In any case, If you want to go back to the [Readme Page]
  * In any case, If you want to go back to the [Architecture page]
  * In any case, If you want to go back to the [Setting up the End-Device]
- * In any case, If you want to go back to the [GW Setup]
+
 
 
 ## Footnotes
