@@ -176,7 +176,7 @@ INFO[0075] integration/mqtt: publishing event            event=up qos=0 topic=ga
 
 When the Packet Forwarder sends data to the ChirpStack Gateway Bridge (this could be a “ping”), you will see the following logs:
 ```sh
-  INFO[0013] mqtt: subscribing to topic qos=0 topic=gateway/7276ff002e062c18/command/#
+  INFO[0008] integration/mqtt: subscribing to topic        qos=0 topic="gateway/00800000a0000825/command/#"
 ```
 When your device sends an uplink message, you will see something like:
 
