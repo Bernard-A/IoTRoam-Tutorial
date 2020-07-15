@@ -89,7 +89,7 @@ We are using use the Open Source ["Chirpstack"]. The first step is to install Ch
  
 *ChirpStack GW Bridge is a service which converts LoRa® Packet Forwarder protocols into a ChirpStack Network Server common data-format (JSON and Protobuf). This component is part of the ChirpStack open-source LoRaWAN® Network Server stack.*
 
-```*The source for the information below is : (https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-chirpstack-gateway-bridge)*```
+```The source for the information below is : (https://www.chirpstack.io/gateway-bridge/gateway/multitech/#setting-up-the-chirpstack-gateway-bridge)```
 
  * Log in to the RGW using  ```SSH``` or use the  ```USB to serial interface ```
  * Download the latest chirpstack-gateway-bridge ```.ipk``` package
