@@ -115,7 +115,7 @@ Also check out if your LoRaWAN transmission band is consistent with the regulati
    [network_server.band]
    .
    .
-   name=”EU_863_870”
+   name=”EU_863”
 ```
 
 #### 6.	In the ```metrics``` section
