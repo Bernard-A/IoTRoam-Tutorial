@@ -202,7 +202,7 @@ To activate the ED via OTAA, NS uses the Join Server (JS) as per the [LoRaWAN Ba
 
 In the event of one using NS that is not Chirpstack, please make sure that you [Verifying Communication between RGW->NS] . Once verified, Next section to follow : [AS_Setup]
 
-If you are using Multitech mDot and you have verified accessing the ED by following the page, Next section to follow : [AS_Setup]
+If you are using Chirpstack NS, Next section to follow : [AS_Setup]
 
  * In any case, If you want to go back to the [Readme Page]
  * In any case, If you want to go back to the [Architecture page]
@@ -219,6 +219,8 @@ If you are using Multitech mDot and you have verified accessing the ED by follow
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 [AS_Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md
 [Setting up the GW]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
+[Architecture page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
+[Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial
 
 
 
