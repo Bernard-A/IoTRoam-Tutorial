@@ -305,7 +305,7 @@ INFO[0164] device-session saved                          dev_addr=018f5aa9 dev_e
 INFO[0164] finished client unary call                    grpc.code=OK grpc.method=HandleUplinkData grpc.service=as.ApplicationServerService grpc.time_ms=52.204 span.kind=client system=grpc
 ```
 
-- But the NS received the following
+- But the NS logs gives an error
 
 ```sh
 Jul 16 11:11:01 vps323914 chirpstack-network-server[21156]: time="2020-07-16T11:11:01+02:00" level=info msg="gateway/mqtt: uplink frame received" gateway_id=00800000a0000825 uplink_id=634ac2e8-939f-4af8-8ac4-3407bae732ba
@@ -314,7 +314,7 @@ Jul 16 11:11:01 vps323914 chirpstack-network-server[21156]: time="2020-07-16T11:
 Jul 16 11:11:01 vps323914 chirpstack-network-server[21156]: time="2020-07-16T11:11:01+02:00" level=error msg="uplink: processing uplink frame error" ctx_id=b6a1e382-ae69-49b4-b3ff-20c5dacaee21 error="get device error: object does not exist"
 ```
 
-In this log, the NS has processed the uplink frame from the RGW, and forwarded the application payload to the AS
+In this log, the NS has processed the uplink frame from the RGW, and emits an error message mentioning that the object (device) is not part of the NS known objects (devices) 
 
 ### Verify whether the AS receives data from the NS
 Depending on your OS, one of the following commands will show you the logs:
