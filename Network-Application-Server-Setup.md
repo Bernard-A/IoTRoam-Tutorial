@@ -296,13 +296,22 @@ Depending on your OS, one of the following commands will show you the logs:
 journalctl -f -n 100 -u chirpstack-network-server
 tail -f -n 100 /var/log/chirpstack-network-server/chirpstack-network-server.log
 ```
-Expected log output
++ Expected log output
 
 ```sh
 INFO[0163] backend/gateway: uplink frame received
 INFO[0164] device gateway rx-info meta-data saved        dev_eui=0101010101010101
 INFO[0164] device-session saved                          dev_addr=018f5aa9 dev_eui=0101010101010101
 INFO[0164] finished client unary call                    grpc.code=OK grpc.method=HandleUplinkData grpc.service=as.ApplicationServerService grpc.time_ms=52.204 span.kind=client system=grpc
+```
+
+- But the NS received the following
+
+```sh
+Jul 16 11:11:01 vps323914 chirpstack-network-server[21156]: time="2020-07-16T11:11:01+02:00" level=info msg="gateway/mqtt: uplink frame received" gateway_id=00800000a0000825 uplink_id=634ac2e8-939f-4af8-8ac4-3407bae732ba
+Jul 16 11:11:01 vps323914 chirpstack-network-server[21156]: time="2020-07-16T11:11:01+02:00" level=info msg="uplink: frame(s) collected" ctx_id=b6a1e382-ae69-49b4-b3ff-20c5dacaee21 mtype=JoinRequest uplink_ids="[634ac2e8-939f-4af8-8ac4-3407bae732ba]"
+Jul 16 11:11:01 vps323914 chirpstack-network-server[21156]: time="2020-07-16T11:11:01+02:00" level=error msg="get gateway error" ctx_id=b6a1e382-ae69-49b4-b3ff-20c5dacaee21 error="get gateway error: object does not exist" gateway_id=00800000a0000825
+Jul 16 11:11:01 vps323914 chirpstack-network-server[21156]: time="2020-07-16T11:11:01+02:00" level=error msg="uplink: processing uplink frame error" ctx_id=b6a1e382-ae69-49b4-b3ff-20c5dacaee21 error="get device error: object does not exist"
 ```
 
 In this log, the NS has processed the uplink frame from the RGW, and forwarded the application payload to the AS
