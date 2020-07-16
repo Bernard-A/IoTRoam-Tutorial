@@ -64,10 +64,9 @@ $ /etc/chirpstack-network-server/chirpstack-network-server.toml
 
 ChirpStack recommends checking to following sections and modifying the parameters (if required) in the above .toml file when setting up a ChirpStack Network Server:
  * [postgresql]
- * [3.	redis]
- * [4.	network_server.net_id]
- * [5.	network_server.band] 
- * [6.	metrics.timezone]
+ * [redis]
+ * [network_server]
+ * [metrics.timezone]
 
 #### ```postgresql``` section
 
@@ -84,22 +83,18 @@ The following parameter in the default configuration file is “postgresql.autom
 automigrate=true
 ```
 
-#### 3.	In the ```redis``` section
+#### ```redis``` section
 
 If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the ```redis.url``` parameter
 
-#### 4.	In the ```network_server``` section
-Y
-ou may set your LoRaWAN NetID (if you have one).  The net_id parameter may be set to “000000” or “000001” for experimental network. But one need a NetID to do passive roaming:
+####  ```network_server``` section
+
+You may set your LoRaWAN NetID (if you have one).  The net_id parameter may be set to “000000” or “000001” for experimental network. But one need a NetID to do passive roaming:
+
 ```sh
-[network_server]
-.
 .
 net_id=123456
 ```
-
-#### 5.	In the ```network_server.band``` section
-
 Also check out if your LoRaWAN transmission band is consistent with the regulation for the region you live in (As we are located in Europe and use the 868MHz band, we set it in the configuration (other possible values are indicated in the default configuration file)
 ```sh
 [network_server]
@@ -111,7 +106,7 @@ Also check out if your LoRaWAN transmission band is consistent with the regulati
    name=”EU_863”
 ```
 
-#### 6.	In the ```metrics``` section
+####  ```metrics``` section
 
 You can use either ```local``` for the system local time zone or use settings such as ```“Europe/Paris”```
 
