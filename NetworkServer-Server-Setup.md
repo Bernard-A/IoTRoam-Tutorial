@@ -1,9 +1,9 @@
 
 # Installing and Configuring the Network Server (NS) using ChirpStack (Debian/Ubuntu)
 
-In our set up, we have a dedicated NS Virtual Private Server and an AS Virtual Private Server which is accessible externally by distinct physical assress. 
+In our set up, we have a dedicated NS Virtual Private Server which is accessible externally by distinct physical assress. 
 
-This page covers setting up the NS and AS which are detailed in different sections as follows:
+This page covers setting up the NS which is detailed in different sections as follows:
 
  * [NS Setup]
  * [Verifying Communication between RGW->NS]
