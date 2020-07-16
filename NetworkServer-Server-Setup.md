@@ -187,8 +187,16 @@ Jul 16 11:11:01 vps323914 chirpstack-network-server[21156]: time="2020-07-16T11:
 Jul 16 11:11:01 vps323914 chirpstack-network-server[21156]: time="2020-07-16T11:11:01+02:00" level=error msg="uplink: processing uplink frame error" ctx_id=b6a1e382-ae69-49b4-b3ff-20c5dacaee21 error="get device error: object does not exist"
 ```
 
-In this log, the NS has processed the uplink frame from the RGW, and emits an error message mentioning that the object (device) is not part of the NS known objects (devices) 
+In this log, the NS has processed the uplink frame from the RGW, and emits an error message mentioning that the object (ED) is not part of the NS known objects (EDs)
 
+To make sure that the NS understands the data from the ED, the ED should be activated to interface with the NS. As per the [LoRaWAN Backend Specifications], there are two ways that the ED could be activated : 
+ * 1. Activation-by-Personalization (ABP) activated EDs
+ * 2. Over-the-Air Activated (OTAA) EDs
+
+```diff
++ Our focus will be on OTAA EDs
+```
+To activate the ED via OTAA, it uses the Join Server (JS) as per the [LoRaWAN Backend Specifications]
 
 [NS Setup]: #ns-setup
 [Verifying Communication between RGW->NS]: #post-sanity-check-from-rgw-ns-setup
@@ -197,6 +205,7 @@ In this log, the NS has processed the uplink frame from the RGW, and emits an er
 [redis]: #redis-section
 [network_server]: #network_server-section
 [metrics]: #metrics-section
+[LoRaWAN Backend Specifications] : https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 
 
 
