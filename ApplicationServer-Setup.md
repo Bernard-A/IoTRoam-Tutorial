@@ -139,16 +139,18 @@ Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15
 ...
 ```
 
-*For now, if you followed all the above indications. You should have a running ChirpStack stack. Running the Network Server and Application Server with this configuration should give you access to the web-interface accessible using your AS’s IP default port (http://192.168.1.2:8080) or if you are running locally http://localhost:8080*
-
-## JS Set up
-
 If you see the last line from the ouput after starting the NS, it is as follows:
 
 ```sh
 Jul 15 21:33:43 vps323915 chirpstack-application-server[15346]: time="2020-07-15T21:33:43+02:00" level=info msg="api/js: starting join-server api" bind="0.0.0.0:8003" ca_cert= tls_cert= tls_key=
 ```
 It means that the JS is bound to port ```8003``` on all interfaces.
+
+If you have followed the sequence of this tutorial, if you send data from the LoRa ED, you will not see any data in the AS logs. Hence, certain actions should be done in the AS web interface.
+
+```sh 
+For now, if you followed all the above indications. You should have a running ChirpStack stack. Running the Network Server and Application Server with this configuration should give you access to the web-interface accessible using your AS’s IP default port (http://192.168.1.2:8080) or if you are running locally http://localhost:8080
+```
 
 ## Post Sanity Check from RGW->NS->AS Setup
 
