@@ -219,7 +219,7 @@ ChirpStack recommends checking to following parameters in the above .toml file w
 * [3.	redis]
 * [4. application_server.external_api]
 
-#### 1.	In the ```postgresql``` section
+#### 1.	In the AS ```postgresql``` section
 
 Update the “dsn” parameter with the parameters you provided when setting up your own PostgreSQL database:
 
@@ -230,7 +230,7 @@ Update the “dsn” parameter with the parameters you provided when setting up 
 dsn="postgres://chirpstack_as:dbaspassword@localhost/chirpstack_as?sslmode=disable"
 ```
 
-#### 2.	In the ```postgresql``` section
+#### 2.	In the AS ```postgresql``` section
 
 The following parameter in the default configuration file is “postgresql.automigrate” which is useful when upgrading ChirpStack. Set it as you wish :
 
@@ -241,11 +241,11 @@ The following parameter in the default configuration file is “postgresql.autom
 automigrate=true
 ```
 
-#### 3.	In the ```redis``` section
+#### 3.	In the AS ```redis``` section
 
 If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the ```redis.url``` parameter
 
-#### 4.	In the ```application_server.external_api``` section
+#### 4.	In the As ```application_server.external_api``` section
 
 ChirpStack Application Server provides two API interfaces (```gRPC``` interface and RESTful ```JSON``` interface) that can be used to integrate with ChirpStack Application Server. Both interfaces provide exactly the same functionality and Authentication mechanism.
 
@@ -355,7 +355,12 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [4.	network_server.net_id]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#4in-the-network_server-section
 [5.	network_server.band]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#5in-the-network_serverband-section
 [6.	metrics.timezone]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#6in-the-metrics-section
-[4. application_server.external_api]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#4in-the-application_serverexternal_api-section
+[1.	In the AS ```postgresql``` section]
+[2.	In the AS ```postgresql``` section]
+[3.	In the AS ```redis``` section]
+[4.	In the As ```application_server.external_api``` section]
+
+
 
 
 
