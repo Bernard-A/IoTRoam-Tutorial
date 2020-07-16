@@ -64,28 +64,27 @@ $ /etc/chirpstack-network-server/chirpstack-network-server.toml
 
 ChirpStack recommends checking to following sections and modifying the parameters (if required) in the above .toml file when setting up a ChirpStack Network Server:
  * 1. [postgresql]
- * [redis]
- * [network_server]
- * [metrics.timezone]
+ * 2. [redis]
+ * 3. [network_server]
+ * 4. [metrics.timezone]
 
 #### ```postgresql``` section
 
 Update the ```dsn``` parameter with the parameters you provided when setting up your own PostgreSQL database:
 ```sh
-.
 dsn="postgres://chirpstack_ns:dbnspassword@localhost/chirpstack_ns?sslmode=disable"
 ``` 
 
 The following parameter in the default configuration file is “postgresql.automigrate” which is useful when upgrading ChirpStack. Set it as you wish :
 
 ```sh
-.
 automigrate=true
 ```
 
 #### ```redis``` section
 
 If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the ```redis.url``` parameter
+
 
 ####  ```network_server``` section
 
@@ -338,11 +337,9 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [AS binary]: https://www.chirpstack.io/application-server/overview/downloads/
 [generate one JWT]: https://www.chirpstack.io/application-server/integrate/auth/
 [postgresql]: #postgresql-section
-[2.	postgresql.automigrate]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#2in-the-postgresql-section
-[3.	redis]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#3in-the-redis-section
-[4.	network_server.net_id]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#4in-the-network_server-section
-[5.	network_server.band]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#5in-the-network_serverband-section
-[6.	metrics.timezone]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#6in-the-metrics-section
+[redis]: #redis-section
+[network_server]: #network_server-section
+[metrics.timezone]: #metrics-section
 [1.	In the AS ```postgresql``` section]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#1in-the-as-postgresql-section
 [2.	In the AS ```postgresql``` section]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#1in-the-as-postgresql-section
 [3.	In the AS ```redis``` section]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#3in-the-as-redis-section
