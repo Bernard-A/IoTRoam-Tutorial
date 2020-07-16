@@ -1,3 +1,10 @@
+```diff
+-           In this document, We have used chirpstack NS as the source : https://www.chirpstack.io/network-server/overview/.
+-           If you are using a different Software for NS, follow those Software specific details to set up the NS
++           Please follow the Pointer section below for further details if you are using a Software different 
++           from Chirpstack NS. 
+```
+
 
 # Installing and Configuring the Network Server (NS) using ChirpStack (Debian/Ubuntu)
 
