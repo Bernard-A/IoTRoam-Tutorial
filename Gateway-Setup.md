@@ -240,7 +240,7 @@ If you are using Multitech mDot and you have verified accessing the ED by follow
 [latest]: https://artifacts.chirpstack.io/vendor/multitech/conduit/
 [customising]: https://forum.chirpstack.io/t/no-logfile-from-lora-gateway-bridge/2925/7
 [topic]: https://www.chirpstack.io/gateway-bridge/integrate/generic-mqtt/
-[Install NS]: https://github.com/sandoche2k/IoTRoam-Tutorial/edit/master/NetworkServer-Server-Setup.md
+[Install NS]: https://github.com/sandoche2k/IoTRoam-Tutorial/master/NetworkServer-Server-Setup.md
 [Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
 [Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial 
 [GW Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
