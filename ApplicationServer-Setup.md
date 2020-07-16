@@ -168,11 +168,13 @@ should give you access to the web-interface using your AS’s IP and the default
    * In the tab ```Join OTAA/ABP```, click on Device Supports OTAA
    * I have not selected other tabs
 * Create [Gateway]. Other than retrieving the Gateway ID, everything is self-explanatory
-One can verify that the GW is configured correctly by clicking on LIVE LORAWAN FRAMES in the Gateways menu and one should see the Join Request if you start sending data from your ED as follows:
+One can verify that the GW is configured correctly by clicking on ```LIVE LORAWAN FRAMES``` in the Gateways menu and one should see the Join Request if you start sending data from your ED as follows:
 <p align="center">
   <img width="760" height="200" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig19.png?raw=true">
 </p>
-
+* Click on the ```Applications``` in the menu and fill the required fields and Update
+* Once again click on the ```Applications``` and click on the your Application Name
+   * One has to set the DevEUI (which is obtained from your ED) and in the device profille set the Keys (Search on how to do it)
 
 ## Post Sanity Check from RGW->NS->AS Setup
 
