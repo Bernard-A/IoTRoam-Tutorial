@@ -63,7 +63,7 @@ $ /etc/chirpstack-network-server/chirpstack-network-server.toml
 ```
 
 ChirpStack recommends checking to following sections and modifying the parameters (if required) in the above .toml file when setting up a ChirpStack Network Server:
- * [1.	postgresql.dsn]
+ * 1.	[postgresql.dsn]
  * [2.	postgresql.automigrate]
  * [3.	redis]
  * [4.	network_server.net_id]
@@ -349,7 +349,7 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [binary]:  https://www.chirpstack.io/network-server/overview/downloads/
 [AS binary]: https://www.chirpstack.io/application-server/overview/downloads/
 [generate one JWT]: https://www.chirpstack.io/application-server/integrate/auth/
-[1.	postgresql.dsn]: #1in-the-postgresql-section
+[postgresql.dsn]: #1in-the-postgresql-section
 [2.	postgresql.automigrate]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#2in-the-postgresql-section
 [3.	redis]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#3in-the-redis-section
 [4.	network_server.net_id]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#4in-the-network_server-section
