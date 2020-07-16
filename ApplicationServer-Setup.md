@@ -167,6 +167,11 @@ should give you access to the web-interface using your AS’s IP and the default
 * Click on the [Device Profile] and Update (Regional Paramater set to ```A``` and for others it is self explanatory)
    * In the tab ```Join OTAA/ABP```, click on Device Supports OTAA
    * I have not selected other tabs
+* Create [Gateway]. Other than retrieving the Gateway ID, everything is self-explanatory
+One can verify that the GW is configured correctly by clicking on LIVE LORAWAN FRAMES in the Gateways menu and one should see the Join Request if you start sending data from your ED as follows:
+<p align="center">
+  <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig19.png?raw=true">
+</p>
 
 
 ## Post Sanity Check from RGW->NS->AS Setup
@@ -237,6 +242,7 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [Organisation]: https://www.chirpstack.io/application-server/use/organizations/
 [Service Profile]: https://www.chirpstack.io/application-server/use/service-profiles/
 [Device Profile]: https://www.chirpstack.io/application-server/use/device-profiles/
+[Gateway]: https://www.chirpstack.io/application-server/use/gateways/
 
 
 
