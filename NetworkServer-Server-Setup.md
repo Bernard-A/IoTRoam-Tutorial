@@ -1,13 +1,12 @@
 
-# Installing and Configuring the Network Server (NS) and Application Server (AS) using ChirpStack (Debian/Ubuntu)
+# Installing and Configuring the Network Server (NS) using ChirpStack (Debian/Ubuntu)
 
 In our set up, we have a dedicated NS Virtual Private Server and an AS Virtual Private Server which is accessible externally by distinct physical assress. 
 
 This page covers setting up the NS and AS which are detailed in different sections as follows:
 
  * [NS Setup]
- * [As Setup]
- * [Verifying Communication between RGW->NS->AS]
+ * [Verifying Communication between RGW->NS]
 
 ## NS Setup
 
@@ -147,7 +146,7 @@ Jul 15 12:00:25 vps323914 chirpstack-network-server[5420]: time="2020-07-15T12:0
 ...
 ```
 
-*For now, if you followed all the above indications. You should have a running ChirpStack stack Network Server 
+*For now, if you followed all the above indications. You should have a running ChirpStack stack Network Server* 
 
 
 ## Post Sanity Check from RGW->NS->AS Setup
