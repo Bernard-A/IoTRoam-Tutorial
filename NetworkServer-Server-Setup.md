@@ -151,7 +151,7 @@ Jul 15 12:00:25 vps323914 chirpstack-network-server[5420]: time="2020-07-15T12:0
 
 ## Post Sanity Check from RGW->NS Setup
 
-The objective in this section is to verify the communication between the RGW->NS (2) and the NS->AS (3) shown in the figure:
+The objective in this section is to verify the communication between the RGW->NS (2) as shown in the figure:
 
 <p align="center">
   <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig14.png?raw=true">
@@ -165,7 +165,9 @@ Depending on your OS, one of the following commands will show you the logs:
 journalctl -f -n 100 -u chirpstack-network-server
 tail -f -n 100 /var/log/chirpstack-network-server/chirpstack-network-server.log
 ```
+```diff
 + Expected log output
+```
 
 ```sh
 INFO[0163] backend/gateway: uplink frame received
@@ -174,7 +176,9 @@ INFO[0164] device-session saved                          dev_addr=018f5aa9 dev_e
 INFO[0164] finished client unary call                    grpc.code=OK grpc.method=HandleUplinkData grpc.service=as.ApplicationServerService grpc.time_ms=52.204 span.kind=client system=grpc
 ```
 
+```diff
 - But the NS logs gives an error
+```
 
 ```sh
 Jul 16 11:11:01 vps323914 chirpstack-network-server[21156]: time="2020-07-16T11:11:01+02:00" level=info msg="gateway/mqtt: uplink frame received" gateway_id=00800000a0000825 uplink_id=634ac2e8-939f-4af8-8ac4-3407bae732ba
