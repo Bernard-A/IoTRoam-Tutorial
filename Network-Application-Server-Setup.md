@@ -63,7 +63,7 @@ $ /etc/chirpstack-network-server/chirpstack-network-server.toml
 ```
 
 ChirpStack recommends checking to following sections and modifying the parameters (if required) in the above .toml file when setting up a ChirpStack Network Server:
- * [postgresql]
+ * 1. [postgresql]
  * [redis]
  * [network_server]
  * [metrics.timezone]
