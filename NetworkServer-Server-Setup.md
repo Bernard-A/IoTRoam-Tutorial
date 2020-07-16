@@ -221,6 +221,7 @@ If you are using Chirpstack NS, Next section to follow : [AS_Setup]
 [Setting up the GW]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
 [Architecture page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 [Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial
+[Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
 
 
 
