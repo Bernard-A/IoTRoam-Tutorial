@@ -63,8 +63,7 @@ $ /etc/chirpstack-network-server/chirpstack-network-server.toml
 ```
 
 ChirpStack recommends checking to following sections and modifying the parameters (if required) in the above .toml file when setting up a ChirpStack Network Server:
- * [postgresql.dsn]
- * [2.	postgresql.automigrate]
+ * [postgresql]
  * [3.	redis]
  * [4.	network_server.net_id]
  * [5.	network_server.band] 
@@ -74,19 +73,13 @@ ChirpStack recommends checking to following sections and modifying the parameter
 
 Update the ```dsn``` parameter with the parameters you provided when setting up your own PostgreSQL database:
 ```sh
-[postgresql]
-.
 .
 dsn="postgres://chirpstack_ns:dbnspassword@localhost/chirpstack_ns?sslmode=disable"
 ``` 
 
-#### 2.	In the ```postgresql``` section
-
 The following parameter in the default configuration file is “postgresql.automigrate” which is useful when upgrading ChirpStack. Set it as you wish :
 
 ```sh
-[postgresql]
-.
 .
 automigrate=true
 ```
