@@ -149,7 +149,7 @@ Jul 15 12:00:25 vps323914 chirpstack-network-server[5420]: time="2020-07-15T12:0
 *For now, if you followed all the above indications. You should have a running ChirpStack stack Network Server* 
 
 
-## Post Sanity Check from RGW->NS->AS Setup
+## Post Sanity Check from RGW->NS Setup
 
 The objective in this section is to verify the communication between the RGW->NS (2) and the NS->AS (3) shown in the figure:
 
