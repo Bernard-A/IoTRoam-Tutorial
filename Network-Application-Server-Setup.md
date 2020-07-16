@@ -62,7 +62,7 @@ The configuration file is located in the chirpstack-network-server folder in /et
 $ /etc/chirpstack-network-server/chirpstack-network-server.toml
 ```
 
-ChirpStack recommends checking to following sections and modifying the parameters (if required) in the above .toml file when setting up a ChirpStack Network Server:
+ChirpStack recommends checking to following sections and modifying the parameters (if required) in the above .toml file when setting up a ChirpStack NS:
  * 1. [postgresql]
  * 2. [redis]
  * 3. [network_server]
@@ -200,39 +200,32 @@ The configuration file is located as follows:
 ```sh
 $ /etc/chirpstack-application-server/chirpstack-application-server.toml
 ```
-ChirpStack recommends checking to following parameters in the above .toml file when setting up a ChirpStack Application Server:
-* [1.	postgresql.dsn]
-* [2.	postgresql.automigrate]
-* [3.	redis]
-* [4. application_server.external_api]
+ChirpStack recommends checking to following parameters in the above .toml file when setting up a ChirpStack AS:
 
-#### 1.	In the AS ```postgresql``` section
+* 1. [AS postgresql]
+* 2. [AS redis]
+* 3. [AS application_server.external_api]
+
+#### AS ```postgresql``` section
 
 Update the “dsn” parameter with the parameters you provided when setting up your own PostgreSQL database:
 
 ```sh
-[postgresql]
-.
-.
 dsn="postgres://chirpstack_as:dbaspassword@localhost/chirpstack_as?sslmode=disable"
 ```
-
-#### 2.	In the AS ```postgresql``` section
 
 The following parameter in the default configuration file is “postgresql.automigrate” which is useful when upgrading ChirpStack. Set it as you wish :
 
 ```sh
-[postgresql]
-.
-.
 automigrate=true
 ```
 
-#### 3.	In the AS ```redis``` section
+#### AS ```redis``` section
 
 If you changed the default port for redis or if you host redis on a different machine, don’t forget to change the ```redis.url``` parameter
 
-#### 4.	In the As ```application_server.external_api``` section
+
+#### AS ```application_server.external_api``` section
 
 ChirpStack Application Server provides two API interfaces (```gRPC``` interface and RESTful ```JSON``` interface) that can be used to integrate with ChirpStack Application Server. Both interfaces provide exactly the same functionality and Authentication mechanism.
 
@@ -340,10 +333,9 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [redis]: #redis-section
 [network_server]: #network_server-section
 [metrics]: #metrics-section
-[1.	In the AS ```postgresql``` section]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#1in-the-as-postgresql-section
-[2.	In the AS ```postgresql``` section]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#1in-the-as-postgresql-section
-[3.	In the AS ```redis``` section]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#3in-the-as-redis-section
-[4.	In the As ```application_server.external_api``` section]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#4in-the-as-application_serverexternal_api-section
+[AS postgresql]
+[AS redis]
+[AS application_server.external_api]
 
 
 
