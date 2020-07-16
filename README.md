@@ -11,6 +11,7 @@ This document is structured and one can follow sequentially starting with ``` Ar
  * [Architecture]
  * [Setting up the End-Device]
  * [Setting up the Packet Forwarder and the Radio Gateway Bridge]
+ * [Installing and Configuring the Network Server]
  * [Installing and Configuring the Network Server and the Application Server]
  * [Setting up the DNS infrastructure]
  * [OTAA via DNS]
