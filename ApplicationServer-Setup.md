@@ -6,6 +6,7 @@ In our set up, we have a dedicated AS Virtual Private Server which is accessible
 This page covers setting up the AS which are detailed in different sections as follows:
 
  * [AS Setup]
+ * [Web Interface Setup]
  * [Verifying Communication between RGW->NS->AS]
 
 
@@ -154,6 +155,14 @@ should give you access to the web-interface using your AS’s IP and the default
 (or) if you are running locally as :http://localhost:8080
 ```
 
+## Web Interface Setup
+
+[Chirpstack UI page] provides a detailed description on how to set the web interface? Here we will just point out to those links in a sequential manner: 
+
+* [Login] to your Web interface
+* Set up or update [User], if required
+
+
 ## Post Sanity Check from RGW->NS->AS Setup
 
 The objective in this section is to verify the communication between the RGW->NS (2) and the NS->AS (3) shown in the figure:
@@ -215,6 +224,10 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [postgresql]: #postgresql-section
 [redis]: #redis-section
 [application_server.external_api]: #application_serverexternal_api-section
+[Web Interface Setup]: #Web_Interface_Setup
+[Chirpstack UI page]: https://www.chirpstack.io/application-server/use/
+[Login]: https://www.chirpstack.io/application-server/use/login/
+[User]: https://www.chirpstack.io/application-server/use/users/
 
 
 
