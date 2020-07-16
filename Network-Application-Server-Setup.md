@@ -70,7 +70,7 @@ ChirpStack recommends checking to following sections and modifying the parameter
  * [5.	network_server.band] 
  * [6.	metrics.timezone]
 
-#### 1. In the ```postgresql``` section
+#### ```postgresql``` section
 
 Update the ```dsn``` parameter with the parameters you provided when setting up your own PostgreSQL database:
 ```sh
