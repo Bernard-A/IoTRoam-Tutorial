@@ -353,7 +353,7 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [2.	postgresql.automigrate]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#2in-the-postgresql-section
 [3.	redis]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#3in-the-redis-section
 [4.	network_server.net_id]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#4in-the-network_server-section
-[5.	network_server.band]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#5in-the-network_serverband-section
+[5.	network_server.band]: 
 [6.	metrics.timezone]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#6in-the-metrics-section
 [4. application_server.external_api]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#4in-the-application_serverexternal_api-section
 
