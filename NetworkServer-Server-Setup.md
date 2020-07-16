@@ -205,7 +205,7 @@ To activate the ED via OTAA, it uses the Join Server (JS) as per the [LoRaWAN Ba
 [redis]: #redis-section
 [network_server]: #network_server-section
 [metrics]: #metrics-section
-[LoRaWAN Backend Specifications] : https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
+[LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 
 
 
