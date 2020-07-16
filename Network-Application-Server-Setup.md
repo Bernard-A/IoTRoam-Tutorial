@@ -345,7 +345,7 @@ In this log, the AS received an uplink application-payload from the NS and publi
 
 [NS Setup]: #ns-setup
 [AS Setup]: #as-setup
-[Verifying Communication between RGW->NS->AS]: #verify-communication-from-rgw-ns-as-setup
+[Verifying Communication between RGW->NS->AS]: #post-sanity-check-from-rgw-ns-as-setup
 [binary]:  https://www.chirpstack.io/network-server/overview/downloads/
 [AS binary]: https://www.chirpstack.io/application-server/overview/downloads/
 [generate one JWT]: https://www.chirpstack.io/application-server/integrate/auth/
