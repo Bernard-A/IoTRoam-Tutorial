@@ -333,8 +333,8 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [redis]: #redis-section
 [network_server]: #network_server-section
 [metrics]: #metrics-section
-[AS postgresql]
-[AS redis]
+[AS postgresql]: #as-postgresql-section
+[AS redis]:#as-redis-section
 [AS application_server.external_api]
 
 
