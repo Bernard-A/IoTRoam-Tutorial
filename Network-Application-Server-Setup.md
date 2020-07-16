@@ -66,7 +66,7 @@ ChirpStack recommends checking to following sections and modifying the parameter
  * 1. [postgresql]
  * 2. [redis]
  * 3. [network_server]
- * 4. [metrics.timezone]
+ * 4. [metrics]
 
 #### ```postgresql``` section
 
@@ -339,7 +339,7 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [postgresql]: #postgresql-section
 [redis]: #redis-section
 [network_server]: #network_server-section
-[metrics.timezone]: #metrics-section
+[metrics]: #metrics-section
 [1.	In the AS ```postgresql``` section]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#1in-the-as-postgresql-section
 [2.	In the AS ```postgresql``` section]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#1in-the-as-postgresql-section
 [3.	In the AS ```redis``` section]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#3in-the-as-redis-section
