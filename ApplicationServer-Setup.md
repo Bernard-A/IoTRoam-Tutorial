@@ -161,6 +161,9 @@ should give you access to the web-interface using your AS’s IP and the default
 
 * [Login] to your Web interface
 * Set up or update [User], if required
+* Add your NS in the Web interface which is self explanatory. At this juncture, fill only the ```General``` section
+* Add/Update [Organisation]
+* Click on the [Service Profile] and Create one (click on ```Add gateway meta-data``` ; set ```Minimum allowed data-rate``` to ```0``` and ```Maximum allowed data-rate``` to ```5``` 
 
 
 ## Post Sanity Check from RGW->NS->AS Setup
@@ -228,6 +231,8 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [Chirpstack UI page]: https://www.chirpstack.io/application-server/use/
 [Login]: https://www.chirpstack.io/application-server/use/login/
 [User]: https://www.chirpstack.io/application-server/use/users/
+[Organisation]: https://www.chirpstack.io/application-server/use/organizations/
+[Service Profile]: https://www.chirpstack.io/application-server/use/service-profiles/
 
 
 
