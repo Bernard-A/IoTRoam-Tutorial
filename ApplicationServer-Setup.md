@@ -149,7 +149,9 @@ It means that the JS is bound to port ```8003``` on all interfaces.
 If you have followed the sequence of this tutorial, if you send data from the LoRa ED, you will not see any data in the AS logs. Hence, certain actions should be done in the AS web interface.
 
 ```sh 
-For now, if you followed all the above indications. You should have a running ChirpStack stack. Running the Network Server and Application Server with this configuration should give you access to the web-interface accessible using your AS’s IP default port (http://192.168.1.2:8080) or if you are running locally http://localhost:8080
+For now, if you followed all the above indications. You should have a running ChirpStack stack. Running the NS and AS with 
+this configuration should give you access to the web-interface accessible using your AS’s IP default port (http://192.168.1.2:8080)
+or if you are running locally http://localhost:8080
 ```
 
 ## Post Sanity Check from RGW->NS->AS Setup
