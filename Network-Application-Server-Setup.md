@@ -342,7 +342,7 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [binary]:  https://www.chirpstack.io/network-server/overview/downloads/
 [AS binary]: https://www.chirpstack.io/application-server/overview/downloads/
 [generate one JWT]: https://www.chirpstack.io/application-server/integrate/auth/
-[postgresql.dsn]: #postgresql-section
+[postgresql]: #postgresql-section
 [2.	postgresql.automigrate]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#2in-the-postgresql-section
 [3.	redis]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#3in-the-redis-section
 [4.	network_server.net_id]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md#4in-the-network_server-section
