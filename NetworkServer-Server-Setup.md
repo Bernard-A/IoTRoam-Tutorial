@@ -196,7 +196,7 @@ To make sure that the NS understands the data from the ED, the ED should be acti
 ```diff
 + Our focus will be on OTAA EDs
 ```
-To activate the ED via OTAA, NS uses the Join Server (JS) as per the [LoRaWAN Backend Specifications]. To complete the verification of the RGW->NS interface one has to validate the AS Post Sanity (in our set up JS is part of the AS) Check as per our set up.
+To activate the ED via OTAA, NS uses the Join Server (JS) as per the [LoRaWAN Backend Specifications]. To complete the verification of the RGW->NS interface one has to validate the AS Post Sanity Check (as in our set up ```JS and AS are in the same machine```)  as per our set up.
 
 ## Pointer Section
 
