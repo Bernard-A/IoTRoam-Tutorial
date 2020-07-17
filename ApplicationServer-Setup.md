@@ -215,7 +215,21 @@ gateway/00800000a0000825/event/up {"phyPayload":"APliDNaluVYV260AAAAAgAAnnH6k4Y0
 ```
 The above log confirms that there is a uplink payload recieved from the Gateway ```00800000a0000825```
 
+Another terminal running at the same with the below command as per your OS distribution
+```sh
+journalctl -f -n 100 -u chirpstack-application-server
+tail -f -n 100 /var/log/chirpstack-application-server/chirpstack-application-server.log
+```
 
+Shows the logs as follows:
+```sh
+Jul 18 00:28:53 vps323914 chirpstack-network-server[21156]: time="2020-07-18T00:28:53+02:00" level=info msg="gateway/mqtt: uplink frame received" gateway_id=00800000a0000825 uplink_id=3f06f367-6d77-468b-bb12-85fe0e41b931
+Jul 18 00:28:53 vps323914 chirpstack-network-server[21156]: time="2020-07-18T00:28:53+02:00" level=info msg="uplink: frame(s) collected" ctx_id=bee0644a-cf32-4179-8361-b47106df4898 mtype=JoinRequest uplink_ids="[3f06f367-6d77-468b-bb12-85fe0e41b931]"
+Jul 18 00:28:53 vps323914 chirpstack-network-server[21156]: time="2020-07-18T00:28:53+02:00" level=warning msg="creating insecure application-server client" server="localhost:8001"
+Jul 18 00:28:53 vps323914 chirpstack-network-server[21156]: time="2020-07-18T00:28:53+02:00" level=warning msg="grpc: addrConn.createTransport failed to connect to {127.0.0.1:8001  <nil> 0 <nil>}. Err: connection error: desc = \"transport: Error while dialing dial tcp 127.0.0.1:8001: connect: connection refused\". Reconnecting..."
+Jul 18 00:28:54 vps323914 chirpstack-network-server[21156]: time="2020-07-18T00:28:54+02:00" level=error msg="uplink/join: get as client for routing-profile id error" ctx_id=bee0644a-cf32-4179-8361-b47106df4898 dev_eui=008000000000addb error="get application-server client error: create application-server api client error: dial application-server api error: context deadline exceeded"
+Jul 18 00:28:54 vps323914 chirpstack-network-server[21156]: time="2020-07-18T00:28:54+02:00" level=error msg="uplink: processing uplink frame error" ctx_id=bee0644a-cf32-4179-8361-b47106df4898 error="join-request to join-server error: http post error: Post http://localhost:8003: dial tcp 127.0.0.1:8003: connect: connection refused"
+```
 
 ### Verify whether the AS receives data from the NS
 Depending on your OS, one of the following commands will show you the logs:
