@@ -231,7 +231,15 @@ Jul 18 00:28:54 vps323914 chirpstack-network-server[21156]: time="2020-07-18T00:
 Jul 18 00:28:54 vps323914 chirpstack-network-server[21156]: time="2020-07-18T00:28:54+02:00" level=error msg="uplink: processing uplink frame error" ctx_id=bee0644a-cf32-4179-8361-b47106df4898 error="join-request to join-server error: http post error: Post http://localhost:8003: dial tcp 127.0.0.1:8003: connect: connection refused"
 ```
 
-If one looks carefully in the logs above, there is connection refused for ports  ```8001``` and ```8003```. This where we redirect you to the [Architecture page] to make sure that required ports are open.
+If one looks carefully in the logs above, there is a ```warning``` and ```three error``` messages:
+* Warning message is that the NS is ```creating insecure application-server client```. The reason being until now we have not set the TLS certificates. We will do it later
+* First Error message is ```tcp 127.0.0.1:8001: connect: connection refused```
+* Second Error message is `that since the connection is refused for port 8001, the NS is not able to get the client routing profile 
+* Third error message is not able to connect to the Join Server using port 8003
+
+To rectify the above issues:
+* The connection refused for ports  ```8001``` and ```8003```. This where we redirect you to the [Architecture page] to make sure that required ports are open
+* Make sure that the NS [JS-config] is pointing to the appropriate JS IP and port  
 
 
 
@@ -288,6 +296,7 @@ If you are using Chirpstack NS, Next section to follow : []
 [Setting up the GW]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
 [NS Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
 [GW-Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md#chirpstack-gateway-bridge-is-receiving-data-from-the-packet-forwarder
+[JS-config]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md#Join-Server-section
 
 
 
