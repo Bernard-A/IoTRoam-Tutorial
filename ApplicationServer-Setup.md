@@ -176,10 +176,8 @@ should give you access to the web-interface using your AS’s IP and the default
 
 * Click on the ```Applications``` in the menu and fill the required fields and Update
 * Once again click on the ```Applications``` and click on the your Application Name
-   * One has to set the DevEUI (which is obtained from your ED) 
-      * In the [ED Setup], it is explained hoiw to access your mDoT ED and type the following command to obtain the DevEUI
-      
-            ```sh
+   * One has to set the DevEUI (which is obtained from your ED). In the [ED Setup], it is explained hoiw to access your mDoT ED and type the following command to obtain the DevEUI
+           ```sh
                AT+DI       ## Unique Device EUI set at factory (8 bytes)
             ``` 
    * and in the device profille set the Keys 
