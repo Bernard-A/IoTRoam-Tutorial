@@ -180,6 +180,10 @@ should give you access to the web-interface using your AS’s IP and the default
   ```sh
                   AT+DI       ## Unique Device EUI set at factory (8 bytes)
   ```
+  <p align="center">
+  <img width="760" height="200" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig20.png?raw=true">
+</p>
+  
    * and in the device profille set the Keys 
 
 
