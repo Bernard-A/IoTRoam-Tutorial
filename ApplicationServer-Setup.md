@@ -262,7 +262,6 @@ If you are using Chirpstack NS, Next section to follow : []
  * In any case, If you want to go back to the [NS Setup]
 
 
-[NS Setup]: #NetworkServer-Server-Setup.md
 [AS Setup]: #as-setup
 [Verifying Communication between RGW->NS->AS]: #post-sanity-check-from-rgw-ns-as-setup
 [binary]:  https://www.chirpstack.io/network-server/overview/downloads/
@@ -284,6 +283,7 @@ If you are using Chirpstack NS, Next section to follow : []
 [Architecture page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 [Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
 [Setting up the GW]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
+[NS Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
 
 
 
