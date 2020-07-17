@@ -193,7 +193,7 @@ should give you access to the web-interface using your AS’s IP and the default
   * If you click on the ```Activation``` menu, at this instance you should get a resonse that the device is not activated as follows:
   
   <p align="center">
-  <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig21.png?raw=true">
+  <img width="760" height="150" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig21.png?raw=true">
 </p>
 
 
