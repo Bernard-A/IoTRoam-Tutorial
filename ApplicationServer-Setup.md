@@ -281,8 +281,10 @@ If you are using Chirpstack NS, Next section to follow : []
 [Gateway]: https://www.chirpstack.io/application-server/use/gateways/
 [ED Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md#hardware-setup
 [Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial
-[Setting up the GW]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
 [Architecture page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
+[Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
+[Setting up the GW]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
+
 
 
 
