@@ -207,9 +207,11 @@ The objective in this section is to verify the communication between the RGW->NS
 
 ### Verify whether the NS receives data from the RGW
 
-There are two interfaces in the NS to check whether we have received any data from the RGW. 
+When the ED sends an uplink, the logs from the RGW is same as in the [GW-Setup]. There are two tools in the NS to check whether we have received any data from the RGW. First is the MQTT client and the logs are as follows: 
 
-When the ED sends an uplink, the logs from the RGW is same as in the [GW-Setup]
+```sh
+gateway/00800000a0000825/event/up {"phyPayload":"APliDNaluVYV260AAAAAgAAnnH6k4Y0=","txInfo":{"frequency":868300000,"modulation":"LORA","loRaModulationInfo":{"bandwidth":125,"spreadingFactor":12,"codeRate":"4/5","polarizationInversion":false}},"rxInfo":{"gatewayID":"AIAAAKAACCU=","time":"2020-05-26T14:36:17.347455Z","timeSinceGPSEpoch":null,"rssi":-108,"loRaSNR":-5.8,"channel":1,"rfChain":0,"board":0,"antenna":0,"location":null,"fineTimestampType":"NONE","context":"OcO85A==","uplinkID":"PwbzZ213Rou7EoX+DkG5MQ=="}}
+```
 
 
 
