@@ -209,7 +209,7 @@ The objective in this section is to verify the communication between the RGW->NS
 
 There are two interfaces in the NS to check whether we have received any data from the RGW. 
 
-When the ED sends an uplink, the logs from the RGW is same as in the GW-Setup
+When the ED sends an uplink, the logs from the RGW is same as in the [GW-Setup]
 
 
 
