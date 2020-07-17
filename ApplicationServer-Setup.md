@@ -190,10 +190,10 @@ should give you access to the web-interface using your AS’s IP and the default
   ```sh
                   AT+NK=0,DACFF1F919CC7BD3E7490439D926A3BD       ## Your App Key 
   ```
-  * If you click on the ```Activation``` menu, at this instance you should get a resonse that the device is not activated as follows:
+  * If you click on the ```Activation``` menu, at this instance you should get a response that the device is not activated as follows:
   
-  <p align="center">
-  <img width="760" height="100" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig21.png?raw=true">
+ <p align="center">
+  <img width="760" height="125" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig21.png?raw=true">
 </p>
 
 
