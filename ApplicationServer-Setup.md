@@ -181,11 +181,13 @@ should give you access to the web-interface using your AS’s IP and the default
                   AT+DI       ## Unique Device EUI set at factory (8 bytes)
   ```
  * Once one click on the device that has been created you will come to a page and now as one clicks on the menu ```Keys(OTAA)``` the page will be displayed as below
+ 
   <p align="center">
   <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig20.png?raw=true">
 </p>
+
  * We have set only the  ```Application Key``` field. We clicked the arrow symbol in the right to generate an application key. You can also set your own Application Key as per the specifications. This key should be introduced to your ED. In  the mDot, we added using the following command:
- ```sh
+  ```sh
                   AT+NK=0,DACFF1F919CC7BD3E7490439D926A3BD       ## Your App Key 
   ```
 
