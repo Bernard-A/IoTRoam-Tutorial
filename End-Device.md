@@ -14,7 +14,7 @@ We are using [Multitech mDoT]. The mDot is fixed to the [Micro Developer Kit].
  * One has to connect the LoRa Antenna to mDot as shown in Figure 1 
 
 <p align="center">
-  <img width="560" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig2.png?raw=true">
+  <img width="560" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig2.png?raw=true">
 </p>
 
  * The Micro Developer Kit where the ED is fixed enables one to access the ED from one's computer. As shown in the Figure 1, the Micro Developer Kit is connected with a USB connection which can be connected to one's computer. 
