@@ -231,6 +231,11 @@ Jul 18 00:28:54 vps323914 chirpstack-network-server[21156]: time="2020-07-18T00:
 Jul 18 00:28:54 vps323914 chirpstack-network-server[21156]: time="2020-07-18T00:28:54+02:00" level=error msg="uplink: processing uplink frame error" ctx_id=bee0644a-cf32-4179-8361-b47106df4898 error="join-request to join-server error: http post error: Post http://localhost:8003: dial tcp 127.0.0.1:8003: connect: connection refused"
 ```
 
+If one looks carefully in the logs above, there is connection refused for ports  ```8001``` and ```8003```. This where we redirect you to the [Architecture page] to make sure that required ports are open.
+
+
+
+
 ### Verify whether the AS receives data from the NS
 Depending on your OS, one of the following commands will show you the logs:
 
