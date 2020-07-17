@@ -73,6 +73,7 @@ ChirpStack recommends checking to following sections and modifying the parameter
  * 2. [redis]
  * 3. [network_server]
  * 4. [metrics]
+ * 5. [Join_Server]
 
 #### ```postgresql``` section
 
@@ -114,6 +115,16 @@ Also check out if your LoRaWAN transmission band is consistent with the regulati
 
 You can use either ```local``` for the system local time zone or use settings such as ```“Europe/Paris”```
 
+####  ```Join-Server``` section
+
+The Join Server configuration should point to the Join Server (JS) IP. In our set up the AS is the same as the JS
+```sh
+[join_server]
+
+  [join_server.default]
+  
+  server="http://JS-IP:8003
+```
 
 ### 	Starting the ChirpStack NS
 To (re)start and stop ChirpStack NS depends on if your distribution uses “init.d” or “systemd”:
@@ -222,6 +233,7 @@ If you are using Chirpstack NS, Next section to follow : [AS_Setup]
 [redis]: #redis-section
 [network_server]: #network_server-section
 [metrics]: #metrics-section
+[Join_Server]: #Join-Server-section
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 [AS_Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md
 [Setting up the GW]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
