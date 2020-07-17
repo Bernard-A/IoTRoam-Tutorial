@@ -237,7 +237,7 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [postgresql]: #postgresql-section
 [redis]: #redis-section
 [application_server.external_api]: #application_serverexternal_api-section
-[Web Interface Setup]: #Web_Interface_Setup
+[Web Interface Setup]: #web-interface-setup 
 [Chirpstack UI page]: https://www.chirpstack.io/application-server/use/
 [Login]: https://www.chirpstack.io/application-server/use/login/
 [User]: https://www.chirpstack.io/application-server/use/users/
