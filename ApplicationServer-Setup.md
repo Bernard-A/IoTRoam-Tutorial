@@ -249,7 +249,20 @@ INFO[0186] finished unary call with code OK              grpc.code=OK grpc.metho
 
 In this log, the AS received an uplink application-payload from the NS and published this payload to the application/1/device/0101010101010101/rx MQTT topic.
 
-[NS Setup]: #ns-setup
+## Pointer Section
+
+In the event of one using As that is not Chirpstack, please make sure that you [] . Once verified, Next section to follow : []
+
+If you are using Chirpstack NS, Next section to follow : []
+
+ * In any case, If you want to go back to the [Readme Page]
+ * In any case, If you want to go back to the [Architecture page]
+ * In any case, If you want to go back to the [Setting up the End-Device]
+ * In any case, If you want to go back to the [Setting up the GW]
+ * In any case, If you want to go back to the [NS Setup]
+
+
+[NS Setup]: #NetworkServer-Server-Setup.md
 [AS Setup]: #as-setup
 [Verifying Communication between RGW->NS->AS]: #post-sanity-check-from-rgw-ns-as-setup
 [binary]:  https://www.chirpstack.io/network-server/overview/downloads/
@@ -267,6 +280,7 @@ In this log, the AS received an uplink application-payload from the NS and publi
 [Device Profile]: https://www.chirpstack.io/application-server/use/device-profiles/
 [Gateway]: https://www.chirpstack.io/application-server/use/gateways/
 [ED Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md#hardware-setup
+[Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial
 
 
 
