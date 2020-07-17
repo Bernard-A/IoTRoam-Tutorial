@@ -182,7 +182,7 @@ should give you access to the web-interface using your AS’s IP and the default
   ```
  * Once one click on the device that has been created you will come to a page and now as one clicks on the menu ```Keys(OTAA)``` the page will be displayed as below
  
-  <p align="center">
+ <p align="center">
   <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig20.png?raw=true">
 </p>
 
@@ -190,6 +190,11 @@ should give you access to the web-interface using your AS’s IP and the default
   ```sh
                   AT+NK=0,DACFF1F919CC7BD3E7490439D926A3BD       ## Your App Key 
   ```
+  * If you click on the ```Activation``` menu, at this instance you should get a resonse that the device is not activated as follows:
+  
+  <p align="center">
+  <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig21.png?raw=true">
+</p>
 
 
 ## Post Sanity Check from RGW->NS->AS Setup
