@@ -1,8 +1,9 @@
-<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
 
 # Installing and Configuring the Application Server (AS) using ChirpStack (Debian/Ubuntu)
 
-<div class="text-purple">
+<div class="h1">
   This text is purple, <a href="#" class="text-inherit">including the link</a>
 </div>
 
