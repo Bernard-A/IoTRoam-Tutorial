@@ -310,7 +310,7 @@ In this log, the AS received an uplink JoinRequest from the NS. The JS verifies 
 If you have reached until this level, one has activated the ED via OTAA AS by having interactions with different entities in the LoRaWAN as shown in the figure below
 
 <p align="center">
-  <img width="600" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig23.png?raw=true">
+  <img width="600" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/FIG23.png?raw=true">
 </p>
 
 ## Pointer Section
