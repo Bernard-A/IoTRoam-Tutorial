@@ -1,9 +1,9 @@
 <link href="https://unpkg.com/primer/build/build.css" rel="stylesheet">
-
+<link rel="stylesheet" type="text/css" href="css/style.css">
 
 # Installing and Configuring the Application Server (AS) using ChirpStack (Debian/Ubuntu)
 
-<p class="red"> Red text </p>
+<h1> Red text </h1>
 <span title="Label: gray label" class="Label Label--gray">gray label</span>
 
 
