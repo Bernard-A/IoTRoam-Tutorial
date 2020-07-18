@@ -1,6 +1,10 @@
 
 # Installing and Configuring the Application Server (AS) using ChirpStack (Debian/Ubuntu)
 
+<div class="text-purple">
+  This text is purple, <a href="#" class="text-inherit">including the link</a>
+</div>
+
 In our set up, we have a dedicated AS Virtual Private Server which is accessible externally by distinct physical address. The JS functions in the same Virtual Private Server as the AS in out set up. 
 
 This page covers setting up the AS which are detailed in different sections as follows:
