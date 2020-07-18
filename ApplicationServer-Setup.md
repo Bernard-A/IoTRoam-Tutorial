@@ -307,7 +307,7 @@ Jul 18 15:22:40 ApplicationServer chirpstack-application-server[727]: time="2020
 
 In this log, the AS received an uplink JoinRequest from the NS. The JS verifies and sends back the JoinAns and finally publishes to the mqtt.
 
-If you have reached until this level, one has activated the ED via OTAA AS by having interactions with different entities in the LoRaWAN as shown in the figure below
+If you have reached until this level, one has activated the ED via OTAA by having interactions with different entities in the LoRaWAN ecosystem as shown in the figure below
 
 <p align="center">
   <img width="600" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/FIG23.png?raw=true">
@@ -315,9 +315,9 @@ If you have reached until this level, one has activated the ED via OTAA AS by ha
 
 ## Pointer Section
 
-In the event of one using As that is not Chirpstack, please make sure that you [] . Once verified, Next section to follow : []
+In the event of one using As that is not Chirpstack, please make sure that you [] . Once verified, Next section to follow : [DNS-Setup]
 
-If you are using Chirpstack NS, Next section to follow : []
+If you are using Chirpstack NS and AS, Next section to follow : [DNS-Setup]
 
  * In any case, If you want to go back to the [Readme Page]
  * In any case, If you want to go back to the [Architecture page]
@@ -350,6 +350,7 @@ If you are using Chirpstack NS, Next section to follow : []
 [NS Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
 [GW-Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md#chirpstack-gateway-bridge-is-receiving-data-from-the-packet-forwarder
 [JS-config]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md#Join-Server-section
+[DNS-Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/DNS-Setup.md
 
 
 
