@@ -199,8 +199,8 @@ should give you access to the web-interface using your AS’s IP and the default
   ```
  * Make sure that you save the setting and also test whether your new settings has been updated by using following commands:
  ```sh
-                  AT&W            ##Save Configuration to flash memory
-                  AT&V            ##Display current settings and status
+                  AT&W            ## Save Configuration to flash memory
+                  AT&V            ##  Display current settings and status
  ```
  * If you click on the ```Activation``` menu, at this instance you should get a response that the device is not activated as follows:
   
@@ -263,7 +263,20 @@ Jul 18 12:28:08 vps323914 chirpstack-network-server[3524]: time="2020-07-18T12:2
 Jul 18 12:28:08 vps323914 chirpstack-network-server[3524]: time="2020-07-18T12:28:08+02:00" level=error msg="uplink: processing uplink frame error" ctx_id=034b33b3-0389-4325-8629-a6277b6834f5 error="join-request to join-server error: response error, code: MICFailed, description: invalid mic"
 ```
 
-The error message that rests in the above log is ```invalid mic```
+The error message that rests in the above log is ```invalid mic```. The reason was that we did not save the App key settings after adding it to the device. 
+
+
+```sh
+Jul 18 15:22:32 NetworkServer chirpstack-network-server[759]: time="2020-07-18T15:22:32+02:00" level=info msg="gateway/mqtt: uplink frame received" gateway_id=00800000a0000825 uplink_id=3e6babfc-841a-4772-847a-e5ce7c09c08d
+Jul 18 15:22:32 NetworkServer chirpstack-network-server[759]: time="2020-07-18T15:22:32+02:00" level=info msg="uplink: frame(s) collected" ctx_id=31c30668-cf03-40ec-8637-40f114603a96 mtype=JoinRequest uplink_ids="[3e6babfc-841a-4772-847a-e5ce7c09c08d]"
+Jul 18 15:22:32 NetworkServer chirpstack-network-server[759]: time="2020-07-18T15:22:32+02:00" level=info msg="device-queue flushed" ctx_id=31c30668-cf03-40ec-8637-40f114603a96 dev_eui=008000000000addb
+Jul 18 15:22:32 NetworkServer chirpstack-network-server[759]: time="2020-07-18T15:22:32+02:00" level=info msg="sent uplink meta-data to network-controller" ctx_id=31c30668-cf03-40ec-8637-40f114603a96 dev_eui=008000000000addb
+Jul 18 15:22:32 NetworkServer chirpstack-network-server[759]: time="2020-07-18T15:22:32+02:00" level=info msg="device-session saved" ctx_id=31c30668-cf03-40ec-8637-40f114603a96 dev_addr=2c3c404e dev_eui=008000000000addb
+Jul 18 15:22:32 NetworkServer chirpstack-network-server[759]: time="2020-07-18T15:22:32+02:00" level=info msg="device-activation created" ctx_id=31c30668-cf03-40ec-8637-40f114603a96 dev_eui=008000000000addb id=1
+Jul 18 15:22:32 NetworkServer chirpstack-network-server[759]: time="2020-07-18T15:22:32+02:00" level=info msg="device updated" ctx_id=31c30668-cf03-40ec-8637-40f114603a96 dev_eui=008000000000addb
+Jul 18 15:22:32 NetworkServer chirpstack-network-server[759]: time="2020-07-18T15:22:32+02:00" level=info msg="gateway/mqtt: publishing gateway command" command=down downlink_id=31c30668-cf03-40ec-8637-40f114603a96 gateway_id=00800000a0000825 qos=0 topic=gateway/00800000a0000825/command/down
+Jul 18 15:22:32 NetworkServer chirpstack-network-server[759]: time="2020-07-18T15:22:32+02:00" level=info msg="downlink-frames saved" ctx_id=31c30668-cf03-40ec-8637-40f114603a96 token=45539
+```
 
 
 
