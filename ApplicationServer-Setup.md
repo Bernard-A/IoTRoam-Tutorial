@@ -3,13 +3,6 @@
 
 # Installing and Configuring the Application Server (AS) using ChirpStack (Debian/Ubuntu)
 
-<p>okay</p>
-
-<h1> Red text </h1>
-<span title="Label: gray label" class="Label Label--gray">gray label</span>
-
-
-
 In our set up, we have a dedicated AS Virtual Private Server which is accessible externally by distinct physical address. The JS functions in the same Virtual Private Server as the AS in out set up. 
 
 This page covers setting up the AS which are detailed in different sections as follows:
