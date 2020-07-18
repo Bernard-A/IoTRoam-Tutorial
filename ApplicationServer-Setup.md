@@ -1,7 +1,12 @@
-<link href="https://unpkg.com/primer/build/build.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
+
+
 # Installing and Configuring the Application Server (AS) using ChirpStack (Debian/Ubuntu)
+
+<div class="h1">
+  This text is purple, <a href="#" class="text-inherit">including the link</a>
+</div>
 
 In our set up, we have a dedicated AS Virtual Private Server which is accessible externally by distinct physical address. The JS functions in the same Virtual Private Server as the AS in out set up. 
 
@@ -233,10 +238,26 @@ Jul 18 00:28:54 vps323914 chirpstack-network-server[21156]: time="2020-07-18T00:
 Jul 18 00:28:54 vps323914 chirpstack-network-server[21156]: time="2020-07-18T00:28:54+02:00" level=error msg="uplink: processing uplink frame error" ctx_id=bee0644a-cf32-4179-8361-b47106df4898 error="join-request to join-server error: http post error: Post http://localhost:8003: dial tcp 127.0.0.1:8003: connect: connection refused"
 ```
 
-If one looks carefully in the logs above, there are two ```warning``` and two ```error``` messages:
-* First Warning message is that the NS is ```creating insecure application-server client```. The reason being until now we have not set the TLS certificates. We will do it later
-* As you can view from the [Architecture page], the NS tries to establish a connection to the AS using port ```8001``` in the second warning message. Make sure that the port is open in the AS and the AS is listening on port ```8001```
-* The two error messages are linked to Join Functionality. Make sure that the in the NS, [JS-config] is pointing to the appropriate JS IP and port. In our set up the JS is in the same Computer as that of the AS. Hence, make sure that   that the port ```8003``` is open in the AS and the AS is listening on port ```8003```
+If one looks carefully in the logs above, there is a ```warning``` and ```three error``` messages:
+* Warning message is that the NS is ```creating insecure application-server client```. The reason being until now we have not set the TLS certificates. We will do it later
+* First Error message is ```tcp 127.0.0.1:8001: connect: connection refused```
+* Second Error message is `that since the connection is refused for port 8001, the NS is not able to get the client routing profile 
+* Third error message is not able to connect to the Join Server using port 8003
+
+To rectify the above issues:
+* The connection refused for ports  ```8001``` and ```8003```. This where we redirect you to the [Architecture page] to make sure that required ports are open
+* Make sure that the NS [JS-config] is pointing to the appropriate JS IP and port  
+
+Once the above corrections are done, and on restarting both the NS and the AS, the logs are as follows:
+
+```sh
+Jul 18 12:28:08 vps323914 chirpstack-network-server[3524]: time="2020-07-18T12:28:08+02:00" level=info msg="gateway/mqtt: uplink frame received" gateway_id=00800000a0000825 uplink_id=f64a3e1f-a63d-4f5d-ba85-c235144b80c2
+Jul 18 12:28:08 vps323914 chirpstack-network-server[3524]: time="2020-07-18T12:28:08+02:00" level=info msg="uplink: frame(s) collected" ctx_id=034b33b3-0389-4325-8629-a6277b6834f5 mtype=JoinRequest uplink_ids="[f64a3e1f-a63d-4f5d-ba85-c235144b80c2]"
+Jul 18 12:28:08 vps323914 chirpstack-network-server[3524]: time="2020-07-18T12:28:08+02:00" level=warning msg="creating insecure application-server client" server="149.202.57.54:8001"
+Jul 18 12:28:08 vps323914 chirpstack-network-server[3524]: time="2020-07-18T12:28:08+02:00" level=info msg="finished client unary call" ctx_id=034b33b3-0389-4325-8629-a6277b6834f5 grpc.code=OK grpc.ctx_id=93cfd556-1d3c-43fb-8811-0234fcf5cf81 grpc.duration=21.5717ms grpc.method=HandleError grpc.service=as.ApplicationServerService span.kind=client system=grpc
+Jul 18 12:28:08 vps323914 chirpstack-network-server[3524]: time="2020-07-18T12:28:08+02:00" level=error msg="uplink: processing uplink frame error" ctx_id=034b33b3-0389-4325-8629-a6277b6834f5 error="join-request to join-server error: response error, code: MICFailed, description: invalid mic"
+```
+
 
 
 ### Verify whether the AS receives data from the NS
