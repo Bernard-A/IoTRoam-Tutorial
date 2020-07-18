@@ -263,7 +263,7 @@ Jul 18 12:28:08 vps323914 chirpstack-network-server[3524]: time="2020-07-18T12:2
 Jul 18 12:28:08 vps323914 chirpstack-network-server[3524]: time="2020-07-18T12:28:08+02:00" level=error msg="uplink: processing uplink frame error" ctx_id=034b33b3-0389-4325-8629-a6277b6834f5 error="join-request to join-server error: response error, code: MICFailed, description: invalid mic"
 ```
 
-The error message that rests in the above log is ```invalid mic```. The reason was that we did not save the App key settings after adding it to the device. 
+The error message that rests in the above log is ```invalid mic```. The reason was that we did not save the App key settings ```(AT&W)``` as explained in the [Web Interface Setup] after adding it to the device. 
 
 
 ```sh
