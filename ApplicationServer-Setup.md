@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/css/style.css">
 
 
 # Installing and Configuring the Application Server (AS) using ChirpStack (Debian/Ubuntu)
