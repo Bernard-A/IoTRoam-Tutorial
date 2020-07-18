@@ -1,9 +1,10 @@
-<link rel="stylesheet" type="text/css" href="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/css/style.css">
+<link href="https://unpkg.com/primer/build/build.css" rel="stylesheet">
 
 
 # Installing and Configuring the Application Server (AS) using ChirpStack (Debian/Ubuntu)
 
 <p class="red"> Red text </p>
+<span title="Label: gray label" class="Label Label--gray">gray label</span>
 
 
 
