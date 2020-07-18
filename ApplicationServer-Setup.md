@@ -236,7 +236,7 @@ Jul 18 00:28:54 vps323914 chirpstack-network-server[21156]: time="2020-07-18T00:
 If one looks carefully in the logs above, there are two ```warning``` and two ```error``` messages:
 * First Warning message is that the NS is ```creating insecure application-server client```. The reason being until now we have not set the TLS certificates. We will do it later
 * As you can view from the [Architecture page], the NS tries to establish a connection to the AS using port ```8001``` in the second warning message. Make sure that the port is open in the AS and the AS is listening on port ```8001```
-* The two error messages are linked to Join Functionality. Make sure that the in the NS, [JS-config] is pointing to the appropriate JS IP and port. In our set up the JS is in the same Computer as that of the AS. Hence, make sure that   that the port ```8001``` is open in the AS and the AS is listening on port ```8003```
+* The two error messages are linked to Join Functionality. Make sure that the in the NS, [JS-config] is pointing to the appropriate JS IP and port. In our set up the JS is in the same Computer as that of the AS. Hence, make sure that   that the port ```8003``` is open in the AS and the AS is listening on port ```8003```
 
 
 ### Verify whether the AS receives data from the NS
