@@ -3,13 +3,6 @@
 
 # Installing and Configuring the Application Server (AS) using ChirpStack (Debian/Ubuntu)
 
-<style
-  type="text/css">
-h1 {color:red;}
-
-p {color:blue;}
-</style>
-
 <p>okay</p>
 
 <h1> Red text </h1>
