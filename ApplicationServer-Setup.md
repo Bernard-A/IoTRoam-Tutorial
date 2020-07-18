@@ -286,20 +286,32 @@ If you now look at the webinterface, one can verify that the device has been act
 </p>
 
 ### Verify whether the AS receives data from the NS
-Depending on your OS, one of the following commands will show you the logs:
+At the same instance as in the previous section, if you have connected to your AS (via SSH) and depending on your OS, if you have launched one of the following commands will show you the logs:
 
 ```sh
 journalctl -f -n 100 -u chirpstack-application-server
 tail -f -n 100 /var/log/chirpstack-application-server/chirpstack-application-server.log
 ```
-Expected log output
+The log output is as follows:
 
 ```sh
-INFO[0186] handler/mqtt: publishing message              qos=0 topic=application/1/device/0101010101010101/rx
-INFO[0186] finished unary call with code OK              grpc.code=OK grpc.method=HandleUplinkData grpc.request.deadline="2018-09-24T10:54:37+02:00" grpc.service=as.ApplicationServerService grpc.start_time="2018-09-24T10:54:36+02:00" grpc.time_ms=6.989 peer.address="[::1]:63536" span.kind=server system=grpc
+Jul 18 15:22:32 ApplicationServer chirpstack-application-server[727]: time="2020-07-18T15:22:32+02:00" level=info msg="backend/joinserver: request received" message_type=JoinReq receiver_id=6c4eef66f47986a6 sender_id=123456 transaction_id=4199638801
+Jul 18 15:22:32 ApplicationServer chirpstack-application-server[727]: time="2020-07-18T15:22:32+02:00" level=info msg="device-keys updated" ctx_id="<nil>" dev_eui=008000000000addb
+Jul 18 15:22:32 ApplicationServer chirpstack-application-server[727]: time="2020-07-18T15:22:32+02:00" level=info msg="backend/joinserver: sending response" message_type=JoinAns receiver_id=123456 result_code=Success sender_id=6c4eef66f47986a6 transaction_id=4199638801
+Jul 18 15:22:40 ApplicationServer chirpstack-application-server[727]: time="2020-07-18T15:22:40+02:00" level=info msg="device last-seen and dr updated" ctx_id=e8ace4c5-04d1-456a-8a90-71ff1baa48aa dev_eui=008000000000addb
+Jul 18 15:22:40 ApplicationServer chirpstack-application-server[727]: time="2020-07-18T15:22:40+02:00" level=info msg="device activation updated" ctx_id=e8ace4c5-04d1-456a-8a90-71ff1baa48aa dev_addr=2c3c404e dev_eui=008000000000addb
+Jul 18 15:22:40 ApplicationServer chirpstack-application-server[727]: time="2020-07-18T15:22:40+02:00" level=info msg="finished unary call with code OK" ctx_id=e8ace4c5-04d1-456a-8a90-71ff1baa48aa grpc.code=OK grpc.method=HandleUplinkData grpc.request.deadline="2020-07-18T15:22:41+02:00" grpc.service=as.ApplicationServerService grpc.start_time="2020-07-18T15:22:40+02:00" grpc.time_ms=23.062 peer.address="149.202.56.242:52722" span.kind=server system=grpc
+Jul 18 15:22:40 ApplicationServer chirpstack-application-server[727]: time="2020-07-18T15:22:40+02:00" level=info msg="integration/mqtt: publishing message" ctx_id=e8ace4c5-04d1-456a-8a90-71ff1baa48aa qos=0 topic=application/2/device/008000000000addb/join
+Jul 18 15:22:40 ApplicationServer chirpstack-application-server[727]: time="2020-07-18T15:22:40+02:00" level=info msg="integration/mqtt: publishing message" ctx_id=e8ace4c5-04d1-456a-8a90-71ff1baa48aa qos=0 topic=application/2/device/008000000000addb/rx
 ```
 
-In this log, the AS received an uplink application-payload from the NS and published this payload to the application/1/device/0101010101010101/rx MQTT topic.
+In this log, the AS received an uplink JoinRequest from the NS. The JS verifies and sends back the JoinAns and finally publishes to the mqtt.
+
+If you have reached until this level, one has activated the ED via OTAA AS by having interactions with different entities in the LoRaWAN as shown in the figure below
+
+<p align="center">
+  <img width="600" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig23.png?raw=true">
+</p>
 
 ## Pointer Section
 
