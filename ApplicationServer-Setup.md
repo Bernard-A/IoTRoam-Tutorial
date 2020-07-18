@@ -197,7 +197,12 @@ should give you access to the web-interface using your AS’s IP and the default
   ```sh
                   AT+NK=0,DACFF1F919CC7BD3E7490439D926A3BD       ## Your App Key 
   ```
-  * If you click on the ```Activation``` menu, at this instance you should get a response that the device is not activated as follows:
+ * Make sure that you save the setting and also test whether your new settings has been updated by using following commands:
+ ```sh
+                  AT&W            ##Save Configuration to flash memory
+                  AT&V            ##Display current settings and status
+ ```
+ * If you click on the ```Activation``` menu, at this instance you should get a response that the device is not activated as follows:
   
  <p align="center">
   <img width="760" height="125" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig21.png?raw=true">
