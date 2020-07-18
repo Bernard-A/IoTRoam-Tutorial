@@ -215,7 +215,7 @@ gateway/00800000a0000825/event/up {"phyPayload":"APliDNaluVYV260AAAAAgAAnnH6k4Y0
 ```
 The above log confirms that there is a uplink payload recieved from the Gateway ```00800000a0000825```
 
-Another terminal running at the same with the below command as per your OS distribution
+ * Second is the log files from your NS. Launch a terminal with the below command as per your OS distribution
 ```sh
 journalctl -f -n 100 -u chirpstack-application-server
 tail -f -n 100 /var/log/chirpstack-application-server/chirpstack-application-server.log
