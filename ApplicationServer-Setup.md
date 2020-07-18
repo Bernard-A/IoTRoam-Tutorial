@@ -315,7 +315,7 @@ If you have reached until this level, one has activated the ED via OTAA by havin
 
 ## Pointer Section
 
-In the event of one using As that is not Chirpstack, please make sure that you [] . Once verified, Next section to follow : [DNS-Setup]
+In the event of one using As that is not Chirpstack, please make sure that you have verified your set up as per the [Post-Sanity] checks. Once verified, Next section to follow : [DNS-Setup]
 
 If you are using Chirpstack NS and AS, Next section to follow : [DNS-Setup]
 
@@ -351,6 +351,7 @@ If you are using Chirpstack NS and AS, Next section to follow : [DNS-Setup]
 [GW-Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md#chirpstack-gateway-bridge-is-receiving-data-from-the-packet-forwarder
 [JS-config]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md#Join-Server-section
 [DNS-Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/DNS-Setup.md
+[Post-Sanity]: #post-sanity-check-from-rgw-ns-as-setup
 
 
 
