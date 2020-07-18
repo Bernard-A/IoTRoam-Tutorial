@@ -277,8 +277,13 @@ Jul 18 15:22:32 NetworkServer chirpstack-network-server[759]: time="2020-07-18T1
 Jul 18 15:22:32 NetworkServer chirpstack-network-server[759]: time="2020-07-18T15:22:32+02:00" level=info msg="gateway/mqtt: publishing gateway command" command=down downlink_id=31c30668-cf03-40ec-8637-40f114603a96 gateway_id=00800000a0000825 qos=0 topic=gateway/00800000a0000825/command/down
 Jul 18 15:22:32 NetworkServer chirpstack-network-server[759]: time="2020-07-18T15:22:32+02:00" level=info msg="downlink-frames saved" ctx_id=31c30668-cf03-40ec-8637-40f114603a96 token=45539
 ```
+From the above logs, it is clear that the NS has received an uplink from the gateway, the uplink is a JoinRequest which has been forwarder to the JS and the device activation created (which means the JS has accepted the JoinRequest and responded with a JoinAnswer) and a downlink has been sent to the gateway mentioning that the ED is activated by OTAA. 
 
+If you now look at the webinterface, one can verify that the device has been activated as shown in the Figure below (when compared with the earlier scenario for device activation as shown in the [Web Interface Setup])
 
+<p align="center">
+  <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig22.png?raw=true">
+</p>
 
 ### Verify whether the AS receives data from the NS
 Depending on your OS, one of the following commands will show you the logs:
