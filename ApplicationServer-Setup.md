@@ -313,11 +313,18 @@ If you have reached until this level, one has activated the ED via OTAA by havin
   <img width="600" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/FIG23.png?raw=true">
 </p>
 
+
 ## Pointer Section
 
-In the event of one using an AS that is not Chirpstack AS, please make sure that you have verified your set up as per the [Post-Sanity] checks. Once verified, Next section to follow : [DNS-Setup]
+```diff
+-           In the event NS receives a JR from the RGW, that is not known to it (such as the Roaming use-case), then there is 
+-           an additional requirement. This is where DNS plays the role. For details, please follow the Pointer below
+```      
 
-If you are using Chirpstack NS and AS, Next section to follow : [DNS-Setup]
+In the event of one using an AS that is not Chirpstack AS, please make sure that you have verified your set up as per the [Post-Sanity] checks. Once verified, Next section to follow : [DNS-Setup] in the event that the NS receives a JR from a foreign ED
+
+If you are using Chirpstack NS and AS, Next section to follow : [DNS-Setup] wherein it is required  in the event that the NS receives a JR from a foreign ED
+
 
  * In any case, If you want to go back to the [Readme Page]
  * In any case, If you want to go back to the [Architecture page]
