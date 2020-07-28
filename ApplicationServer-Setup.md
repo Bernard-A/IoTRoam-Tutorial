@@ -315,7 +315,7 @@ If you have reached until this level, one has activated the ED via OTAA by havin
 
 ## Pointer Section
 
-In the event of one using As that is not Chirpstack, please make sure that you have verified your set up as per the [Post-Sanity] checks. Once verified, Next section to follow : [DNS-Setup]
+In the event of one using an AS that is not Chirpstack AS, please make sure that you have verified your set up as per the [Post-Sanity] checks. Once verified, Next section to follow : [DNS-Setup]
 
 If you are using Chirpstack NS and AS, Next section to follow : [DNS-Setup]
 
