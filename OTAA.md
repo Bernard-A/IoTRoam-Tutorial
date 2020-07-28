@@ -188,7 +188,7 @@ These certificates are for securing the LoRa App Server Join API which is by def
 Then, add the three files mentioned in ```Step 3```  under *Certificates for LoRa Server to LoRa App Server connection* using the web interface as indicated above.
 
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
-[Configuring NS to enable DNS resolution]: #configuring-ns-to-enable-dns-resolution
+[Configuring NS to access the JS using DNS]: #configuring-ns-to-access-the-js-using-dns
 [JS Brief Intro]: #js-brief-intro
 [Generating Certificates for secure TLS Communication between NS<->AS/JS]: #generating-certificates-for-secure-tls-communication-between-ns-asjs
 [Deploying Certificates for secure TLS Communication between NS<->AS/JS]: #deploying-certificates-for-secure-tls-communication-between-ns-asjs
