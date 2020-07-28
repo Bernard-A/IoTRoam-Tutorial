@@ -1,3 +1,10 @@
+```diff
+-           In this document, We have used chirpstack AS as the source : https://www.chirpstack.io/application-server/overview/.
+-           If you are using a different Software for AS, follow those Software specific details to set up the AS
++           Please follow the Pointer section below for further details if you are using a Software different 
++           from Chirpstack AS. 
+```      
+
 
 # Installing and Configuring the Application Server (AS) using ChirpStack (Debian/Ubuntu)
 
