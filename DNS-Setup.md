@@ -44,6 +44,8 @@ Once the JoinEUI information is updated to the DNS, one can verify whether the i
  * In any case, If you want to go back to the [Architecture page]
  * In any case, If you want to go back to the [Setting up the End-Device]
  * In any case, If you want to go back to the [Setting up the GW]
+ * In any case, If you want to go back to the [NS Setup]
+ * In any case, If you want to go back to the [AS Setup]
 
 [Why do we need the DNS Infrastructure?]: #why-the-dns-infrastructure-is-required-in-the-lorawan-set-up
 [How to Provision NetIDs and JoinEUIs in the DNS for OTAA and Roaming?]: #how-to-provision-netids-and-joineuis-in-the-dns-for-otaa-and-roaming
@@ -53,4 +55,6 @@ Once the JoinEUI information is updated to the DNS, one can verify whether the i
 [Architecture page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
 [Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial
 [Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
+[NS Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
+[AS Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md
 
