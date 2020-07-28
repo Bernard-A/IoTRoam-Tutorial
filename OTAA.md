@@ -1,7 +1,7 @@
 This page provides an introduction to the Join Server (JS), JoinEUI and configuring the NS to enable DNS resolution. To communicate securely between the NS and AS this page also explains how to configure the TLS certificates:
 
  * [JS Brief Intro]
- * [Configuring NS to enable DNS resolution]
+ * [Configuring NS to access the JS using DNS]
  * [Generating Certificates for secure TLS Communication between NS<->AS/JS]
  * [Deploying Certificates for secure TLS Communication between NS<->AS/JS]
  
@@ -14,9 +14,11 @@ JS is used for authenticating the end-devices, is also identified by a 64-bit gl
 </p>
  
  
- ## Configuring NS to enable DNS resolution
+ ## Configuring NS to access the JS using DNS
 
-The configuration file is located in the NS folder in ```/etc```. It is a ```toml``` file:
+When the ED sends a Join Request (JR) as per the [LoRaWAN Backend Specifications], the RGW will forward the JR to the NS. If the ED is not known to the NS, then it generates a DNS query to securely communicate with the JS. 
+
+In order to enable DNS resolution, the configuration file is located in the NS folder in ```/etc```. It is a ```toml``` file:
 
 ```sh
 $ /etc/chirpstack-network-server/chirpstack-network-server.toml
@@ -46,7 +48,7 @@ If your AS is not hosted on the same server as your NS, you will also need to ch
    [join_server.default]
    .
    .  
-   server=http://10.1.86.48:8003
+   server=http://192.168.2.12:8003
    ```
    
  ## Generating Certificates for secure TLS Communication between NS<->AS/JS
@@ -185,7 +187,7 @@ These certificates are for securing the LoRa App Server Join API which is by def
 
 Then, add the three files mentioned in ```Step 3```  under *Certificates for LoRa Server to LoRa App Server connection* using the web interface as indicated above.
 
-
+[LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 [Configuring NS to enable DNS resolution]: #configuring-ns-to-enable-dns-resolution
 [JS Brief Intro]: #js-brief-intro
 [Generating Certificates for secure TLS Communication between NS<->AS/JS]: #generating-certificates-for-secure-tls-communication-between-ns-asjs
