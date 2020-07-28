@@ -317,8 +317,9 @@ If you have reached until this level, one has activated the ED via OTAA by havin
 ## Pointer Section
 
 ```diff
--           In the event NS receives a JR from the RGW, that is not known to it (such as the Roaming use-case), then there is 
--           an additional requirement. This is where DNS plays the role. For details, please follow the Pointer below
+-       In the event NS receives a JR from the RGW, that is not known to it (such as the Roaming use-case), 
+-       then there is an additional requirement. This is where DNS plays the role. For details, please 
+-       follow the Pointer below
 ```      
 
 In the event of one using an AS that is not Chirpstack AS, please make sure that you have verified your set up as per the [Post-Sanity] checks. Once verified, Next section to follow : [DNS-Setup] in the event that the NS receives a JR from a foreign ED
