@@ -307,7 +307,9 @@ Jul 18 15:22:40 ApplicationServer chirpstack-application-server[727]: time="2020
 
 In this log, the AS received an uplink JoinRequest from the NS. The JS verifies and sends back the JoinAns and finally publishes to the mqtt.
 
-If you have reached until this level, one has activated the ED via OTAA by having interactions with different entities in the LoRaWAN ecosystem as shown in the figure below
+If you have reached until this level, one has activated the ED via OTAA by having interactions with different entities in the LoRaWAN ecosystem as shown in the figure below. 
+
+Similarly, one can observe in the logs a downlink from the AS->NS->RGW as shown in the figure below.
 
 <p align="center">
   <img width="600" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/FIG23.png?raw=true">
