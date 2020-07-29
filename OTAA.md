@@ -36,10 +36,11 @@ The configuration file already specifies the ```resolve_domain_suffix``` corresp
 resolve_join_eui=true
 .
 .
-resolve_domain_suffix=”.joineuis.iotreg.net”
+resolve_domain_suffix=”.joineui.iotreg.net”
 ```
+The above configuration will enable the NS to generate a DNS query and concatenate the JoinEUI with a sub domain as specified in the LoRaWAN Backend Specifications.    
    
-If your JS is not hosted on the same server as your NS, you will also need to change the ```[join_server.default]``` parameter with the IP address of your JS
+In addition, if your JS is not hosted on the same server as your NS, you will also need to change the ```[join_server.default]``` parameter with the IP address of your JS
 
 ```sh
 [join_server]
