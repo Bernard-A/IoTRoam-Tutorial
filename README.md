@@ -12,7 +12,7 @@ This document is structured and one can follow sequentially starting with ``` Ar
  * [Setting up the End-Device]
  * [Setting up the Packet Forwarder and the Radio Gateway Bridge]
  * [Installing and Configuring the Network Server]
- * [Installing and Configuring the Network Server and the Application Server]
+ * [Installing and Configuring the Application Server]
  * [Setting up the DNS infrastructure]
  * [OTAA via DNS]
  * [Passive roaming via DNS]
@@ -29,7 +29,7 @@ Next section to follow: [Architecture]
 [Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
 [Setting up the Packet Forwarder and the Radio Gateway Bridge]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
 [Installing and Configuring the Network Server]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
-[Installing and Configuring the Network Server and the Application Server]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Network-Application-Server-Setup.md
+[Installing and Configuring the Application Server]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md
 [Setting up the DNS infrastructure]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/DNS-Setup.md
 [OTAA via DNS]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/OTAA.md
 [provision]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/DNS-Setup.md#how-to-provision-netids-and-joineuis-in-the-dns-for-otaa-and-roaming
