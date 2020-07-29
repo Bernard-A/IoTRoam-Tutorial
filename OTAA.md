@@ -57,9 +57,13 @@ In addition, if your JS is not hosted on the same server as your NS, you will al
 The idea is to generate Certificates for both the NS and the AS. Follow the 7 steps as follows: 
 
 1. For this platform set up, following the Chirpstack process, we need to install the [CFSSL] tool. This installation could be done in your local computer or the NS ot the AS:
+
 ```sh
  sudo apt-get install -y golang-cfssl
 ```
+
+```Note:``` If you are not able to install cfssl with the above command add the appropriate mirror to your apt sources list.
+
 2. Clone the repository ```https://github.com/brocaar/chirpstack-certificates```
 3. Fom the ```$ chirpstack-certificates``` directory
 
