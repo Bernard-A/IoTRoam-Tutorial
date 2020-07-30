@@ -136,8 +136,10 @@ One should verify the generated keys with OpenSSL:
 +       This section is needed by each Institution to generate certificates  for their AS or NS
 ```
 
-The next steps require a profile config file. The profile describes general details about the certificate. For example it’s duration, and usages.
+The next steps require a profile config file. The profile describes general details about the certificate. For example it’s duration, and usages. use a single file config for all the configurations, when doing this, we set up a new “profile” for each of the entities concerned. In addition to the "Intermediate_Ca", we also add "Client" and "Server" profiles.
 
+One can observe in the config file how the “client” profile specifies “client auth” in its usages, while the “server” profile specifies “server auth”, while 
+the "intermediate-ca" profile does both.
 
 Add to the respective folder, the file ```config.json```as in the [Directory Structure]
 ```sh
@@ -183,8 +185,30 @@ Add to the respective folder, the file ```config.json```as in the [Directory Str
           }
 }
 ```         
-Add to the respective folder, the file ```intermediate-csr.json```as in the [Directory Structure]   
-   
+Just as with the root, each intermediate certificate requires a CSR json file. Add to the respective folder, the file ```intermediate-csr.json```as in the [Directory Structure]  
+
+```sh
+{
+  "CN": "Afnic Intermediate CA",
+  "key": {
+          "algo": "rsa",
+          "size": 2048
+         },
+         "names": [
+             {
+                 "C": "FR",
+                 "L": "SQY",
+                "O": "Afnic-Labs",
+                "ST": "Yevlines"
+             }
+        ],
+        "ca": {
+            "expiry": "42720h"
+        }
+}
+```
+
+
 #### Generation
 
 Now it is necessary to create the certificates for the CA following the commands below:
