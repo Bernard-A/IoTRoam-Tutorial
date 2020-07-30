@@ -65,6 +65,8 @@ This step is optional. But, it is better to have the directory structured like t
 
 ### CA Certificate generation
 
+#### Configuration
+
 ```diff
 +         This section is needed only by the CA and might not be needed in most cases
 ```
@@ -89,4 +91,24 @@ Add to the respective folder, the file ```ca-csr.json```as in the [Directory Str
 		}
 ```         
        
+#### Generation
+
+Now it is necessary to create the certificates for the CA following the commands below:
+
+The following commands are run from the ```/chirpstack-certificates``` directory as in the [Directory Structure]
+
+```sh
+	mkdir -p certs/ca
+        cfssl gencert -initca config/ca-csr.json | cfssljson -bare certs/ca/ca
+
+``` 
+
+The above command creates a new certificate, a key and a sign request in the ```/certs/ca``` directory as follows:
+ * ca-key.pem (certificate key)
+ * ca.pem (certificate)
+ * ca.csr (sign request)
+ 
+The ca.pem file is a public file, the ca.csr file is not too important as of now, as we won’t sign the request with another CA, while the ca-key.pem is your private key. This key is the object that you should keep safe. Keep it as safe as possible after you are done with this tutorial and do not share it with anyone. If anyone gains access to the CA, they can sign requests as if it was you doing it.
+
+
 [Directory Structure]: #directory-structure
