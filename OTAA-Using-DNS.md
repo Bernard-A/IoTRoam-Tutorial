@@ -81,7 +81,7 @@ As per the [LoRaWAN Backend Specifications], each of the AppEUI/JoinEUI nibble a
 
 
 ```sh
-     f.2.0.0.0.0.0.0.0.1.e.5.0.0.0.0. JOINEUIS.lorawan.net. IN A 	192.168.2.3  ## Your JoinServer IP address
+     f.2.0.0.0.0.0.0.0.1.e.5.0.0.0.0.joineui.iotreg.net. IN A 	192.168.2.3  ## Your JoinServer IP address
 ```
 
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
