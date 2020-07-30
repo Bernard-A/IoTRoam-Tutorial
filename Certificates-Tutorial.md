@@ -110,5 +110,23 @@ The above command creates a new certificate, a key and a sign request in the ```
  
 The ca.pem file is a public file, the ca.csr file is not too important as of now, as we won’t sign the request with another CA, while the ca-key.pem is your private key. This key is the object that you should keep safe. Keep it as safe as possible after you are done with this tutorial and do not share it with anyone. If anyone gains access to the CA, they can sign requests as if it was you doing it.
 
+#### Verification
+
+One should verify the generated keys with OpenSSL:
+
+ * Verify the CSR file (At the beginning of the Output you should have text ```verify OK```)
+ ```sh
+	openssl req -text -noout -verify -in ca.csr
+ ``` 
+  
+ * Verfiy the certificate (The output shows whether the certificate has been generated with your required inputs)
+ ```sh
+	openssl x509 -in ca.pem -text -noout
+ ``` 
+ * Verify the private key (At the beginning of the Output you should have text ```RSA key ok```)
+  ```sh
+	openssl rsa -in ca-key.pem -check
+  ``` 
+
 
 [Directory Structure]: #directory-structure
