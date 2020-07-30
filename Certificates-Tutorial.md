@@ -65,23 +65,24 @@ This step is optional. But, it is better to have the directory structured like t
 
 ### CA Certificate generation
 
-Add to the respective folder as in the 
+Add to the respective folder, the file ```ca-csr.json```as in the [Directory Structure]
 ```sh
          ca-csr.json # To point to the CA details
 		{
-			 "CN": "ChirpStack CA",
+			 "CN": "Afnic CA",			# Cannonical Name
   			 "key": {
     					"algo": "rsa",
     					"size": 2048
   				},
 			 "names": [
      			       {
-               				"C": "FR",
-               				"L": "SQY",
-               				"O": "Afnic",
-               				"ST": "Yevlines"
+               				"C": "FR",   		# Country
+               				"L": "SQY",		# Location/City
+               				"O": "Afnic",		# Organisation
+               				"ST": "Yevlines"	# State
         			}
     				   ]
 		}
 ```         
        
+[Directory Structure]: #directory-structure
