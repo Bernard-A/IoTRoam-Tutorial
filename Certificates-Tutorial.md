@@ -54,10 +54,34 @@ This step is optional. But, it is better to have the directory structured like t
         /home
             /chirpstack-certificates
                 /config
+                    ca-csr.json
                     /chirpstack-gateway-bridge
                     /chirpstack-application-server
                     /chirpstack-network-server
-                    /ca
-                    /intermediate
-    
+                    /ca                         ## In most cases, this directory will not be needed
+                        certs/ca
+                    /intermediate               ## In most cases, Intermediate will be the CA
 ```
+
+### CA Certificate generation
+
+Add to the respective folder as in the 
+```sh
+         ca-csr.json # To point to the CA details
+		{
+			 "CN": "ChirpStack CA",
+  			 "key": {
+    					"algo": "rsa",
+    					"size": 2048
+  				},
+			 "names": [
+     			       {
+               				"C": "FR",
+               				"L": "SQY",
+               				"O": "Afnic",
+               				"ST": "Yevlines"
+        			}
+    				   ]
+		}
+```         
+       
