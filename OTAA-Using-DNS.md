@@ -13,7 +13,7 @@ JS is used for authenticating the end-devices, is also identified by a 64-bit gl
 </p>
  
  
- ## Configuring NS to access the JS using DNS
+## Configuring NS to access the JS using DNS
 
 When the ED sends a Join Request (JR) as per the [LoRaWAN Backend Specifications], the RGW will forward the JR to the NS. If the ED is not known to the NS, then it generates a DNS query to securely communicate with the JS. 
 
@@ -49,9 +49,30 @@ In addition, if your JS is not hosted on the same server as your NS, you will al
    .
    .  
    server=http://192.168.2.12:8003
-   ```
-   
+```
+ 
+## Configuring the ED to access the JS using DNS
+
+In the [Web Interfaces Setup], it is shown how config (like the AppKey) is added to the ED for Multitech Mdot? We need to add the JoinEUI/AppEUI also. The issue with the Chirpstack, unlike Things Network LoRaWAN backend, there is no unique AppEUI or JoinEUI generated. Hence we add a unique AppEUI/JoinEUI of the format as below: 
+```sh
+       00005E100000002F
+```
+
+This is done by adding to the ED for mDot as follows
+
+```sh
+         AT+NJM=1                  # To enable join OTAA mode
+         AT+NI=0, 00005E100000002F # Set your AppEUI/JoinEUI
+```
+
+Make sure that you save the setting and also test whether your new settings has been updated by using following commands:
+
+```sh
+                 AT&W            ## Save Configuration to flash memory
+                 AT&V            ##  Display current settings and status
+```
 
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 [Configuring NS to access the JS using DNS]: #configuring-ns-to-access-the-js-using-dns
 [JS Brief Intro]: #js-brief-intro
+[Web Interfaces Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup
