@@ -211,22 +211,28 @@ Just as with the root, each intermediate certificate requires a CSR json file. A
 
 #### Generation
 
-Now it is necessary to create the certificates for the CA following the commands below:
+Now it is necessary to create the certificates for the Intermediate CA following the commands below:
 
 The following commands are run from the ```/chirpstack-certificates``` directory as in the [Directory Structure]
 
 ```sh
-	mkdir -p certs/ca
-        cfssl gencert -initca config/ca-csr.json | cfssljson -bare certs/ca/ca
+	mkdir -p intermediate/intermediate
+        cfssl gencert -initca config/intermediate-csr.json | cfssljson -bare certs/intermediate/intermediate
 
 ``` 
 
 The above command creates a new certificate, a key and a sign request in the ```/certs/ca``` directory as follows:
- * ca-key.pem (certificate key)
- * ca.pem (certificate)
- * ca.csr (sign request)
+ * intermediate-key.pem (certificate key)
+ * intermediate.pem (certificate)
+ * intermediate.csr (sign request)
  
-The ca.pem file is a public file, the ca.csr file is not too important as of now, as we won’t sign the request with another CA, while the ca-key.pem is your private key. This key is the object that you should keep safe. Keep it as safe as possible after you are done with this tutorial and do not share it with anyone. If anyone gains access to the CA, they can sign requests as if it was you doing it.
+#### Sign
+
+Now we have to sign the ```intermediate CA```.  It is done by the command below which uses the CA produced previously to sign the intermediate CA. It also uses the “config.json” profile and specifies the “intermediate_ca” profile.
+
+```sh
+ cfssl sign -ca certs/ca/ca.pem -ca-key certs/ca/ca-key.pem -config config/config.json -profile intermediate_ca certs/intermediate/intermediate.csr |  cfssljson -bare certs/intermediate/intermediate
+ ``` 
 
 #### Verification
 
