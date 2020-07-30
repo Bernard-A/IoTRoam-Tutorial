@@ -65,6 +65,10 @@ This step is optional. But, it is better to have the directory structured like t
 
 ### CA Certificate generation
 
+```diff
++         This section is needed only by the CA and might not be needed in most cases
+```
+
 Add to the respective folder, the file ```ca-csr.json```as in the [Directory Structure]
 ```sh
          ca-csr.json # To point to the CA details
