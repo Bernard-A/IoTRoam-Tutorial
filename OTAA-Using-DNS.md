@@ -75,9 +75,11 @@ Make sure that you save the setting and also test whether your new settings has 
 
 ## Provisioning in the DNS
 
+Afnic manages the DNS provisioning and the more infiormation is explained in the section: [How to Provision in the DNS?] 
 
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 [Configuring NS to access the JS using DNS]: #configuring-ns-to-access-the-js-using-dns
 [JS Brief Intro]: #js-brief-intro
 [Web Interfaces Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup
 [Provisioning in the DNS]: #provisioning-in-the-dns
+[How to Provision in the DNS?]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/DNS-Setup.md#how-to-provision-netids-and-joineuis-in-the-dns-for-otaa-and-roaming
