@@ -1,4 +1,4 @@
-This page provides an introduction to the Join Server (JS), JoinEUI and configuring the NS to enable DNS resolution. To communicate securely between the NS and AS this page also explains how to configure the TLS certificates:
+This page provides an introduction to the Join Server (JS), JoinEUI and configuring the NS to enable DNS resolution. The DNS resolution is required when the ED is not known to the NS and it needs the DNS resolution to identify the JS for the ED and complete the OTAA.
 
  * [JS Brief Intro]
  * [Configuring NS to access the JS using DNS]
