@@ -2,9 +2,8 @@ This page provides an introduction to the Join Server (JS), JoinEUI and configur
 
  * [JS Brief Intro]
  * [Configuring NS to access the JS using DNS]
- * [Generating Certificates for secure TLS Communication between NS<->AS/JS]
- * [Deploying Certificates for secure TLS Communication between NS<->AS/JS]
- 
+ * [OTAA Verification using DNS]
+
  ## JS Brief Intro
  
 JS is used for authenticating the end-devices, is also identified by a 64-bit globally unique identifier termed as AppEUI/JoinEUI. The JS could be a separate server or same as the AS. In our set up the JS and AS functionalities runs in the same physical machine as shown in the figure below:
@@ -56,6 +55,3 @@ In addition, if your JS is not hosted on the same server as your NS, you will al
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 [Configuring NS to access the JS using DNS]: #configuring-ns-to-access-the-js-using-dns
 [JS Brief Intro]: #js-brief-intro
-[Generating Certificates for secure TLS Communication between NS<->AS/JS]: #generating-certificates-for-secure-tls-communication-between-ns-asjs
-[Deploying Certificates for secure TLS Communication between NS<->AS/JS]: #deploying-certificates-for-secure-tls-communication-between-ns-asjs
-[CFSSL]: https://cfssl.org/
