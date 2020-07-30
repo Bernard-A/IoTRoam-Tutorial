@@ -22,8 +22,10 @@ To work effectively, one should also take into account for the firewall rules so
  *	GW => NS  (default is Port 1883 for MQTT)
  *	NS => AS (default is Port 8001)
  *	AS => NS (default is Port 8000)
+ *  AS => NS (default is Port 1883 for MQTT) ``` As we used the NS as common MQTT broker ```
  *	NS => AS to (default is Port 8003)  ``` This is required if your AS and Join Server (JS) are same machines ```
-
+ *  NS => AS (default is Port 8001)
+ 
 Additionally, you probably want to expose the following ports too:
  *	From your computer to AS web-interface (default is port 8080)
  *	From your computer to NS and AS (so that you can subscribe to the MQTT messages) (default is port 1883)
