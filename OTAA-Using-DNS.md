@@ -84,6 +84,14 @@ As per the [LoRaWAN Backend Specifications], each of the AppEUI/JoinEUI nibble a
      f.2.0.0.0.0.0.0.0.1.e.5.0.0.0.0.joineui.iotreg.net. IN A 	192.168.2.3  ## Your JoinServer IP address
 ```
 
+## Post Sanity Check from RGW->NS->DNS->AS Setup
+
+The objective in this section is to verify the communication between the RGW->NS (2) and the NS->AS (3) shown in the figure:
+
+<p align="center">
+  <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig24.png?raw=true">
+</p>
+
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 [Configuring NS to access the JS using DNS]: #configuring-ns-to-access-the-js-using-dns
 [JS Brief Intro]: #js-brief-intro
