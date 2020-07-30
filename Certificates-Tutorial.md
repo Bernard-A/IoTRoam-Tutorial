@@ -35,7 +35,7 @@ The root CA signs the intermediate root with its private key, and in turn, the i
 
 ## Self-signed Certificate
 
-A self signed certificate is a certificate signed by the same entity that the certificate verifies. It is like you approving your own passport application
+A self signed certificate is a certificate signed by the same entity that the certificate verifies. It is like you approving your own passport application.
 
 
 ## Certificate Signing Request (CSR)
@@ -43,3 +43,21 @@ A self signed certificate is a certificate signed by the same entity that the ce
 A CSR is a block of encoded text that is given to a Certificate Authority when applying for a TLS Certificate. It is usually generated on the server where the certificate will be installed and contains information that will be included in the certificate such as the organization name, common name (domain name), locality, and country. It also contains the public key that will be included in the certificate. A private key is usually created at the same time that you create the CSR, making a key pair. A CSR is generally encoded using ASN.1 according to the PKCS #10 specification.
 
 The CA will use a CSR to create your TLS certificate, but it does not need your private key. You need to keep your private key secret. The certificate created with a particular CSR will only work with the private key that was generated with it. So if you lose the private key, the certificate will no longer work.
+
+## Certificate Setup 
+
+### Directory structure
+
+This step is optional. But, it is better to have the directory structured like this to make it easy to look at!
+
+```sh
+        /home
+            /chirpstack-certificates
+                /config
+                    /chirpstack-gateway-bridge
+                    /chirpstack-application-server
+                    /chirpstack-network-server
+                    /ca
+                    /intermediate
+    
+```
