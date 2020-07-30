@@ -86,7 +86,7 @@ As per the [LoRaWAN Backend Specifications], each of the AppEUI/JoinEUI nibble a
 
 ## Post Sanity Check from RGW->NS->DNS->AS Setup
 
-The objective in this section is to verify the communication between the RGW->NS (2) and the NS->AS (3) shown in the figure:
+The objective in this section is to verify the communication between the RGW->NS (2), NS->DNS (3), DNS->NS (4) and NS->AS (5) as shown in the figure:
 
 <p align="center">
   <img width="800" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig24.png?raw=true">
