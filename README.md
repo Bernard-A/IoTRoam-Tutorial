@@ -31,7 +31,7 @@ Next section to follow: [Architecture]
 [Installing and Configuring the Network Server]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
 [Installing and Configuring the Application Server]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md
 [Setting up the DNS infrastructure]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/DNS-Setup.md
-[OTAA via DNS]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/OTAA.md
+[OTAA via DNS]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/OTAA-Using-DNS.md
 [provision]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/DNS-Setup.md#how-to-provision-netids-and-joineuis-in-the-dns-for-otaa-and-roaming
 [certificates]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/OTAA.md#generating-certificates-for-secure-tls-communication-between-ns-asjs
 [EduRoam]: https://www.eduroam.org/
