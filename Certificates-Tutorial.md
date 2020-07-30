@@ -15,32 +15,30 @@ Normally in a web communication, the Client (i.e. the web browser) will ask the 
 
 The standard format for this certificate is called X.509. An X.509 certificate contains Public Key, An identity (e.g. Hostname or Organisation or Individual) and is either signed by a Certificate Authority (CA) or Self-Signed. 
 
-## Certificate Authority (CA)
 
+## Certificate Authority (CA)
 
 CA is a trusted third party that verifies the Public Key provided by the server and validates it by including  its digital signature into the X.509 Certificate. In layman terms, it is like the Government provides a authenticity for one's passport which is accepted in all Airports of the world. 
 
 
 ## Root Certificate
 
-
 The root certificate, also called a trusted root, is one of the certificates issued by a trusted CA. It’s a special type of X.509 digital certificate which is used for issuing other certificates called intermediates and further end-user SSL Certificate for avoiding the risk of getting compromised.
 
 
 ## Intermediate Certificate
 
-
 Issuing a digital Certificate to the end-user directly from the root certificate is too dangerous. The roots are extremely valuable. To further protect themselves the CAs, came up with another layer of security – the intermediate certificate.
 
 The root CA signs the intermediate root with its private key, and in turn, the intermediate CA uses its private key to issue X.509 certificates to the general public. 
 
-## Self-signed Certificate
 
+## Self-signed Certificate
 
 A self signed certificate is a certificate signed by the same entity that the certificate verifies. It is like you approving your own passport application
 
-## Certificate Signing Request (CSR)
 
+## Certificate Signing Request (CSR)
 
 A CSR is a block of encoded text that is given to a Certificate Authority when applying for a TLS Certificate. It is usually generated on the server where the certificate will be installed and contains information that will be included in the certificate such as the organization name, common name (domain name), locality, and country. It also contains the public key that will be included in the certificate. A private key is usually created at the same time that you create the CSR, making a key pair. A CSR is generally encoded using ASN.1 according to the PKCS #10 specification.
 
