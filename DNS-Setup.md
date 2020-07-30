@@ -40,7 +40,7 @@ Once the JoinEUI information is updated to the DNS, one can verify whether the i
 
 ## Pointer Section
 
-Once verified that your NetID and JoinEUI provisioned in the Internet are publicly accessible, Next section to follow : [OTAA-Setup]
+Once verified that your NetID and JoinEUI provisioned in the Internet are publicly accessible, Next section to follow : [OTAA-Setup  Using DNS]
 
 
  * In any case, If you want to go back to the [Readme Page]
@@ -60,5 +60,5 @@ Once verified that your NetID and JoinEUI provisioned in the Internet are public
 [Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
 [NS Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
 [AS Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md
-[OTAA-Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/OTAA.md
+[OTAA-Setup  Using DNS]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/OTAA-Using-DNS.md
 
