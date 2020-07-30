@@ -2,6 +2,7 @@ This page provides an introduction to the Join Server (JS), JoinEUI and configur
 
  * [JS Brief Intro]
  * [Configuring NS to access the JS using DNS]
+ * [Provisioning in the DNS]
  * [OTAA Verification using DNS]
 
  ## JS Brief Intro
@@ -72,7 +73,11 @@ Make sure that you save the setting and also test whether your new settings has 
                  AT&V            ##  Display current settings and status
 ```
 
+## Provisioning in the DNS
+
+
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 [Configuring NS to access the JS using DNS]: #configuring-ns-to-access-the-js-using-dns
 [JS Brief Intro]: #js-brief-intro
 [Web Interfaces Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup
+[Provisioning in the DNS]: 
