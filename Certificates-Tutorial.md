@@ -234,6 +234,12 @@ Now we have to sign the ```intermediate CA```.  It is done by the command below 
  cfssl sign -ca certs/ca/ca.pem -ca-key certs/ca/ca-key.pem -config config/config.json -profile intermediate_ca certs/intermediate/intermediate.csr |  cfssljson -bare certs/intermediate/intermediate
  ``` 
 
+The above command should output something similiar as follows:
+
+```sh
+ [INFO] signed certificate with serial number 442522653809835936897657268932942954456988632585
+ ``` 
+ 
 #### Verification
 
 
