@@ -55,6 +55,7 @@ This step is optional. But, it is better to have the directory structured like t
             /chirpstack-certificates
                 /config
                     ca-csr.json
+		    intermediate-config.json
                     /chirpstack-gateway-bridge
                     /chirpstack-application-server
                     /chirpstack-network-server
@@ -73,8 +74,7 @@ This step is optional. But, it is better to have the directory structured like t
 
 Add to the respective folder, the file ```ca-csr.json```as in the [Directory Structure]
 ```sh
-         ca-csr.json # To point to the CA details
-		{
+ 		{
 			 "CN": "Afnic CA",			# Cannonical Name
   			 "key": {
     					"algo": "rsa",
@@ -136,24 +136,37 @@ One should verify the generated keys with OpenSSL:
 +       This section is needed by each Institution to generate certificates  for their AS or NS
 ```
 
-Add to the respective folder, the file ```ca-csr.json```as in the [Directory Structure]
+The next steps require a profile config file. The profile describes general details about the certificate. For example it’s duration, and usages.
+
+
+Add to the respective folder, the file ```intermediate-config.json```as in the [Directory Structure]
 ```sh
-         ca-csr.json # To point to the CA details
-		{
-			 "CN": "Afnic CA",			# Cannonical Name
-  			 "key": {
-    					"algo": "rsa",
-    					"size": 2048
-  				},
-			 "names": [
-     			       {
-               				"C": "FR",   		# Country
-               				"L": "SQY",		# Location/City
-               				"O": "Afnic",		# Organisation
-               				"ST": "Yevlines"	# State
-        			}
-    				   ]
-		}
+	{
+  		"signing": {
+    				"default": {
+      				"expiry": "8760h"
+    			   },
+		 "profiles": {
+      				"intermediate_ca": {
+        					"usages": [
+            							"signing",
+            							"digital signature",
+            							"key encipherment",
+            							"cert sign",
+            							"crl sign",
+            							"server auth",
+            							"client auth"
+        						 ],
+        						 "expiry": "8760h",
+        					"ca_constraint": {
+            								"is_ca": true,
+            								"max_path_len": 0, 
+            								"max_path_len_zero": true
+        							 }
+      						   }
+                             }
+                           }
+        }
 ```         
        
 #### Generation
