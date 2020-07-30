@@ -56,6 +56,7 @@ This step is optional. But, it is better to have the directory structured like t
                 /config
                     ca-csr.json
 		    intermediate-config.json
+		    intermediate-csr.json
                     /chirpstack-gateway-bridge
                     /chirpstack-application-server
                     /chirpstack-network-server
@@ -168,7 +169,8 @@ Add to the respective folder, the file ```intermediate-config.json```as in the [
                            }
         }
 ```         
-       
+Add to the respective folder, the file ```intermediate-csr.json```as in the [Directory Structure]   
+   
 #### Generation
 
 Now it is necessary to create the certificates for the CA following the commands below:
