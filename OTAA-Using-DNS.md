@@ -89,7 +89,7 @@ As per the [LoRaWAN Backend Specifications], each of the AppEUI/JoinEUI nibble a
 The objective in this section is to verify the communication between the RGW->NS (2) and the NS->AS (3) shown in the figure:
 
 <p align="center">
-  <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig24.png?raw=true">
+  <img width="800" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig24.png?raw=true">
 </p>
 
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
