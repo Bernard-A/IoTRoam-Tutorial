@@ -92,6 +92,8 @@ The objective in this section is to verify the communication between the RGW->NS
   <img width="800" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig24.png?raw=true">
 </p>
 
+### Verify whether the NS receives data from the RGW
+
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 [Configuring NS to access the JS using DNS]: #configuring-ns-to-access-the-js-using-dns
 [JS Brief Intro]: #js-brief-intro
