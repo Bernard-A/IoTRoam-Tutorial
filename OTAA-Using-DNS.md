@@ -80,4 +80,4 @@ Make sure that you save the setting and also test whether your new settings has 
 [Configuring NS to access the JS using DNS]: #configuring-ns-to-access-the-js-using-dns
 [JS Brief Intro]: #js-brief-intro
 [Web Interfaces Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup
-[Provisioning in the DNS]: 
+[Provisioning in the DNS]: #provisioning-in-the-dns
