@@ -229,8 +229,8 @@ The above log confirms that there is a uplink payload recieved from the Gateway 
 
  * Second is the log files from your NS. Launch a terminal with the below command as per your OS distribution
 ```sh
-journalctl -f -n 100 -u chirpstack-application-server
-tail -f -n 100 /var/log/chirpstack-application-server/chirpstack-application-server.log
+journalctl -f -n 100 -u chirpstack-network-server
+tail -f -n 100 /var/log/chirpstack-network-server/chirpstack-application-server.log
 ```
 
 Shows the logs as follows:
