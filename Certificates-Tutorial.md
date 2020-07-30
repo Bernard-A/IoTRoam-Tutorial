@@ -55,14 +55,13 @@ This step is optional. But, it is better to have the directory structured like t
             /chirpstack-certificates
                 /config
                     ca-csr.json
-		    intermediate-config.json
-		    intermediate-csr.json
-                    /chirpstack-gateway-bridge
-                    /chirpstack-application-server
-                    /chirpstack-network-server
-                    /certs                         
-                        /ca				## In most cases, this directory will not be needed
-                    	/intermediate               	## In most cases, Intermediate will be the CA
+		    config.json
+		/chirpstack-gateway-bridge
+                /chirpstack-application-server
+                /chirpstack-network-server
+                /certs                         
+                    /ca				## In most cases, this directory will not be needed
+                    /intermediate               ## In most cases, Intermediate will be the CA
 ```
 
 ### CA Certificate generation
@@ -140,7 +139,7 @@ One should verify the generated keys with OpenSSL:
 The next steps require a profile config file. The profile describes general details about the certificate. For example it’s duration, and usages.
 
 
-Add to the respective folder, the file ```intermediate-config.json```as in the [Directory Structure]
+Add to the respective folder, the file ```config.json```as in the [Directory Structure]
 ```sh
 	{
   		"signing": {
