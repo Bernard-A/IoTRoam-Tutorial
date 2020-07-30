@@ -75,7 +75,10 @@ Make sure that you save the setting and also test whether your new settings has 
 
 ## Provisioning in the DNS
 
-Afnic manages the DNS provisioning and the more infiormation is explained in the section: [How to Provision in the DNS?] 
+Afnic manages the DNS provisioning and the more infiormation is explained in the section: [How to Provision in the DNS?].
+
+As per the [LoRaWAN Backend Specifications], each of the AppEUI/JoinEUI nibble are encoded in reverse order and periods are added between each hexadecimal digit. Finally the domain name “JOINEUIS.lorawan.net” is concatenated as suffix to the encoded hexadecimal conversion of the JoinEUI. In our set up instead of “JOINEUIS.lorawan.net”, we are using “JOINEUI.iotreg.net”.
+
 
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 [Configuring NS to access the JS using DNS]: #configuring-ns-to-access-the-js-using-dns
