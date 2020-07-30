@@ -58,9 +58,9 @@ This step is optional. But, it is better to have the directory structured like t
                     /chirpstack-gateway-bridge
                     /chirpstack-application-server
                     /chirpstack-network-server
-                    /ca                         ## In most cases, this directory will not be needed
-                        certs/ca
-                    /intermediate               ## In most cases, Intermediate will be the CA
+                    /certs                         
+                        /ca				## In most cases, this directory will not be needed
+                    	/intermediate               	## In most cases, Intermediate will be the CA
 ```
 
 ### CA Certificate generation
