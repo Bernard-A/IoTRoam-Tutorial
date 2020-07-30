@@ -170,7 +170,7 @@ should give you access to the web-interface using your AS’s IP and the default
 * Set up or update [User], if required
 * Add your NS in the Web interface which is self explanatory. At this juncture, fill only the ```General``` section
 * Add/Update [Organisation]
-* Click on the [Service Profile] and Update (click on ```Add gateway meta-data``` ; set ```Minimum allowed data-rate``` to ```0``` and ```Maximum allowed data-rate``` to ```5```)
+* Click on the [Service Profile], add the NS info if asked and Update (click on ```Add gateway meta-data``` ; set ```Minimum allowed data-rate``` to ```0``` and ```Maximum allowed data-rate``` to ```5```)
 * Click on the [Device Profile] and Update (Regional Paramater set to ```A``` and for others it is self explanatory)
    * In the tab ```Join OTAA/ABP```, click on Device Supports OTAA
    * I have not selected other tabs
