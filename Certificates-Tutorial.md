@@ -145,7 +145,7 @@ Add to the respective folder, the file ```intermediate-config.json```as in the [
   		"signing": {
     				"default": {
       				"expiry": "8760h"
-    			   },
+    			                   },
 		 "profiles": {
       				"intermediate_ca": {
         					"usages": [
