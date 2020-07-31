@@ -12,6 +12,7 @@
         AT+NJM=1                                  ## Configure mDot for OTA join mode (default)
         AT+JOIN                                   ## Send a join request to the server
         AT+NJS                                    ## Display current join status 0:not joined, 1:joined
+        AT&F                                      ## To set to Factory defaults
         AT&W                                      ## Save your changes
         AT&V                                      ##  Display current settings and status
 ```
