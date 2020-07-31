@@ -13,4 +13,5 @@
         AT+JOIN                                   ## Send a join request to the server
         AT+NJS                                    ## Display current join status 0:not joined, 1:joined
         AT&W                                      ## Save your changes
+        AT&V                                      ##  Display current settings and status
 ```
