@@ -59,6 +59,11 @@ This step is optional. But, it is better to have the directory structured like t
 		/chirpstack-gateway-bridge
                 /chirpstack-application-server
                 /chirpstack-network-server
+		    /api
+		        /server
+			     certifcate.json
+			/client
+			     certificate.json
                 /certs                         
                     /ca				## In most cases, this directory will not be needed
                     /intermediate               ## In most cases, Intermediate will be the CA
@@ -245,6 +250,45 @@ The above command should output something similiar as follows:
 One can verify the generated certificates using the commands in the [Verification] section
 
 
+### Certificate generation at the NS
+
+The NS will act as ```Client``` when trying to authenitcate the AS and the NS will act as ```Server``` when the AS is trying to authenticate it. Both the communications for authentications are done by [API]. Hence there are two certificates needed - 1. When the NS acts as a Client and 2. When the NS acts as the server
+
+#### Configuration
+
+##### Client Configuration
+
+Add to the respective folder under ```api/client```, the file ```certificate.json```as in the [Directory Structure]
+
+```sh
+```         
+       
+#### Generation
+
+Now it is necessary to create the certificates for the CA following the commands below:
+
+The following commands are run from the ```/chirpstack-certificates``` directory as in the [Directory Structure]
+
+```sh
+	mkdir -p certs/ca
+        cfssl gencert -initca config/ca-csr.json | cfssljson -bare certs/ca/ca
+
+``` 
+
+The above command creates a new certificate, a key and a sign request in the ```/certs/ca``` directory as follows:
+ * ca-key.pem (certificate key)
+ * ca.pem (certificate)
+ * ca.csr (sign request)
+ 
+The ca.pem file is a public file, the ca.csr file is not too important as of now, as we won’t sign the request with another CA, while the ca-key.pem is your private key. This key is the object that you should keep safe. Keep it as safe as possible after you are done with this tutorial and do not share it with anyone. If anyone gains access to the CA, they can sign requests as if it was you doing it.
+
+#### Verification
+
+One can verify the generated certificates using the commands in the [Verification] section
+
+
+
 
 [Directory Structure]: #directory-structure
 [Verification]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Certificates-Tutorial.md#verification
+[API]: https://www.chirpstack.io/network-server/integrate/api/
