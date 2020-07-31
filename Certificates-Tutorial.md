@@ -136,7 +136,7 @@ One should verify the generated keys with OpenSSL:
 +       This section is needed by each Institution to generate certificates  for their AS or NS
 ```
 
-The next steps require a profile config file. The profile describes general details about the certificate. For example it’s duration, and usages. use a single file config for all the configurations, when doing this, we set up a new “profile” for each of the entities concerned. In addition to the "Intermediate_Ca", we also add "Client" and "Server" profiles.
+The next steps require a profile config file. The profile describes general details about the certificate. For example it’s duration, and usages. We will use a single config file for all certificate generation. Thus, we set up a new “profile” for each of the entities concerned. In addition to the "Intermediate_Ca", we also add "Client" and "Server" profiles.
 
 One can observe in the config file how the “client” profile specifies “client auth” in its usages, while the “server” profile specifies “server auth”, while 
 the "intermediate-ca" profile does both.
