@@ -69,7 +69,7 @@ The function of **Packet Forwarder** is to forward the received LoRa Packet from
 
 The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet forwarder option. 
 
- * We are using AEP version of the Multitech RGW. Hence we can enable this option once connected to the web interface. The options could change depending on the firmware version. For the RGW AEP Firmware version : 5.2.1, the steps are as follows: 
+ * We are using AEP version of the Multitech RGW. Hence we can enable this option once connected to the web interface (by connecting with the IP address of the RGW). The options could change depending on the firmware version. For the RGW AEP Firmware version : 5.2.1, the steps are as follows: 
     *	 On the left menu, select LoRaWAN.
     *  Set “Mode” to “PACKET FORWARDER”.
     *	Other options are as shown in the figure below:
