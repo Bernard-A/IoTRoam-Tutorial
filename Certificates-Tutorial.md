@@ -18,12 +18,12 @@ The standard format for this certificate is called X.509. An X.509 certificate c
 
 ## Certificate Authority (CA)
 
-CA is a trusted third party that verifies the Public Key provided by the server and validates it by including  its digital signature into the X.509 Certificate. In layman terms, it is like the Government provides a authenticity for one's passport which is accepted in all Airports of the world. 
+CA is a trusted third party that verifies the Public Key provided by the server and validates it by including  its digital signature into the X.509 Certificate. In layman terms, it is like the Government whch provides a digital signature for one's passport that can be verified and accepted in all Airports of the world. 
 
 
 ## Root Certificate
 
-The root certificate, also called a trusted root, is one of the certificates issued by a trusted CA. It’s a special type of X.509 digital certificate which is used for issuing other certificates called intermediates and further end-user SSL Certificate for avoiding the risk of getting compromised.
+The root certificate, also called a trusted root, is one of the certificates issued by a trusted CA. It’s a special type of X.509 digital certificate which is used for issuing other certificates called intermediates and further end-user TLS Certificates for avoiding the risk of getting compromised.
 
 
 ## Intermediate Certificate
