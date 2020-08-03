@@ -162,7 +162,7 @@ The above command creates a new certificate, a key and a sign request in the ```
  
 The ca.pem file is a public file, the ca.csr file is not too important as of now, as we won’t sign the request with another CA, while the ca-key.pem is your private key. This key is the object that you should keep safe. Keep it as safe as possible after you are done with this tutorial and do not share it with anyone. If anyone gains access to the CA, they can sign requests as if it was you doing it.
 
-#### 1.3 Verification
+### 1.3 Verification
 
 One could verify the generated keys with OpenSSL:
 
@@ -305,7 +305,7 @@ The above command should output something similiar as follows:
  [INFO] signed certificate with serial number 442522653809835936897657268932942954456988632585
  ``` 
  
-#### 2.4 Verification of the Intermediate Certificates
+### 2.4 Verification of the Intermediate Certificates
 
 One can verify the generated certificates using the commands in the [Verification] section
 
@@ -317,8 +317,9 @@ The NS will act both as Client and Server. It will act as ```Server``` when tryi
    1. When the NS acts as a Client and 
    2. When the NS acts as the server
 
+### 3.1  Client
 
-#### Client Configuration
+#### 3.1.1 NS Client Configuration
 
 The following commands are run from the ```/certificates``` directory as in the [Directory Structure]
 
@@ -344,7 +345,7 @@ The CN field here corresponds to the unique identifier for the Application Serve
 The "hosts" field, by default it is ```["127.0.0.1","localhost]"```. In the configuration above, the Application server’s public IP is as follow : ```["127.0.0.1","localhost","192.168.1.4"]``` 
 
        
-#### Client Certificate Generation
+#### 3.1.2 NS Client Certificate Generation
 
 Now it is necessary to create the certificates for the CA following the commands below:
 
@@ -363,12 +364,13 @@ The above command creates a new certificate, a key and a sign request in the ```
  * network-server-api-client.csr (sign request)
 
 
-#### Verification
+#### 3.1.3 NS Certificate Verification
 
 One can verify the generated certificates using the commands in the [Verification] section
 
+### 3.2  Server
 
-#### Server Configuration
+#### 3.2.1 NS Server Configuration
 
 ```sh
 	mkdir -p config/network-server/api/server
@@ -390,7 +392,7 @@ Add to the respective folder under ```config/network-server/api/server```, the f
 The CN field could be any string. The "hosts" field, by default it is ```["127.0.0.1","localhost"]```. In the above config, the Network server’s public IP is added as follows: ```["127.0.0.1","localhost","192.168.1.3"]```
 
        
-#### Server Certificate Generation
+#### 3.2.2  NS Server Certificate Generation
 
 Now it is necessary to create the certificates for the CA following the commands below:
 
@@ -409,20 +411,21 @@ The above command creates a new certificate, a key and a sign request in the ```
  * network-server-api-server.csr (sign request)
  
 
-#### Verification
+#### 3.2.3 NS Certificate Verification
 
 One can verify the generated certificates using the commands in the [Verification] section
 
 
-### Certificate generation at the AS
+## 4. Certificate generation at the AS
 
 The AS will also act both as Client and Server. The AS will act as ```Server``` when trying to authenticate the NS and the AS will act as ```Client``` when the NS is trying to authenticate it. Both the communications for authentications are done by [API]. Hence there are two groups of certificates needed:
 
    1. When the AS acts as a Client and 
    2. When the AS acts as the server
 
+### 4.1  Client
 
-#### Client Configuration
+#### 4.1.1 AS Client Configuration
 
 ```sh
 	mkdir -p config/application-server/api/client
@@ -446,7 +449,7 @@ The CN field here corresponds to the unique identifier for the Network Server, a
 The "hosts" field, by default it is ```["127.0.0.1","localhost"]```. The Network server’s public IP is added in the above configuration as follows: ```["127.0.0.1","localhost","192.168.1.3"]```.
 
        
-#### Client Certificate Generation
+#### 4.1.2 AS Client Certificate Generation
 
 Now it is necessary to create the certificates for the CA following the commands below:
 
@@ -465,12 +468,13 @@ The above command creates a new certificate, a key and a sign request in the ```
  * application-server-api-client.csr (sign request)
  
 
-#### Verification
+#### 4.1.3 AS Certificate Verification
 
 One can verify the generated certificates using the commands in the [Verification] section
 
+### 4.2  Server
 
-#### Server Configuration
+#### 4.2.1  AS Server Configuration
 
 ```sh
 	mkdir -p config/application-server/api/server
@@ -492,7 +496,7 @@ Add to the respective folder under ```config/application-server/api/server```, t
 The CN field could be any string. The "hosts" field, by default it is ```["127.0.0.1","localhost"]```. The above configuration includes Application server’s public IP here as follows: ```["127.0.0.1","localhost","192.168.1.4"]```
 
        
-#### Server Certificate Generation
+#### 4.2.2  AS Server Certificate Generation
 
 Now it is necessary to create the certificates for the CA following the commands below:
 
@@ -511,12 +515,12 @@ The above command creates a new certificate, a key and a sign request in the ```
  * application-server-api-server.csr (sign request)
  
 
-#### Verification
+#### 4.2.3  AS Verification
 
 One can verify the generated certificates using the commands in the [Verification] section
 
 
-#### Join Server (JS) Configuration
+## 5. Join Server (JS) Configuration
 
 As mentioned earlier, the roaming platform does ```Join``` via OTAA. Hence, there is a JS involved.  In our case the JS and AS are in the same physical machine. The JS might be located separately and in that case, appropriate IP address should be included in the configuration. 
 
@@ -525,7 +529,9 @@ Similar to the NS and AS, the JS will also act both as Client and Server. The JS
    1. When the JS acts as a Client and 
    2. When the JS acts as the server
 
-#### JS Client Configuration
+### 5.1 Client
+
+#### 5.1.1  JS Client Configuration
 
 ```sh
 	mkdir -p config/application-server/join-api/client
@@ -547,7 +553,7 @@ The  CN field here corresponds to the NetID of the ChirpStack Network Server you
 
 The "hosts" field, by default it is ```["127.0.0.1","localhost"]```. The Network server’s public IP is included as follows: ```["127.0.0.1","localhost","192.168.1.3"]```
 
-#### JS Client Certificate Generation
+#### 5.1.2  JS Client Certificate Generation
 
 Now it is necessary to create the certificates for the CA following the commands below:
 
@@ -567,11 +573,13 @@ The above command creates a new certificate, a key and a sign request in the ```
  * application-server-join-api-client.csr (sign request)
  
 
-#### Verification
+#### 5.1.3 JS Verification
 
 One can verify the generated certificates using the commands in the [Verification] section
 
-#### JS Server Configuration
+### 5.2 Server
+
+#### 5.2.1 JS Server Configuration
 
 ```sh
 	mkdir -p config/application-server/join-api/server
@@ -595,7 +603,7 @@ Add to the respective folder under ```config/application-server/join-api/server`
 
 The CN field could be any string. The "hosts" field, by default it is ```["127.0.0.1","localhost"]```. The above configuration includes Application server’s public IP here as follows: ```["127.0.0.1","localhost","192.168.1.4"]```
 
-#### JS Server Certificate Generation
+#### 5.2.2 JS Server Certificate Generation
 
 Now it is necessary to create the certificates for the CA following the commands below:
 
@@ -614,7 +622,7 @@ The above command creates a new certificate, a key and a sign request in the ```
  * application-server-join-api-server.pem (certificate)
  * application-server-join-api-server.csr (sign request)
  
-#### Verification
+#### 5.2.3 JS Server Certificate Verification
 
 One can verify the generated certificates using the commands in the [Verification] section
 
