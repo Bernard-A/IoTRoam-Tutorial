@@ -532,7 +532,7 @@ Add to the respective folder under ```config/application-server/join-api/client`
 
 The  CN field here corresponds to the NetID of the ChirpStack Network Server you deployed, accessible in the configuration file as ```network_server.net_id```. Since in our case, we have put a fictional NetID, it is as ```"CN": "000001"```.
 
-In the "hosts" field, by default it is ```["127.0.0.1","localhost"]```. We added our Network server’s public IP here, ours is as follow : ```["127.0.0.1","localhost","192.168.1.3"]```
+The "hosts" field, by default it is ```["127.0.0.1","localhost"]```. The Network server’s public IP is included as follows: ```["127.0.0.1","localhost","192.168.1.3"]```
 
 #### JS Client Certificate Generation
 
