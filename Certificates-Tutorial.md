@@ -72,7 +72,13 @@ This step is optional. But, it is better to have the directory structured like t
 			     		certificate.json
                 /certs                         
                     /ca				## In most cases, this directory will not be needed
-                    /intermediate               ## In most cases, Intermediate will be the CA
+                    	ca.csr
+			ca-key.pem
+			ca.pem
+		    /intermediate               ## In most cases, Intermediate will be the CA
+		    	intermediate.csr
+			intermediate-key.pem
+			intermediate.pem
 		    /network-server
 		    	/api
 				/server
@@ -268,7 +274,7 @@ One can verify the generated certificates using the commands in the [Verificatio
 
 ### Certificate generation at the NS
 
-The NS will act as ```Client``` when trying to authenitcate the AS and the NS will act as ```Server``` when the AS is trying to authenticate it. Both the communications for authentications are done by [API]. Hence there are two certificates needed:
+The NS will act as ```Client``` when trying to authenticate the AS and the NS will act as ```Server``` when the AS is trying to authenticate it. Both the communications for authentications are done by [API]. Hence there are two certificates needed:
 
    1. When the NS acts as a Client and 
    2. When the NS acts as the server
@@ -277,7 +283,7 @@ The NS will act as ```Client``` when trying to authenitcate the AS and the NS wi
 
 ##### Client Configuration
 
-Add to the respective folder under ```api/client```, the file ```certificate.json```as in the [Directory Structure]
+Add to the respective folder under ```config/network-server/api/client```, the file ```certificate.json```as in the [Directory Structure]
 
 ```sh
 	{
@@ -302,11 +308,11 @@ The CN field here corresponds to the unique identifier for the Application Serve
 
 Now it is necessary to create the certificates for the CA following the commands below:
 
-The following commands are run from the ```/chirpstack-certificates``` directory as in the [Directory Structure]
+The following commands are run from the ```/certificates``` directory as in the [Directory Structure]
 
 ```sh
-	mkdir -p certs/chirpstack-network-server/api/server
-        mkdir -p certs/chirpstack-network-server/api/client
+	mkdir -p certs/network-server/api/client
+	cfssl gencert -ca certs/intermediate-ca/intermediate-ca.pem -ca-key certs/ca/ca-key.pem -config config/ca-config.json -profile client config/network-     server/api/client/certificate.json | cfssljson -bare certs/network-server/api/client/chirpstack-network-server-api-client
 ``` 
 
 The above command creates a new certificate, a key and a sign request in the ```/certs/ca``` directory as follows:
