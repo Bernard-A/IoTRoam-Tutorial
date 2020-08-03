@@ -503,7 +503,7 @@ The above command creates a new certificate, a key and a sign request in the ```
 One can verify the generated certificates using the commands in the [Verification] section
 
 
-#### Join Server Configuration
+#### Join Server (JS) Configuration
 
 As mentioned earlier, the roaming platform does ```Join``` via OTAA. Hence, there is a JS involved.  In our case the JS and AS are in the same physical machine. The JS might be located separately and in that case, appropriate IP address should be included in the configuration. 
 
@@ -512,7 +512,7 @@ Similar to the NS and AS, the JS will also act both as Client and Server. The JS
    1. When the JS acts as a Client and 
    2. When the JS acts as the server
 
-#### Client Configuration
+#### JS Client Configuration
 
 ```sh
 	mkdir -p config/application-server/join-api/client
@@ -524,8 +524,8 @@ Add to the respective folder under ```config/application-server/join-api/client`
     		"CN": ""000001",
     		"hosts": ["127.0.0.1","localhost","192.168.1.3"],
     		"key": {
-      		"algo": "rsa",
-      		"size": 2048
+      			"algo": "rsa",
+      			"size": 2048
     		}
 	}
 ```  
@@ -534,30 +534,35 @@ The  CN field here corresponds to the NetID of the ChirpStack Network Server you
 
 In the "hosts" field, by default it is ```["127.0.0.1","localhost"]```. We added our Network server’s public IP here, ours is as follow : ```["127.0.0.1","localhost","192.168.1.3"]```
 
-#### Client Certificate Generation
+#### JS Client Certificate Generation
 
 Now it is necessary to create the certificates for the CA following the commands below:
 
 The following commands are run from the ```/certificates``` directory as in the [Directory Structure]
 
 ```sh
-	mkdir -p certs/application-server/api/client
+	mkdir -p certs/application-server/join-api/client
 	
 	cfssl gencert -ca certs/intermediate/intermediate.pem -ca-key certs/intermediate/intermediate-key.pem -config config/config.json -profile client 
-	config/application-server/api/client/certificate.json | cfssljson -bare certs/application-server/api/client/application-server-api-client
+	config/application-server/join-api/client/certificate.json | cfssljson -bare certs/application-server/join-api/client/application-server-join-api-
+		client
 ``` 
 
-The above command creates a new certificate, a key and a sign request in the ```certs/application-server/api/client``` directory as follows:
- * application-server-api-client-key.pem (certificate key)
- * application-server-api-client.pem (certificate)
- * application-server-api-client.csr (sign request)
+The above command creates a new certificate, a key and a sign request in the ```certs/application-server/join-api/client``` directory as follows:
+ * application-server-join-api-client-key.pem (certificate key)
+ * application-server-join-api-client.pem (certificate)
+ * application-server-join-api-client.csr (sign request)
  
 
 #### Verification
 
 One can verify the generated certificates using the commands in the [Verification] section
 
+ # chirpstack-application-server join api server certificate
+        cfssl gencert -ca certs/ca/ca.pem -ca-key certs/ca/ca-key.pem -config config/ca-config.json -profile server config/chirpstack-application-server/join-api/server/certificate.json | cfssljson -bare certs/chirpstack-application-server/join-api/server/chirpstack-application-server-join-api-server
 
+        # chirpstack-application-server join api client certificate (e.g. for chirpstack-network-server)
+        cfssl gencert -ca certs/ca/ca.pem -ca-key certs/ca/ca-key.pem -config config/ca-config.json -profile client config/chirpstack-application-server/join-api/client/certificate.json | cfssljson -bare certs/chirpstack-application-server/join-api/client/chirpstack-application-server-join-api-client
 
 
 
