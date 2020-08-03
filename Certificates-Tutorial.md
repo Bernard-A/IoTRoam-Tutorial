@@ -52,7 +52,7 @@ This step is optional. But, it is better to have the directory structured like t
 
 ```sh
         /home
-            /chirpstack-certificates
+            /certificates
                 /config
                     ca-csr.json
 		    config.json
@@ -114,7 +114,7 @@ Add to the respective folder, the file ```ca-csr.json```as in the [Directory Str
 
 Now it is necessary to create the certificates for the CA following the commands below:
 
-The following commands are run from the ```/chirpstack-certificates``` directory as in the [Directory Structure]
+The following commands are run from the ```/certificates``` directory as in the [Directory Structure]
 
 ```sh
 	mkdir -p certs/ca
@@ -155,7 +155,7 @@ One should verify the generated keys with OpenSSL:
 +       This section is needed by each Institution to generate certificates  for their AS or NS
 ```
 
-The next steps require a profile config file. The profile describes general details about the certificate. For example it’s duration, and usages. We will use a single config file for all certificate generation. Thus, we set up a new “profile” for each of the entities concerned. In addition to the "Intermediate_Ca", we also add "Client" and "Server" profiles.
+The next steps require a profile config file ```config.json``` as in the [Directory Structure]. The profile describes general details about the certificate. For example it’s duration, and usages. We will use a single config file for all certificate generation. Thus, we set up a new “profile” for each of the entities concerned. In addition to the "Intermediate_Ca", we also add "Client" and "Server" profiles.
 
 One can observe in the config file how the “client” profile specifies “client auth” in its usages, while the “server” profile specifies “server auth”, while 
 the "intermediate-ca" profile does both.
@@ -232,10 +232,10 @@ Just as with the root, each intermediate certificate requires a CSR json file. A
 
 Now it is necessary to create the certificates for the Intermediate CA following the commands below:
 
-The following commands are run from the ```/chirpstack-certificates``` directory as in the [Directory Structure]
+The following commands are run from the ```/certificates``` directory as in the [Directory Structure]
 
 ```sh
-	mkdir -p intermediate/intermediate
+	mkdir -p certs/intermediate
         cfssl gencert -initca config/intermediate-csr.json | cfssljson -bare certs/intermediate/intermediate
 
 ``` 
@@ -248,6 +248,8 @@ The above command creates a new certificate, a key and a sign request in the ```
 #### Sign
 
 Now we have to sign the ```intermediate CA```.  It is done by the command below which uses the CA produced previously to sign the intermediate CA. It also uses the “config.json” profile and specifies the “intermediate_ca” profile.
+
+The following commands are run from the ```/certificates``` directory as in the [Directory Structure]
 
 ```sh
  cfssl sign -ca certs/ca/ca.pem -ca-key certs/ca/ca-key.pem -config config/config.json -profile intermediate_ca certs/intermediate/intermediate.csr |  cfssljson -bare certs/intermediate/intermediate
