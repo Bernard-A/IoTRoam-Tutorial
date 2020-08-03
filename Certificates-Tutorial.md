@@ -604,7 +604,7 @@ The following commands are run from the ```/certificates``` directory as in the 
 	server
 ``` 
 
-The above command creates a new certificate, a key and a sign request in the ```certs/application-server/join-api/client``` directory as follows:
+The above command creates a new certificate, a key and a sign request in the ```certs/application-server/join-api/server``` directory as follows:
  * application-server-join-api-server-key.pem (certificate key)
  * application-server-join-api-server.pem (certificate)
  * application-server-join-api-server.csr (sign request)
