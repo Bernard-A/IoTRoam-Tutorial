@@ -254,6 +254,16 @@ The above command creates a new certificate, a key and a sign request in the ```
  * intermediate.pem (certificate)
  * intermediate.csr (sign request)
  
+ And also outputs a logs as follows:
+ 
+ ```sh
+			[INFO] generate received request
+			[INFO] received CSR
+			[INFO] generating key: rsa-2048
+			[INFO] encoded CSR
+			[INFO] signed certificate with serial number 507554958619371358914352423324768250450624326809
+
+ ``` 
 #### Sign
 
 Now we have to sign the ```intermediate CA```.  It is done by the command below which uses the CA produced previously to sign the intermediate CA. It also uses the “config.json” profile and specifies the “intermediate_ca” profile.
