@@ -1,7 +1,7 @@
 ```diff
 +         This page is intended to be as a tutorial. It tries to provide some basic information about the Public Key
 +         Infrastructure (PKI), X.509 Certificate and associated terms
-+         It also provides informatin on how to generate the certificates and include them for an Open Roaming
++         It also provides information on how to generate the certificates and include them for an Open Roaming
 +         scenario. 
 ```
 
