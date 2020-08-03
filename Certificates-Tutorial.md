@@ -324,10 +324,10 @@ The following commands are run from the ```/certificates``` directory as in the 
 
 ```sh
 	mkdir -p certs/network-server/api/client
-	cfssl gencert -ca certs/intermediate-ca/intermediate-ca.pem -ca-key certs/ca/ca-key.pem -config config/ca-config.json -profile client config/network-     server/api/client/certificate.json | cfssljson -bare certs/network-server/api/client/network-server-api-client
+	cfssl gencert -ca certs/intermediate/intermediate.pem -ca-key certs/intermediate/intermediate-key.pem -config config/config.json -profile client config/network-server/api/client/certificate.json | cfssljson -bare certs/network-server/api/client/network-server-api-client
 ``` 
 
-The above command creates a new certificate, a key and a sign request in the ```certs/network-server/api/client/network-server-api-client``` directory as follows:
+The above command creates a new certificate, a key and a sign request in the ```certs/network-server/api/client``` directory as follows:
  * network-server-api-client-key.pem (certificate key)
  * network-server-api-client.pem (certificate)
  * network-server-api-client.csr (sign request)
@@ -366,14 +366,14 @@ Now it is necessary to create the certificates for the CA following the commands
 The following commands are run from the ```/certificates``` directory as in the [Directory Structure]
 
 ```sh
-	mkdir -p certs/network-server/api/client
-	cfssl gencert -ca certs/intermediate-ca/intermediate-ca.pem -ca-key certs/ca/ca-key.pem -config config/ca-config.json -profile client config/network-     server/api/client/certificate.json | cfssljson -bare certs/network-server/api/client/network-server-api-client
+	mkdir -p certs/network-server/api/server
+	cfssl gencert -ca certs/intermediate/intermediate.pem -ca-key certs/intermediate/intermediate-key.pem -config config/config.json -profile server config/network-server/api/server/certificate.json | cfssljson -bare certs/network-server/api/server/network-server-api-server
 ``` 
 
-The above command creates a new certificate, a key and a sign request in the ```certs/network-server/api/client/network-server-api-client``` directory as follows:
- * network-server-api-client-key.pem (certificate key)
- * network-server-api-client.pem (certificate)
- * network-server-api-client.csr (sign request)
+The above command creates a new certificate, a key and a sign request in the ```certs/network-server/api/server``` directory as follows:
+ * network-server-api-server-key.pem (certificate key)
+ * network-server-api-server.pem (certificate)
+ * network-server-api-server.csr (sign request)
  
 
 #### Verification
