@@ -5,6 +5,8 @@
 +         scenario. 
 ```
 
+# Intro
+In this section, we provide a theoretical explanation on the terminologies involved
 
 ## Certificates
 
@@ -44,7 +46,7 @@ A CSR is a block of encoded text that is given to a Certificate Authority when a
 
 The CA will use a CSR to create your TLS certificate, but it does not need your private key. You need to keep your private key secret. The certificate created with a particular CSR will only work with the private key that was generated with it. So if you lose the private key, the certificate will no longer work.
 
-## Certificate Setup 
+# Certificate Setup 
 
 This section explains how the certificates are generated from the Root to the Intermediate CA to the certificates for each servers in the roaming set up. 
 
