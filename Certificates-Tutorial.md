@@ -257,7 +257,10 @@ One can verify the generated certificates using the commands in the [Verificatio
 
 ### Certificate generation at the NS
 
-The NS will act as ```Client``` when trying to authenitcate the AS and the NS will act as ```Server``` when the AS is trying to authenticate it. Both the communications for authentications are done by [API]. Hence there are two certificates needed - 1. When the NS acts as a Client and 2. When the NS acts as the server
+The NS will act as ```Client``` when trying to authenitcate the AS and the NS will act as ```Server``` when the AS is trying to authenticate it. Both the communications for authentications are done by [API]. Hence there are two certificates needed:
+
+   1. When the NS acts as a Client and 
+   2. When the NS acts as the server
 
 #### Configuration
 
