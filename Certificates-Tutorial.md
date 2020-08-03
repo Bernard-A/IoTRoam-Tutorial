@@ -83,6 +83,9 @@ This step is optional. But, it is better to have the directory structured like t
 		    	/api
 				/server
 				/client
+					network-server-api-client.csr
+					network-server-api-client-key.pem
+					network-server-api-client.pem
 		    /application-server
 		    	/api
 				/server
@@ -312,15 +315,14 @@ The following commands are run from the ```/certificates``` directory as in the 
 
 ```sh
 	mkdir -p certs/network-server/api/client
-	cfssl gencert -ca certs/intermediate-ca/intermediate-ca.pem -ca-key certs/ca/ca-key.pem -config config/ca-config.json -profile client config/network-     server/api/client/certificate.json | cfssljson -bare certs/network-server/api/client/chirpstack-network-server-api-client
+	cfssl gencert -ca certs/intermediate-ca/intermediate-ca.pem -ca-key certs/ca/ca-key.pem -config config/ca-config.json -profile client config/network-     server/api/client/certificate.json | cfssljson -bare certs/network-server/api/client/network-server-api-client
 ``` 
 
-The above command creates a new certificate, a key and a sign request in the ```/certs/ca``` directory as follows:
- * ca-key.pem (certificate key)
- * ca.pem (certificate)
- * ca.csr (sign request)
+The above command creates a new certificate, a key and a sign request in the ```certs/network-server/api/client/network-server-api-client``` directory as follows:
+ * network-server-api-client-key.pem (certificate key)
+ * network-server-api-client.pem (certificate)
+ * network-server-api-client.csr (sign request)
  
-The ca.pem file is a public file, the ca.csr file is not too important as of now, as we won’t sign the request with another CA, while the ca-key.pem is your private key. This key is the object that you should keep safe. Keep it as safe as possible after you are done with this tutorial and do not share it with anyone. If anyone gains access to the CA, they can sign requests as if it was you doing it.
 
 #### Verification
 
