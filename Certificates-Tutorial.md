@@ -566,14 +566,51 @@ The above command creates a new certificate, a key and a sign request in the ```
 
 One can verify the generated certificates using the commands in the [Verification] section
 
- # chirpstack-application-server join api server certificate
-        cfssl gencert -ca certs/ca/ca.pem -ca-key certs/ca/ca-key.pem -config config/ca-config.json -profile server config/chirpstack-application-server/join-api/server/certificate.json | cfssljson -bare certs/chirpstack-application-server/join-api/server/chirpstack-application-server-join-api-server
+#### JS Server Configuration
 
-        # chirpstack-application-server join api client certificate (e.g. for chirpstack-network-server)
-        cfssl gencert -ca certs/ca/ca.pem -ca-key certs/ca/ca-key.pem -config config/ca-config.json -profile client config/chirpstack-application-server/join-api/client/certificate.json | cfssljson -bare certs/chirpstack-application-server/join-api/client/chirpstack-application-server-join-api-client
+```sh
+	mkdir -p config/application-server/join-api/server
+```
+Add to the respective folder under ```config/application-server/join-api/server```, the file ```certificate.json```as in the [Directory Structure]
 
+```sh
+	{
+   		"CN": "Application-Server-Join-API",
+    		"hosts": [
+      				"127.0.0.1",
+      				"localhost",
+				"192.168.1.4"
+    		],
+    		"key": {
+      				"algo": "rsa",
+      				"size": 2048
+  		  }
+	}
+```  
 
+The CN field could be any string. The "hosts" field, by default it is ```["127.0.0.1","localhost"]```. The above configuration includes Application server’s public IP here as follows: ```["127.0.0.1","localhost","192.168.1.4"]```
 
+#### JS Server Certificate Generation
+
+Now it is necessary to create the certificates for the CA following the commands below:
+
+The following commands are run from the ```/certificates``` directory as in the [Directory Structure]
+
+```sh
+	mkdir -p certs/application-server/join-api/server
+	
+	cfssl gencert -ca certs/intermediate/intermediate.pem -ca-key certs/intermediate/intermediate-key.pem -config config/config.json -profile server 
+	config/application-server/join-api/server/certificate.json | cfssljson -bare certs/application-server/join-api/server/application-server-join-api-
+	server
+``` 
+
+The above command creates a new certificate, a key and a sign request in the ```certs/application-server/join-api/client``` directory as follows:
+ * application-server-join-api-server-key.pem (certificate key)
+ * application-server-join-api-server.pem (certificate)
+ * application-server-join-api-server.csr (sign request)
+ 
+
+    
 
 [Directory Structure]: #directory-structure
 [Verification]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Certificates-Tutorial.md#verification
