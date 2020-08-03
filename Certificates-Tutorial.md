@@ -101,7 +101,15 @@ It is better to have the directory structured like this to make it easy to look 
 					application-server-api-client.csr
 					application-server-api-client-key.pem
 					application-server-api-client.pem
-				/join-api
+			/join-api
+				/server
+					application-server-join-api-server.csr
+					application-server-join-api-server-key.pem
+					application-server-join-api-server.pem
+				/client
+					application-server-join-api-client.csr
+					application-server-join-api-client-key.pem
+					application-server-join-api-client.pem
 ```
 
 ### CA Certificate generation
