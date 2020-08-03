@@ -58,6 +58,11 @@ This step is optional. But, it is better to have the directory structured like t
 		    config.json
 		/chirpstack-gateway-bridge
                 /chirpstack-application-server
+		    /api
+		        /server
+			     certifcate.json
+			/client
+			     certificate.json
                 /chirpstack-network-server
 		    /api
 		        /server
