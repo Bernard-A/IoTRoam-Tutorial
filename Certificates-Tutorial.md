@@ -86,9 +86,9 @@ This step is optional. But, it is better to have the directory structured like t
 					network-server-api-server-key.pem
 					network-server-api-server.pem
 				/client
-					network-server-api-client.csr
-					network-server-api-client-key.pem
-					network-server-api-client.pem
+					application-server-api-client.csr
+					application-server-api-client-key.pem
+					application-server-api-client.pem
 		    /application-server
 		    	/api
 				/server
