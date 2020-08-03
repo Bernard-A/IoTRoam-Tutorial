@@ -609,6 +609,9 @@ The above command creates a new certificate, a key and a sign request in the ```
  * application-server-join-api-server.pem (certificate)
  * application-server-join-api-server.csr (sign request)
  
+#### Verification
+
+One can verify the generated certificates using the commands in the [Verification] section
 
     
 
