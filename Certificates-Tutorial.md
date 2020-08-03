@@ -50,7 +50,7 @@ The CA will use a CSR to create your TLS certificate, but it does not need your 
 
 This section explains how the certificates are generated from the Root to the Intermediate CA to the certificates for each servers in the roaming set up. 
 
-### Directory structure
+## Directory structure
 
 It is better to have the directory structured like this to make it easy to look at. We will follow the below directory structure to configure, generate and store the certificates.
 
@@ -114,9 +114,11 @@ It is better to have the directory structured like this to make it easy to look 
 					application-server-join-api-client.pem
 ```
 
-### CA Certificate generation
+## 1. CA Certificate generation
 
-#### Configuration
+For each section, there are three sections: 1. Configuration, 2. Certificate generation and 3. Verification of the certificates generated
+
+### 1.1 Configuration
 
 ```diff
 +         This section is needed only by the CA and might not be needed in most cases
@@ -141,7 +143,7 @@ Add to the respective folder, the file ```ca-csr.json```as in the [Directory Str
 		}
 ```         
        
-#### Generation
+### 1.2 CA Certificate Generation
 
 Now it is necessary to create the certificates for the CA following the commands below:
 
@@ -160,7 +162,7 @@ The above command creates a new certificate, a key and a sign request in the ```
  
 The ca.pem file is a public file, the ca.csr file is not too important as of now, as we won’t sign the request with another CA, while the ca-key.pem is your private key. This key is the object that you should keep safe. Keep it as safe as possible after you are done with this tutorial and do not share it with anyone. If anyone gains access to the CA, they can sign requests as if it was you doing it.
 
-#### Verification
+#### 1.3 Verification
 
 One could verify the generated keys with OpenSSL:
 
@@ -178,12 +180,13 @@ One could verify the generated keys with OpenSSL:
 	openssl rsa -in ca-key.pem -check
   ``` 
 
-### Intermediate Certificate generation
+## 2. Intermediate Certificate generation
 
-#### Configuration
+### 2.1 Configuration
 
 ```diff
-+       This section is needed by each Institution to generate certificates  for their AS or NS
++       This section also may not be needed as the CA generates these certificates and furnishes to the Institutions
++       The Institutions use the Intermediate certificates to generate certificates for their servers.
 ```
 
 The next steps require a profile config file ```config.json``` as in the [Directory Structure]. The profile describes general details about the certificate. For example it’s duration, and usages. We will use a single config file for all certificate generation. Thus, we set up a new “profile” for each of the entities concerned. In addition to the "Intermediate_Ca", we also add "Client" and "Server" profiles.
@@ -259,7 +262,7 @@ Just as with the root, each intermediate certificate requires a CSR json file. A
 ```
 
 
-#### Generation
+### 2.2 Intermediate Certificate Generation
 
 Now it is necessary to create the certificates for the Intermediate CA following the commands below:
 
@@ -286,7 +289,7 @@ The above command creates a new certificate, a key and a sign request in the ```
 			[INFO] signed certificate with serial number 507554958619371358914352423324768250450624326809
 
  ``` 
-#### Sign
+### 2.3 Intermediate Certificate Signing by the CA
 
 Now we have to sign the ```intermediate CA```.  It is done by the command below which uses the CA produced previously to sign the intermediate CA. It also uses the “config.json” profile and specifies the “intermediate_ca” profile.
 
@@ -302,12 +305,12 @@ The above command should output something similiar as follows:
  [INFO] signed certificate with serial number 442522653809835936897657268932942954456988632585
  ``` 
  
-#### Verification
+#### 2.4 Verification of the Intermediate Certificates
 
 One can verify the generated certificates using the commands in the [Verification] section
 
 
-### Certificate generation at the NS
+## 3. Certificate generation at the NS
 
 The NS will act both as Client and Server. It will act as ```Server``` when trying to authenticate the AS and  as ```Client``` when the AS is trying to authenticate it. Both the communications for authentications are done by [API]. Hence there are two two groups of certificates needed:
 
