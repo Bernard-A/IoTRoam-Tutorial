@@ -106,7 +106,7 @@ We are using use the Open Source ["Chirpstack"]. The first step is to install Ch
     # MQTT server (e.g. scheme://host:port where scheme is tcp, ssl or ws)
     # To authorize the Mosquito client ublish to the MQTT topic  
     # and the mosquitto_sub client is authorized to subscribe to the given MQTT topic
-    server="tcp://192.168.2.1:1883" ## Add your NS IP address 
+    server="tcp://192.168.1.3:1883" ## Add your NS IP address 
   ```
 * Start the chirpstack-gateway-bridge and you should get the confirmation that the gateway has started
     ```sh
