@@ -197,45 +197,46 @@ the "intermediate-ca" profile does both.
 Add to the respective folder, the file ```config.json```as in the [Directory Structure]
 ```sh
 {
-        "signing": {
-                "default": {
-                         "expiry": "8760h"
-                          },
-                          "profiles": {
-                                   "intermediate_ca": {
-                                            "usages": [
-                                                       "signing",
-                                                       "digital signature",
-                                                       "key encipherment","cert sign",
-                                                       "crl sign",
-                                                       "server auth",
-                                                       "client auth"
-                                            ],
-                                            "expiry": "8760h",
-                                             "ca_constraint": {
-                                                     "is_ca": true,
-                                                     "max_path_len": 0,
-                                                     "max_path_len_zero": true
-                                              }
-                                   },
-                                   "client": {
-                                                   "expiry": "8760h",
-                                                    "usages": [
-                                                               "signing",
-                                                               "key encipherment",
-                                                               "client auth"
-                                                    ]
-                                   },
-                                   "server": {
-                                                   "expiry": "8760h",
-                                                   "usages": [
-                                                               "signing",
-                                                               "key encipherment",
-                                                               "server auth"
-                                                   ]
-                                  }
-                        }
-          }
+   "signing":{
+      "default":{
+         "expiry":"8760h"
+      },
+      "profiles":{
+         "intermediate_ca":{
+            "usages":[
+               "signing",
+               "digital signature",
+               "key encipherment",
+               "cert sign",
+               "crl sign",
+               "server auth",
+               "client auth"
+            ],
+            "expiry":"8760h",
+            "ca_constraint":{
+               "is_ca":true,
+               "max_path_len":0,
+               "max_path_len_zero":true
+            }
+         },
+         "client":{
+            "expiry":"8760h",
+            "usages":[
+               "signing",
+               "key encipherment",
+               "client auth"
+            ]
+         },
+         "server":{
+            "expiry":"8760h",
+            "usages":[
+               "signing",
+               "key encipherment",
+               "server auth"
+            ]
+         }
+      }
+   }
 }
 ```         
 Just as with the root, each intermediate certificate requires a CSR json file. Add to the respective folder, the file ```intermediate-csr.json```as in the [Directory Structure]  
