@@ -243,7 +243,7 @@ Just as with the root, each intermediate certificate requires a CSR json file. A
 
 ```sh
 {
-  "CN": "Afnic Intermediate CA",
+  "CN": "Afnic Labs Intermediate CA",
   "key": {
           "algo": "rsa",
           "size": 2048
@@ -275,7 +275,7 @@ The following commands are run from the ```/certificates``` directory as in the 
 
 ``` 
 
-The above command creates a new certificate, a key and a sign request in the ```/certs/ca``` directory as follows:
+The above command creates a new certificate, a key and a sign request in the ```/certs/intermediate``` directory as follows:
  * intermediate-key.pem (certificate key)
  * intermediate.pem (certificate)
  * intermediate.csr (sign request)
