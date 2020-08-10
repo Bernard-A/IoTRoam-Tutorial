@@ -126,21 +126,21 @@ For each section, there are three sections: 1. Configuration, 2. Certificate gen
 
 Add to the respective folder, the file ```ca-csr.json```as in the [Directory Structure]
 ```sh
- 		{
-			 "CN": "Afnic CA",			# Cannonical Name
-  			 "key": {
-    					"algo": "rsa",
-    					"size": 2048
-  				},
-			 "names": [
-     			       {
-               				"C": "FR",   		# Country
-               				"L": "SQY",		# Location/City
-               				"O": "Afnic",		# Organisation
-               				"ST": "Yevlines"	# State
-        			}
-    				   ]
-		}
+{
+  "CN":"Afnic CA",  		# Cannonical Name 
+   "key":{
+      "algo":"rsa",
+      "size":2048
+   },
+   "names":[
+      {
+         "C":"FR", 		# Country      
+	 "L":"SQY",             # Location/City         
+	 "O":"Afnic",           # Organisation        
+	 "ST":"Yevlines"        # State
+      }
+   ]
+}
 ```         
        
 ### 1.2 CA Certificate Generation
