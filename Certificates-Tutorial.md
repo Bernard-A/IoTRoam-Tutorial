@@ -541,12 +541,16 @@ Add to the respective folder under ```config/application-server/join-api/client`
 
 ```sh
 	{
-    		"CN": ""000001",
-    		"hosts": ["127.0.0.1","localhost","192.168.1.3"],
-    		"key": {
-      			"algo": "rsa",
-      			"size": 2048
-    		}
+  	  "CN":"000001",
+  	  "hosts":[
+  		   "127.0.0.1",
+   		   "localhost",
+      		   "192.168.1.3"
+   	  ],
+   	  "key":{
+      		"algo":"rsa",
+      		"size":2048
+   	  }
 	}
 ```  
 
