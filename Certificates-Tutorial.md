@@ -124,7 +124,8 @@ For each section, there are three sections: 1. Configuration, 2. Certificate gen
 +         This section is needed only by the CA and might not be needed in most cases
 ```
 
-Add to the respective folder, the file ```ca-csr.json```as in the [Directory Structure]
+Add to the respective folder under ```config/```, the file ```ca-csr.json```as in the [Directory Structure]   
+
 ```sh
 {
   "CN":"Afnic CA",  		# Cannonical Name 
@@ -189,7 +190,7 @@ One could verify the generated keys with OpenSSL:
 +       The Institutions use the Intermediate certificates to generate certificates for their servers.
 ```
 
-The next steps require a profile config file ```config.json``` as in the [Directory Structure]. The profile describes general details about the certificate. For example it’s duration, and usages. We will use a single config file for all certificate generation. Thus, we set up a new “profile” for each of the entities concerned. In addition to the "Intermediate_Ca", we also add "Client" and "Server" profiles.
+The next steps require a profile config file added to the respective folder under ```config/```, the file```config.json``` as in the [Directory Structure]. The profile describes general details about the certificate. For example it’s duration, and usages. We will use a single config file for all certificate generation. Thus, we set up a new “profile” for each of the entities concerned. In addition to the "Intermediate_Ca", we also add "Client" and "Server" profiles.
 
 One can observe in the config file how the “client” profile specifies “client auth” in its usages, while the “server” profile specifies “server auth”, while 
 the "intermediate-ca" profile does both.
