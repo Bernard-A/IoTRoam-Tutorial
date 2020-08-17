@@ -240,7 +240,7 @@ Add to the respective folder, the file ```config.json```as in the [Directory Str
    }
 }
 ```         
-Just as with the root, each intermediate certificate requires a CSR json file. Add to the respective folder, the file ```intermediate-csr.json```as in the [Directory Structure]  
+Just as with the root, each intermediate certificate requires a CSR json file. Add to the respective folder under ```config/```, the file ```intermediate-csr.json``` as in the [Directory Structure]  
 
 ```sh
 {
