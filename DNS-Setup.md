@@ -11,7 +11,11 @@ As per the LoRaWAN Backend specifications, the DNS infrastructure is used for th
 2.  Roaming: By the vNS (Visited NS) to find the hNS (Home NS)
 3.  OTAA: Associate a batch of devices to one specific Join Server using a DNS look-up, combining DevEUI and JoinEUI
 
-Two types of identifiers are provisioned in the DNS - 1. NetIDS for Roaming and 2. JoinEUI for OTAA. as per the backend specification, the LoRa Alliance DNS tree is as shown in the below figure:
+Two types of identifiers are provisioned in the DNS - 
+1. NetIDS for Roaming and 
+2. JoinEUI for OTAA 
+
+As per the backend specification, the LoRa Alliance DNS tree is as shown in the below figure:
 
 <p align="center">
   <img width="760" height="400" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig11.png?raw=true">
