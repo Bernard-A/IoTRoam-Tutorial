@@ -178,7 +178,7 @@ should give you access to the web-interface using your AS’s IP and the default
 * One can verify that the GW is configured correctly by clicking on ```LIVE LORAWAN FRAMES``` in the Gateways menu and one should see the Join Request if you start sending data from your ED as follows:
 
 <p align="center">
-  <img width="760" height="200" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig19.png?raw=true">
+  <img width="760" height="200" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig19.png?raw=true">
 </p>
 
 * Click on the ```Applications``` in the menu and fill the required fields and Update
@@ -190,7 +190,7 @@ should give you access to the web-interface using your AS’s IP and the default
  * Once one click on the device that has been created you will come to a page and now as one clicks on the menu ```Keys(OTAA)``` the page will be displayed as below
  
  <p align="center">
-  <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig20.png?raw=true">
+  <img width="760" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig20.png?raw=true">
 </p>
 
  * We have set only the  ```Application Key``` field. We clicked the arrow symbol in the right to generate an application key. You can also set your own Application Key as per the specifications. This key should be introduced to your ED. In  the mDot, we added using the following command:
@@ -205,7 +205,7 @@ should give you access to the web-interface using your AS’s IP and the default
  * If you click on the ```Activation``` menu, at this instance you should get a response that the device is not activated as follows:
   
  <p align="center">
-  <img width="760" height="125" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig21.png?raw=true">
+  <img width="760" height="125" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig21.png?raw=true">
 </p>
 
 
@@ -214,7 +214,7 @@ should give you access to the web-interface using your AS’s IP and the default
 The objective in this section is to verify the communication between the RGW->NS (2) and the NS->AS (3) shown in the figure:
 
 <p align="center">
-  <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig14.png?raw=true">
+  <img width="760" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig14.png?raw=true">
 </p>
 
 ### Verify whether the NS receives data from the RGW
@@ -282,7 +282,7 @@ From the above logs, it is clear that the NS has received an uplink from the gat
 If you now look at the webinterface, one can verify that the device has been activated as shown in the Figure below (when compared with the earlier scenario for device activation as shown in the [Web Interface Setup])
 
 <p align="center">
-  <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig22.png?raw=true">
+  <img width="760" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig22.png?raw=true">
 </p>
 
 ### Verify whether the AS receives data from the NS
@@ -312,7 +312,7 @@ If you have reached until this level, one has activated the ED via OTAA by havin
 Similarly, one can observe in the logs a downlink from the AS->NS->RGW as shown in the figure below.
 
 <p align="center">
-  <img width="600" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/FIG23.png?raw=true">
+  <img width="600" height="400" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/FIG23.png?raw=true">
 </p>
 
 
@@ -352,15 +352,15 @@ If you are using Chirpstack NS and AS, Next section to follow : [DNS-Setup] wher
 [Service Profile]: https://www.chirpstack.io/application-server/use/service-profiles/
 [Device Profile]: https://www.chirpstack.io/application-server/use/device-profiles/
 [Gateway]: https://www.chirpstack.io/application-server/use/gateways/
-[ED Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md#hardware-setup
-[Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial
-[Architecture page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
-[Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
-[Setting up the GW]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
-[NS Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
-[GW-Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md#chirpstack-gateway-bridge-is-receiving-data-from-the-packet-forwarder
-[JS-config]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md#Join-Server-section
-[DNS-Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/DNS-Setup.md
+[ED Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/End-Device.md#hardware-setup
+[Readme Page]: https://github.com/afnic/IoTRoam-Tutorial
+[Architecture page]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Architecture.md
+[Setting up the End-Device]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/End-Device.md
+[Setting up the GW]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
+[NS Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
+[GW-Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Gateway-Setup.md#chirpstack-gateway-bridge-is-receiving-data-from-the-packet-forwarder
+[JS-config]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md#Join-Server-section
+[DNS-Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/DNS-Setup.md
 [Post-Sanity]: #post-sanity-check-from-rgw-ns-as-setup
 
 
