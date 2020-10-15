@@ -14,7 +14,7 @@ As per the LoRaWAN Backend specifications, the DNS infrastructure is used for th
 Two types of identifiers are provisioned in the DNS - 1. NetIDS for Roaming and 2. JoinEUI for OTAA. as per the backend specification, the LoRa Alliance DNS tree is as shown in the below figure:
 
 <p align="center">
-  <img width="760" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig11.png?raw=true">
+  <img width="760" height="400" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig11.png?raw=true">
 </p>
 
 
@@ -23,7 +23,7 @@ Two types of identifiers are provisioned in the DNS - 1. NetIDS for Roaming and 
 As of now, the LoRa DNS service is not operational. Hence, for the Academic LoRaWAN roaming purposes we have a separate zone called ```iotreg.net``` where the NetIDs and JoinEUIs could be provisioned as shown in the figure below:
 
 <p align="center">
-  <img width="760" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig12.png?raw=true">
+  <img width="760" height="400" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig12.png?raw=true">
 </p>
 
 To provision the information in the DNS (Currently only the JoinEUI info), Send your JoinEUI information (i.e. the Join EUI and the corresponding JS domain name or IP address) to  sandoche.balakrichenan@afnic.fr AND antoine.bernard@afnic.fr 
@@ -33,7 +33,7 @@ To provision the information in the DNS (Currently only the JoinEUI info), Send 
 Once the JoinEUI information is updated to the DNS, one can verify whether the information is updated properly by reversing the JoinEUI, delimiting by ‘.’ and adding the suffix “joineuis.iotreg.net” and testing using the ```dig``` utility as shown inthe figure:
 
 <p align="center">
-  <img width="760" height="75" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig13.png?raw=true">
+  <img width="760" height="75" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig13.png?raw=true">
 </p>
 
 
@@ -52,13 +52,13 @@ Once verified that your NetID and JoinEUI provisioned in the Internet are public
 
 [Why do we need the DNS Infrastructure?]: #why-the-dns-infrastructure-is-required-in-the-lorawan-set-up
 [How to Provision NetIDs and JoinEUIs in the DNS for OTAA and Roaming?]: #how-to-provision-netids-and-joineuis-in-the-dns-for-otaa-and-roaming
-[NS Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
-[AS_Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md
-[Setting up the GW]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
-[Architecture page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
-[Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial
-[Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
-[NS Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
-[AS Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md
-[OTAA-Setup  Using DNS]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/OTAA-Using-DNS.md
+[NS Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
+[AS_Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md
+[Setting up the GW]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
+[Architecture page]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Architecture.md
+[Readme Page]: https://github.com/afnic/IoTRoam-Tutorial
+[Setting up the End-Device]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/End-Device.md
+[NS Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
+[AS Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md
+[OTAA-Setup  Using DNS]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/OTAA-Using-DNS.md
 
