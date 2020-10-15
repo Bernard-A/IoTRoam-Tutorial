@@ -14,7 +14,7 @@ We are using [Multitech mDoT]. The mDot is fixed to the [Micro Developer Kit].
  * One has to connect the LoRa Antenna to mDot as shown in Figure 1 
 
 <p align="center">
-  <img width="560" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig2.png?raw=true">
+  <img width="560" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig2.png?raw=true">
 </p>
 
  * The Micro Developer Kit where the ED is fixed enables one to access the ED from one's computer. As shown in the Figure 1, the Micro Developer Kit is connected with a USB connection which can be connected to one's computer. 
@@ -35,13 +35,13 @@ We are using [Multitech mDoT]. The mDot is fixed to the [Micro Developer Kit].
  * The ```DEBUG``` screen terminal is the one that shows debug commands such as in Figure 2
 
 <p align="center">
-  <img width="300" height="100" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig3.png?raw=true">
+  <img width="300" height="100" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig3.png?raw=true">
 </p>
 
  * The other ```screen terminal``` could be used as interface with the ED. In this ```screen terminal``` you should be able to type the command ```at``` and get an ```Ok``` as shown in the Figure 3. This tells that you have control over the LoRa end-device. 
 
 <p align="center">
-  <img width="150" height="100" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig4.png?raw=true">
+  <img width="150" height="100" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig4.png?raw=true">
 </p>
 
 ## Pointer Section
@@ -60,8 +60,8 @@ If you are using Multitech mDot and you have verified accessing the ED by follow
 [Multitech mDoT]: https://www.multitech.com/brands/multiconnect-mdot
 [Micro Developer Kit]: https://www.multitech.com/brands/micro-mdot-devkit
 [Serial console]: https://tinyurl.com/uxtkgt2
-[GW Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
-[Architecture page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
+[GW Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
+[Architecture page]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Architecture.md
 [downloaded]: https://www.multitech.net/developer/downloads/
 [firmware upgrade]: https://www.multitech.net/developer/software/mdot-software/mdot-firmware-upgrade/
-[Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial 
+[Readme Page]: https://github.com/afnic/IoTRoam-Tutorial 
