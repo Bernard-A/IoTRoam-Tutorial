@@ -1,9 +1,13 @@
 # LoRaWAN Roaming Platform Set up Tutorial
-This document describes the architecture, prerequisites, installation, post-install sanity checking for setting up an open LoRaWAN Roaming platform. The idea is to mimic the [EduRoam] infrastructure for WiFi.
+This document describes the architecture, prerequisites, installation, post-install sanity checking for setting up an **"Open LoRaWAN Roaming Platform"**. The idea is to mimic the [EduRoam] infrastructure for WiFi.
 
 ## Objective 
 Objective of this tutorial is to help users to set up a LoRaWAN as per the [LoRaWAN Backend Specifications]. Ths End-Devices which is part of this network should be able to access the intended services when they roam in the coverage area of other LoRaWANs which has been set up with an open roaming set up as described in this tutorial. 
 
+This tutorial intends to cater to two audiences:
+ * Who already has experience in setting up LoRaWAN and **just** wants to know the steps to be part of the "Open Roaming Platform".
+ * Who has not only limited experience in setting up a LoRaWAN, but also intends to know 
+ 
 The requirement to be part of this open LoRaWAN roaming set up is to [provision] their devices information in the DNS and have the [certificates] generated from the common CA.
 
 ## Structure
