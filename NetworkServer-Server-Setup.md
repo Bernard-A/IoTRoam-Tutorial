@@ -73,7 +73,6 @@ ChirpStack recommends checking to following sections and modifying the parameter
  * 2. [redis]
  * 3. [network_server]
  * 4. [metrics]
- * 5. [Join_Server]
 
 #### ```postgresql``` section
 
@@ -95,7 +94,7 @@ If you changed the default port for redis or if you host redis on a different ma
 
 ####  ```network_server``` section
 
-You may set your LoRaWAN NetID (if you have one).  The net_id parameter may be set to “000000” or “000001” for experimental network. But one need a NetID to do passive roaming:
+One need a NetID to do passive roaming. You may set your LoRaWAN NetID (if you have one).  The net_id parameter may be set to any 6 digits such as “000000” or “000001” for experimental network. In the case of testing with the "Open Roaming Platform", if you don't have the NetID from the LoRa alliance, then we will allocate a NetID for you. 
 
 ```sh
 net_id=123456
@@ -114,17 +113,6 @@ Also check out if your LoRaWAN transmission band is consistent with the regulati
 ####  ```metrics``` section
 
 You can use either ```local``` for the system local time zone or use settings such as ```“Europe/Paris”```
-
-####  ```Join-Server``` section
-
-The Join Server configuration should point to the Join Server (JS) IP. In our set up the AS is the same as the JS
-```sh
-[join_server]
-
-  [join_server.default]
-  
-  server="http://JS-IP:8003
-```
 
 ### 	Starting the ChirpStack NS
 To (re)start and stop ChirpStack NS depends on if your distribution uses “init.d” or “systemd”:
@@ -233,7 +221,6 @@ If you are using Chirpstack NS, Next section to follow : [AS_Setup]
 [redis]: #redis-section
 [network_server]: #network_server-section
 [metrics]: #metrics-section
-[Join_Server]: #Join-Server-section
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 [AS_Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md
 [Setting up the GW]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
