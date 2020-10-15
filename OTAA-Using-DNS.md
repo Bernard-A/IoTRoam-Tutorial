@@ -10,7 +10,7 @@ This page provides an introduction to the Join Server (JS), JoinEUI and configur
 JS is used for authenticating the end-devices, is also identified by a 64-bit globally unique identifier termed as AppEUI/JoinEUI. The JS could be a separate server or same as the AS. In our set up the JS and AS functionalities runs in the same physical machine as shown in the figure below:
 
 <p align="center">
-  <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig14.png?raw=true">
+  <img width="760" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig14.png?raw=true">
 </p>
  
  
@@ -89,7 +89,7 @@ As per the [LoRaWAN Backend Specifications], each of the AppEUI/JoinEUI nibble a
 The objective in this section is to verify the communication between the RGW->NS (2), NS->DNS (3), DNS->NS (4) and NS->AS (5) as shown in the figure:
 
 <p align="center">
-  <img width="800" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig24.png?raw=true">
+  <img width="800" height="400" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig24.png?raw=true">
 </p>
 
 ### Verify whether the NS receives data from the RGW
@@ -97,6 +97,6 @@ The objective in this section is to verify the communication between the RGW->NS
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 [Configuring NS to access the JS using DNS]: #configuring-ns-to-access-the-js-using-dns
 [JS Brief Intro]: #js-brief-intro
-[Web Interfaces Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup
+[Web Interfaces Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup
 [Provisioning in the DNS]: #provisioning-in-the-dns
-[How to Provision in the DNS?]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/DNS-Setup.md#how-to-provision-netids-and-joineuis-in-the-dns-for-otaa-and-roaming
+[How to Provision in the DNS?]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/DNS-Setup.md#how-to-provision-netids-and-joineuis-in-the-dns-for-otaa-and-roaming
