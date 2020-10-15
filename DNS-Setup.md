@@ -2,8 +2,7 @@ This page covers the following:
 
  * [Why do we need the DNS Infrastructure?] 
  * [How to Provision NetIDs and JoinEUIs in the DNS for OTAA and Roaming?]
- * [How to configure the JoinEUI for Join resolution using DNS in the NS?]
- * [How to configure the NetId for Roaming using DNS resolution in the NS?]
+
 
 ## Why the DNS infrastructure is required in the LoRaWAN set up?
 
