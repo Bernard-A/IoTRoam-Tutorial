@@ -49,7 +49,7 @@ In addition, if your JS is not hosted on the same server as your NS, you will al
    [join_server.default]
    .
    .  
-   server=http://192.168.2.12:8003
+   server=http://192.168.2.12:443  # Your JS-IP and port 443 
 ```
  
 ## Configuring the ED to access the JS using DNS
