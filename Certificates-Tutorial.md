@@ -635,5 +635,5 @@ One can verify the generated certificates using the commands in the [Verificatio
     
 
 [Directory Structure]: #directory-structure
-[Verification]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Certificates-Tutorial.md#verification
+[Verification]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Certificates-Tutorial.md#verification
 [API]: https://www.chirpstack.io/network-server/integrate/api/
