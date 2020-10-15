@@ -8,7 +8,7 @@ Figure 1 shows the basic building blocks for setting up a Roaming LoRaWAN platef
 5.	Domain Naming System (DNS) Database 
 
 <p align="center">
-  <img width="700" height="400" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig1.png?raw=true">
+  <img width="700" height="400" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig1.png?raw=true">
 </p>
 
 The scenario as per Fig 1 is as follows:
@@ -35,5 +35,5 @@ Additionally, you probably want to expose the following ports too:
  * Next section to follow: [Setting up the End-Device]
  * If you want to go back to the [Readme Page]
 
-[Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
-[Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial 
+[Setting up the End-Device]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/End-Device.md
+[Readme Page]: https://github.com/afnic/IoTRoam-Tutorial 
