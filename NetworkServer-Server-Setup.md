@@ -171,7 +171,7 @@ Jul 15 12:00:25 vps323914 chirpstack-network-server[5420]: time="2020-07-15T12:0
 The objective in this section is to verify the communication between the RGW->NS (2) as shown in the figure:
 
 <p align="center">
-  <img width="760" height="300" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig14.png?raw=true">
+  <img width="760" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig14.png?raw=true">
 </p>
 
 ### Verify whether the NS receives data from the RGW
@@ -235,11 +235,11 @@ If you are using Chirpstack NS, Next section to follow : [AS_Setup]
 [metrics]: #metrics-section
 [Join_Server]: #Join-Server-section
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
-[AS_Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md
-[Setting up the GW]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
-[Architecture page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
-[Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial
-[Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
+[AS_Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md
+[Setting up the GW]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
+[Architecture page]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Architecture.md
+[Readme Page]: https://github.com/afnic/IoTRoam-Tutorial
+[Setting up the End-Device]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/End-Device.md
 [Pointer Section]: #Pointer-Section
 
 
