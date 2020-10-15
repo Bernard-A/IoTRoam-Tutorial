@@ -25,7 +25,7 @@ The setting up of the RGW is detailed in different sections as follows:
 For LoRa communication, the gateway needs a LoRa mCard (Figure 1) to be inserted into one of the two RF slots of the Multitech [MultiConnect Conduit] as illustrated in Figure 2
 
 <p align="center">
-  <img width="400" height="150" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig7.png?raw=true">
+  <img width="400" height="150" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig7.png?raw=true">
 </p>
 
  *	Attach the 868 MHz antenna to the LoRa mCard’s RF port.
@@ -58,7 +58,7 @@ In addition, here is a brief pointer on the steps followed by us to access the M
 If you relate to the [Architecture] page, our focus is on the two components as shown in the figure below: 
 
 <p align="center">
-  <img width="300" height="150" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig8.png?raw=true">
+  <img width="300" height="150" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig8.png?raw=true">
 </p>
 
 The function of **Packet Forwarder** is to forward the received LoRa Packet from the ED to the NS (which is identified by a fixed IP address and port). The function of the **GW bridge** is to pack the data sent by the packet forwarder into a specified format (e.g. JSON) and upload to the NS.
@@ -75,7 +75,7 @@ The Mltitech RGW has a default Packet Forwarder. We have to enable that Packet f
     *	Other options are as shown in the figure below:
 
 <p align="center">
-  <img width="700" height="600" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig18.png?raw=true">
+  <img width="700" height="600" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig18.png?raw=true">
 </p>
 
 
@@ -191,7 +191,7 @@ If you see these logs, then this indicates that the ChirpStack Gateway Bridge co
 ### ChirpStack Gateway Bridge is publishing the data to the MQTT broker
 
 <p align="center">
-  <img width="300" height="150" src="https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Images/Fig17.png?raw=true">
+  <img width="300" height="150" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig17.png?raw=true">
 </p>
 
 To validate that the ChirpStack Gateway Bridge is publishing LoRa® frames to the MQTT broker, you can subscribe to the ```gateway/#``` MQTT [topic]. When using the mosquitto_sub utility, you can execute the following command:
@@ -225,14 +225,14 @@ If you are using Multitech mDot and you have verified accessing the ED by follow
 [Quick Start Guide]: https://www.multitech.com/documents/publications/quick-start-guides/82101452L-Conduit-Quick-Start.pdf 
 [video tutorial]: https://www.multitech.net/developer/software/lora/getting-started-with-lora-conduit-aep/
 ["Chirpstack"]: https://www.chirpstack.io
-[Architecture]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
+[Architecture]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Architecture.md
 [Hardware Setup]: #Hardware-Setup
 [Accessing the RGW]: #Accessing-the-RGW
 [Configuring the Packet Forwarder]: #Configuring-the-Packet-Forwarder
 [Install and Configuring the  Chirpstack Gateway bridge]: #install-and-configuring-the--chirpstack-gatewaygw-bridge
 [Post Sanity check]: #Post-Sanity-check
 [MultiConnect Conduit]: https://www.multitech.com/brands/multiconnect-conduit
-[End Device Hardware Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md#hardware-setup
+[End Device Hardware Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/End-Device.md#hardware-setup
 [Firmware Upgrade]: http://www.multitech.net/developer/downloads/#aep
 [here]: https://www.chirpstack.io/gateway-bridge/gateway/multitech/
 [Conduit AEP model]: https://www.multitech.net/developer/products/multiconnect-conduit-platform/conduit/
@@ -240,9 +240,9 @@ If you are using Multitech mDot and you have verified accessing the ED by follow
 [latest]: https://artifacts.chirpstack.io/vendor/multitech/conduit/
 [customising]: https://forum.chirpstack.io/t/no-logfile-from-lora-gateway-bridge/2925/7
 [topic]: https://www.chirpstack.io/gateway-bridge/integrate/generic-mqtt/
-[NS-Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
-[Setting up the End-Device]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/End-Device.md
-[Readme Page]: https://github.com/sandoche2k/IoTRoam-Tutorial 
-[GW Setup]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
-[Architecture page]: https://github.com/sandoche2k/IoTRoam-Tutorial/blob/master/Architecture.md
+[NS-Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md
+[Setting up the End-Device]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/End-Device.md
+[Readme Page]: https://github.com/afnic/IoTRoam-Tutorial 
+[GW Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
+[Architecture page]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Architecture.md
 
