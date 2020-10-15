@@ -233,6 +233,7 @@ If you are using Chirpstack NS, Next section to follow : [AS_Setup]
 [redis]: #redis-section
 [network_server]: #network_server-section
 [metrics]: #metrics-section
+[Join_Server]: #Join-Server-section
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
 [AS_Setup]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md
 [Setting up the GW]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/Gateway-Setup.md
