@@ -123,7 +123,7 @@ The Join Server configuration should point to the Join Server (JS) IP. In our se
 
   [join_server.default]
   
-  server="http://JS-IP:443"
+  server="http://JS-IP:8003"
 ```
 
 ### 	Starting the ChirpStack NS
