@@ -8,7 +8,7 @@ Figure 1 shows the basic building blocks for setting up a Roaming LoRaWAN platef
 5.	Domain Naming System (DNS) Database 
 
 <p align="center">
-  <img width="700" height="400" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig1.png?raw=true">
+  <img width="800" height="400" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig1.png?raw=true">
 </p>
 
 The scenario as per Fig 1 is as follows:
