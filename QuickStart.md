@@ -1,12 +1,12 @@
  1. [Verify] whether the required ports are open between the different interfaces  
  2. [Check] the Gateway Set up 
  3. [Validate] that the NS receives data from the RGW 
- 4. [Make sure]  that the AS receives data from the NS : 
- 5. Verify that you have provisioned your NetID and JoinEUI to the DNS : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/DNS-Setup.md#how-to-provision-netids-and-joineuis-in-the-dns-for-otaa-and-roaming
+ 4. [Make sure]  that the AS receives data from the NS  
+ 5. Verify that you have provisioned your NetID and JoinEUI to the [DNS] 
  6. For the Certificates
-    a.) Clone/Copy the required Files : https://github.com/AFNIC/IoTRoam-Tutorial/tree/master/certificates
-    b.) The directory structure is as here : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Certificates-Tutorial.md#directory-structure
-    b.) Modify intermediate-csr.json : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/config/intermediate-csr.json to suit you
+    a.) Clone/Copy the required [Files] 
+    b.) The directory structure is as [here]
+    b.) Modify [intermediate-csr.json]  to suit you
     c.) Modify "Certificate.json" in all subdirectories to suit your "CN" and host "IP addresses"
     d.) For roaming, You have to modify the directory name to suit your NetId. In the example (https://github.com/AFNIC/IoTRoam-Tutorial/tree/master/config/network-server/roaming/000000), the NetID is "000000"
  7. Install cfssl (https://blog.cloudflare.com/introducing-cfssl/). Some cfssl  installation tutorial : https://computingforgeeks.com/how-to-install-cloudflare-cfssl-on-linux-macos/
@@ -27,3 +27,7 @@
 [Check]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Gateway-Setup.md#Post-Sanity-check
 [Validate]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md#post-sanity-check-from-rgw-ns-setup
 [Make sure]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#post-sanity-check-from-rgw-ns-as-setup
+[DNS]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/DNS-Setup.md#how-to-provision-netids-and-joineuis-in-the-dns-for-otaa-and-roaming
+[Files]: https://github.com/AFNIC/IoTRoam-Tutorial/tree/master/certificates
+[here]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Certificates-Tutorial.md#directory-structure
+[intermediate-csr.json]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/config/intermediate-csr.json 
