@@ -11,7 +11,7 @@ The Server side certificates are configured via the respective `.toml`files. For
 
 ## Provisioning the Client Certificates for the NS
 
-On clicking the NS (e.g. Afnic-NS in fig: 25), one should click on the `TLS Certificates`tab   as shown in Figure 26.
+On clicking the NS name (e.g. `Afnic-NS`as shwon in Figure 25), one should click on the `TLS Certificates` tab   as shown in Figure 26.
 
 <p align="center">
   <img width="760" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig26.png?raw=true">
