@@ -8,8 +8,8 @@
     * b.) The directory structure is as [here]
     * b.) Modify [intermediate-csr.json]  to suit you
     * c.) Modify "Certificate.json" in all subdirectories to suit your "CN" and host "IP addresses"
-    * d.) For roaming, You have to modify the directory name to suit your NetId. In the example (https://github.com/AFNIC/IoTRoam-Tutorial/tree/master/config/network-server/roaming/000000), the NetID is "000000"
- 7. Install cfssl (https://blog.cloudflare.com/introducing-cfssl/). Some cfssl  installation tutorial : https://computingforgeeks.com/how-to-install-cloudflare-cfssl-on-linux-macos/
+    * d.) For roaming, You have to modify the directory name to suit your NetId. In the [example], the NetID is "000000"
+ 7. Install [cfssl]. A Short installation tutorial : 
  8. Following has to done to run the Makefile : https://github.com/AFNIC/IoTRoam-Tutorial/edit/master/certificates/Makefile
     a.) Request your intermediate public and private certificate by sending mail to "sandoche.balakrichenan@afnic.fr" AND "antoine.bernard@afnic.fr"
     b.) Copy the intermediate public and private certificate to the intermediate directory as specified in the directory structure : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Certificates-Tutorial.md#directory-structure
@@ -31,3 +31,6 @@
 [Files]: https://github.com/AFNIC/IoTRoam-Tutorial/tree/master/certificates
 [here]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Certificates-Tutorial.md#directory-structure
 [intermediate-csr.json]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/certificates/config/intermediate-csr.json 
+[example]: https://github.com/AFNIC/IoTRoam-Tutorial/tree/master/certificates/config/network-server/roaming/000000
+[cfssl]: https://blog.cloudflare.com/introducing-cfssl/
+[tutorial]: https://computingforgeeks.com/how-to-install-cloudflare-cfssl-on-linux-macos/
