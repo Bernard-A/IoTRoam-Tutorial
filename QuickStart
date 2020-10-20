@@ -1,0 +1,6 @@
+ 1. Verify whether the required ports are open between the different interfaces : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Architecture.md
+ 2. Check the Gateway Set up : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Gateway-Setup.md#Post-Sanity-check
+ 3. Check the whether the NS receives data from the RGW : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md#post-sanity-check-from-rgw-ns-setup
+ 4. Verify whether the AS receives data from the NS : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#post-sanity-check-from-rgw-ns-as-setup
+ 5. Verify that you have provisioned your NetID and JoinEUI to the DNS : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/DNS-Setup.md#how-to-provision-netids-and-joineuis-in-the-dns-for-otaa-and-roaming
+ 6. 
