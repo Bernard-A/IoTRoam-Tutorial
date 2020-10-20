@@ -13,8 +13,10 @@
  8. Following has to done to run the Makefile : https://github.com/AFNIC/IoTRoam-Tutorial/edit/master/certificates/Makefile
     a.) Request your intermediate public and private certificate by sending mail to "sandoche.balakrichenan@afnic.fr" AND "antoine.bernard@afnic.fr"
     b.) Copy the intermediate public and private certificate to the intermediate directory as specified in the directory structure : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Certificates-Tutorial.md#directory-structure
-    c.) Modify the NetId in the top of the Makefile to suit your NetId
+    c.) Modify the `NetId` in the top of the `Makefile` to suit your `NetId`
     d.) Run `make`
  9. Make sure that your `.toml`config files are correctly configured
     a.) Sample Network-Server-Config files https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Server-Config-Files/chirpstack-network-server.toml. For more information : https://www.chirpstack.io/network-server/install/config/
     b.) Sample Application-Server-Config files https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Server-Config-Files/chirpstack-application-server.toml. For more information : https://www.chirpstack.io/application-server/install/config/
+10. Launch the NS andd the AS 
+    a.) https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup
