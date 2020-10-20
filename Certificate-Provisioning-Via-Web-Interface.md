@@ -6,7 +6,7 @@ The Server side certificates are configured via the respective `.toml`files. For
    * Further, click on the "NS" menu as shown in the Figure 25.
 
 <p align="center">
-  <img width="760" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig25.png?raw=true">
+  <img width="760" height="200" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig25.png?raw=true">
 </p>
 
 ## Provisioning the Client Certificates for the NS
