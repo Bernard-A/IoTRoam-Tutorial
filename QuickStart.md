@@ -20,7 +20,7 @@
     * b.) Sample [Application-Server-Config] file. For detialed information, [chirpstack-application-server-config] page
 10. Launch the NS and the AS 
     * a.) Initial [Configuration] of the Web interface : 
-    * b.) One needs to add *Certain* Client certificates to the Web interface. 
+    * b.) One needs to add *Certain* [Client certificates] to the Web interface. 
 
 
 [Verify]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Architecture.md
@@ -40,3 +40,4 @@
 [Application-Server-Config]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Server-Config-Files/chirpstack-application-server.toml
 [chirpstack-application-server-config]: https://www.chirpstack.io/application-server/install/config/
 [Configuration]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup
+[Client certificates]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Certificate-Provisioning-Via-Web-Interface.md
