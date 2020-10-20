@@ -22,6 +22,7 @@
     * a.) Initial [Configuration] of the Web interface : 
     * b.) One needs to add *Certain* [Client certificates] to the Web interface. 
 11. For Roaming, in the Web interace [define] the home NetID of a device, define a variable called "home_netid" with as value for example "000001" if that is the home NetID you would like to assign.
+12. Once everything  is done, send a Join-Request from your device to check the passive roaming OTAA.
 
 
 
