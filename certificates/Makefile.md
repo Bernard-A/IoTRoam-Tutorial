@@ -41,26 +41,26 @@ certs/application-server/api: certs/intermediate
 # Join API Certificate Generation
 certs/application-server/join-api: certs/intermediate
 	
-	#�Client Certificate Creation
+	#ÂClient Certificate Creation
 	mkdir -p certs/application-server/join-api/client
 	cfssl gencert -ca certs/intermediate/intermediate.pem -ca-key certs/intermediate/intermediate-key.pem -config config/config.json -profile client  config/application-server/join-api/client/certificate.json | cfssljson -bare certs/application-server/join-api/client/application-server-join-api-client 
 	cat certs/application-server/join-api/client/application-server-join-api-client.pem certs/intermediate/intermediate.pem >certs/application-server/join-api/client/application-server-join-api-client-combined.pem
 
-        # Server Certificate Creation
+        #Â Server Certificate Creation
 	mkdir -p certs/application-server/join-api/server
 	cfssl gencert -ca certs/intermediate/intermediate.pem -ca-key certs/intermediate/intermediate-key.pem -config config/config.json -profile server  config/application-server/join-api/server/certificate.json | cfssljson -bare certs/application-server/join-api/server/application-server-join-api-server
 	cat certs/application-server/join-api/server/application-server-join-api-server.pem certs/intermediate/intermediate.pem >certs/application-server/join-api/server/application-server-join-api-server-combined.pem 
 
-# Roaming Certificate Generation
+#Â Roaming Certificate Generation
 certs/network-server/roaming: certs/intermediate
 
-        # Client Certificate Creation
+        #Â Client Certificate Creation
 	mkdir -p certs/network-server/roaming/${NetID}/client
 	cfssl gencert -ca certs/intermediate/intermediate.pem -ca-key certs/intermediate/intermediate-key.pem -config config/config.json -profile client config/network-server/roaming/${NetID}/client/certificate.json | cfssljson -bare certs/network-server/roaming/${NetID}/client/client
 
 	cat certs/network-server/roaming/${NetID}/client/client.pem certs/intermediate/intermediate.pem >certs/network-server/roaming/${NetID}/client/client-combined.pem
 
-	# Server Certificate Creation
+	#Â Server Certificate Creation
 	mkdir -p certs/network-server/roaming/${NetID}/server
 	cfssl gencert -ca certs/intermediate/intermediate.pem -ca-key certs/intermediate/intermediate-key.pem -config config/config.json -profile server config/network-server/roaming/${NetID}/server/certificate.json | cfssljson -bare certs/network-server/roaming/${NetID}/server/server
 
