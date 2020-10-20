@@ -1,12 +1,16 @@
-# Input Variables 
+###  Input Variables 
+
+```sh
 NetID=000000
 
 make: certs/intermediate certs/network-server/api certs/application-server/api certs/application-server/join-api certs/network-server/roaming
 
 clean:
 	rm -rf certs/intermediate certs/network-server/api certs/application-server/api certs/application-server/join-api certs/network-server/roaming
+```
 
-# Intermediate Certificate Generation
+### Intermediate Certificate Generation
+
 certs/intermediate:
 	mkdir -p certs/intermediate
 	cfssl gencert -initca config/intermediate-csr.json | cfssljson -bare certs/intermediate/intermediate
