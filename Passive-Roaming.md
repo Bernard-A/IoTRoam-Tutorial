@@ -23,9 +23,7 @@ Click on the `Configuration` tab for the specific Device Name  in the Web interf
   <img width="760" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig31.png?raw=true">
 </p>
 
-<p align="center">
-  <img width="760" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig32.png?raw=true">
-</p>
+Click on the `Variables` tab and set the `home_netId` value to the device home NetId as shown in Figure 33
 
 
 <p align="center">
