@@ -9,7 +9,7 @@ The requirement to be part of this open LoRaWAN roaming set up is to [provision]
 
 ## Structure
 
-For the Impatient, 
+For the Impatient, a [Quckstart] document 
 
 This document is structured and one can follow sequentially starting with ``` Architecture ```:
 
@@ -41,3 +41,4 @@ Next section to follow: [Architecture]
 [certificates]: https://github.com/afnic/IoTRoam-Tutorial/blob/master/OTAA.md#generating-certificates-for-secure-tls-communication-between-ns-asjs
 [EduRoam]: https://www.eduroam.org/
 [LoRaWAN Backend Specifications]: https://lora-alliance.org/resource-hub/lorawanr-back-end-interfaces-v10
+[Quckstart]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/QuickStart.md
