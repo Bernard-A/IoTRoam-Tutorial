@@ -16,4 +16,5 @@
     c.) Modify the NetId in the top of the Makefile to suit your NetId
     d.) Run `make`
  9. Make sure that your `.toml`config files are correctly configured
-    a.) 
+    a.) Sample Network-Server-Config files https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Server-Config-Files/chirpstack-network-server.toml. For more information : https://www.chirpstack.io/network-server/install/config/
+    b.) Sample Application-Server-Config files https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Server-Config-Files/chirpstack-application-server.toml. For more information : https://www.chirpstack.io/application-server/install/config/
