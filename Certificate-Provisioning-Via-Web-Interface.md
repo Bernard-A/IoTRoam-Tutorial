@@ -1,5 +1,4 @@
-# Installing and Configuring the Application Server (AS) using ChirpStack (Debian/Ubuntu)
-# Provisioning the Client Certificates for the NS and the AS
+# Provisioning the Client Certificates for the NS and the AS via the Web-Interface
 
 <p align="center">
   <img width="760" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig25.png?raw=true">
