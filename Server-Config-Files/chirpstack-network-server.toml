@@ -8,23 +8,18 @@ log_level=4
 [postgresql]
 dsn="postgres://chirpstack_ns:dbnspassword@localhost/chirpstack_ns?sslmode=disable"
 
-
 # Redis settings
 [redis]
 url="redis://localhost:6379"
-
 
 # Network-server settings.
 [network_server]
 net_id="000000"
 
-
   [network_server.band]
   name="EU868"
 
-
   [network_server.network_settings]
-
     [[network_server.network_settings.extra_channels]]
     frequency=867100000
     min_dr=0
@@ -50,17 +45,14 @@ net_id="000000"
     min_dr=0
     max_dr=5
 
-
     [network_server.network_settings.class_b]
     ping_slot_dr=0
-
     ping_slot_frequency=0
 
 
   [network_server.api]
   # ip:port to bind the api server
   bind="0.0.0.0:8000"
-
   ca_cert="/home/sandoche/certificates/certs/ca/ca.pem"
   tls_cert="/home/sandoche/certificates/certs/network-server/api/server/network-server-api-server-combined.pem"
   tls_key="/home/sandoche/certificates/certs/network-server/api/server/network-server-api-server-key.pem"
@@ -68,29 +60,21 @@ net_id="000000"
   [network_server.gateway.backend]
   type="mqtt"
 
-
     [network_server.gateway.backend.mqtt]
     event_topic="gateway/+/event/+"
-
     command_topic_template="gateway/{{ .GatewayID }}/command/{{ .CommandType }}"
-
     server="tcp://localhost:1883"
-
     username=""
-
     password=""
-
 
 [metrics]
 timezone="Local"
 
 # Join-server settings.
 [join_server]
-
   # Settings  for DNS resolution
   resolve_join_eui=true
   resolve_domain_suffix=".joineui.iotreg.net"
-
   # Default join-server settings.
   [join_server.default]
   server="https://IPJS:443"
