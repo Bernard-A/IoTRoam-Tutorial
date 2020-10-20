@@ -16,11 +16,11 @@
     * c.) Modify the `NetId` in the top of the `Makefile` to suit your `NetId`
     * d.) Run `make`
  9. Make sure that your `.toml`config files are correctly configured
-    a.) Sample [Network-Server-Config] file. For detailed information, [chirpstack-network-server-config] page
-    b.) Sample [Application-Server-Config] file. For detialed information, [chirpstack-network-server-config] page
+    * a.) Sample [Network-Server-Config] file. For detailed information, [chirpstack-network-server-config] page
+    * b.) Sample [Application-Server-Config] file. For detialed information, [chirpstack-application-server-config] page
 10. Launch the NS and the AS 
-    a.) Initial [Configuration] of the Web interface : 
-    b.) One needs to add *Certain* Client certificates to the Web interface. 
+    * a.) Initial [Configuration] of the Web interface : 
+    * b.) One needs to add *Certain* Client certificates to the Web interface. 
 
 
 [Verify]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Architecture.md
