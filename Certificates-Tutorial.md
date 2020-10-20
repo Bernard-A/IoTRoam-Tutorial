@@ -75,11 +75,7 @@ It is better to have the directory structured like this to make it easy to look 
 				/client
 			     		certificate.json
                 /certs                         
-                    /ca				## In most cases, this directory will not be needed
-                    	ca.csr
-			ca-key.pem
-			ca.pem
-		    /intermediate               ## In most cases, Intermediate will be the CA
+             	    /intermediate               
 		    	intermediate.csr
 			intermediate-key.pem
 			intermediate.pem
