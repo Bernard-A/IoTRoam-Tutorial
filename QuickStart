@@ -18,5 +18,6 @@
  9. Make sure that your `.toml`config files are correctly configured
     a.) Sample Network-Server-Config files https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Server-Config-Files/chirpstack-network-server.toml. For more information : https://www.chirpstack.io/network-server/install/config/
     b.) Sample Application-Server-Config files https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Server-Config-Files/chirpstack-application-server.toml. For more information : https://www.chirpstack.io/application-server/install/config/
-10. Launch the NS andd the AS 
-    a.) https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup
+10. Launch the NS and the AS 
+    a.) Initial Configuration of the Web interface : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup
+    b.) One needs to add *Certain* Client certificates to the Web interface. 
