@@ -1,0 +1,64 @@
+[general]
+log_level=4
+
+[postgresql]
+dsn="postgres://chirpstack_as:dbaspassword@localhost/chirpstack_as?sslmode=disable"
+automigrate=true
+
+[redis]
+url="redis://localhost:6379"
+
+# Application-server settings.
+[application_server]
+id="2bbd0562-ae84-2dcb-c20f-6b9506f6812a"
+
+  [application_server.integration]
+  enabled=["mqtt"]
+
+    [application_server.integration.mqtt]
+    uplink_topic_template="application/{{ .ApplicationID }}/device/{{ .DevEUI }}/rx"
+    downlink_topic_template="application/{{ .ApplicationID }}/device/{{ .DevEUI }}/tx"
+    join_topic_template="application/{{ .ApplicationID }}/device/{{ .DevEUI }}/join"
+    ack_topic_template="application/{{ .ApplicationID }}/device/{{ .DevEUI }}/ack"
+    error_topic_template="application/{{ .ApplicationID }}/device/{{ .DevEUI }}/error"
+    status_topic_template="application/{{ .ApplicationID }}/device/{{ .DevEUI }}/status"
+    location_topic_template="application/{{ .ApplicationID }}/device/{{ .DevEUI }}/location"
+
+    # MQTT server (e.g. scheme://host:port where scheme is tcp, ssl or ws)
+    server="tcp://hostIP:1883"
+    # Connect with the given username (optional)
+    username=""
+    # Connect with the given password (optional)
+    password=""
+    
+    [application_server.api]
+    # ip:port to bind the api server
+    bind="0.0.0.0:8001"
+
+    public_host="hostIP:8001"
+    
+    ca_cert="/home/sandoche/certificates/certs/ca/ca.pem"
+    tls_cert="/home/sandoche/certificates/certs/application-server/api/server/application-server-api-server-combined.pem"
+    tls_key="/home/sandoche/certificates/certs/application-server/api/server/application-server-api-server-key.pem"
+
+    [application_server.external_api]
+    bind="0.0.0.0:8080"
+
+    # http server TLS certificate (optional)
+    tls_cert=""
+
+    # http server TLS key (optional)
+    tls_key=""
+
+    # JWT secret used for api authentication / authorization
+    # You could generate this by executing 'openssl rand -base64 32' for example
+    jwt_secret="Yoursecretstring"
+
+
+[join_server]
+# ip:port to bind the join-server api interface to
+bind="0.0.0.0:443"
+ca_cert="/home/sandoche/certificates/certs/ca/ca.pem"
+tls_cert="/home/sandoche/certificates/certs/application-server/join-api/server/application-server-join-api-server-combined.pem"
+tls_key="/home/sandoche/certificates/certs/application-server/join-api/server/application-server-join-api-server-key.pem"
+
