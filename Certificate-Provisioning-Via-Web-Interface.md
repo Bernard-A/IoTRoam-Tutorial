@@ -17,7 +17,7 @@ On clicking the NS name (e.g. `Afnic-NS`as shown in Figure 25), one should click
   <img width="700" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig26.png?raw=true">
 </p>
 
-One must copy the content of the following files under `Certificates for ChirpStack Application Server to ChirpStack connection`:
+One must copy the content of the following files under `Certificates for ChirpStack Application Server to ChirpStack Network Server connection`:
 
    * *CA certificate* content of `certs/ca/ca.pem`
    * *TLS certificate* content of `certs/network-server/api/client/network-server-api-client-combined.pem`
@@ -26,7 +26,7 @@ One must copy the content of the following files under `Certificates for ChirpSt
 
 ## Provisioning the Client Certificates for the AS
 
-Further down in the same page; One must copy the content of the following files under `Certificates for ChirpStack to ChirpStack Application Server connection`as shown in Figure 27:
+Further down in the same page; One must copy the content of the following files under `Certificates for ChirpStack Network Server to ChirpStack Application Server connection`as shown in Figure 27:
 
    * *CA certificate* content of `certs/ca/ca.pem`
    * *TLS certificate* content of `certs/network-server/api/client/application-server-api-client-combined.pem`
