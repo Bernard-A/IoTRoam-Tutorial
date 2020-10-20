@@ -1,7 +1,7 @@
- 1. Verify whether the required ports are open between the different interfaces : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Architecture.md
- 2. Check the Gateway Set up : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Gateway-Setup.md#Post-Sanity-check
- 3. Check the whether the NS receives data from the RGW : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md#post-sanity-check-from-rgw-ns-setup
- 4. Verify whether the AS receives data from the NS : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#post-sanity-check-from-rgw-ns-as-setup
+ 1. [Verify] whether the required ports are open between the different interfaces  
+ 2. [Check] the Gateway Set up 
+ 3. [Validate] that the NS receives data from the RGW 
+ 4. [Make sure]  that the AS receives data from the NS : 
  5. Verify that you have provisioned your NetID and JoinEUI to the DNS : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/DNS-Setup.md#how-to-provision-netids-and-joineuis-in-the-dns-for-otaa-and-roaming
  6. For the Certificates
     a.) Clone/Copy the required Files : https://github.com/AFNIC/IoTRoam-Tutorial/tree/master/certificates
@@ -21,3 +21,9 @@
 10. Launch the NS and the AS 
     a.) Initial Configuration of the Web interface : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup
     b.) One needs to add *Certain* Client certificates to the Web interface. 
+
+
+[Verify]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Architecture.md
+[Check]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Gateway-Setup.md#Post-Sanity-check
+[Validate]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/NetworkServer-Server-Setup.md#post-sanity-check-from-rgw-ns-setup
+[Make sure]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#post-sanity-check-from-rgw-ns-as-setup
