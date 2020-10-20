@@ -21,6 +21,8 @@
 10. Launch the NS and the AS 
     * a.) Initial [Configuration] of the Web interface : 
     * b.) One needs to add *Certain* [Client certificates] to the Web interface. 
+11. For Roaming, in the Web interace [define] the home NetID of a device, define a variable called "home_netid" with as value for example "000001" if that is the home NetID you would like to assign.
+
 
 
 [Verify]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Architecture.md
@@ -41,3 +43,4 @@
 [chirpstack-application-server-config]: https://www.chirpstack.io/application-server/install/config/
 [Configuration]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup
 [Client certificates]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Certificate-Provisioning-Via-Web-Interface.md
+[define]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Passive-Roaming.md
