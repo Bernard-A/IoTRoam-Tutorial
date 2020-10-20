@@ -1,0 +1,9 @@
+{
+        "CN": "Afnic-Network-Server",
+        "hosts": ["127.0.0.1","localhost","51.178.80.199"],
+        "key": {
+                "algo": "rsa",
+                "size": 2048
+        }
+}
+
