@@ -9,6 +9,8 @@ The requirement to be part of this open LoRaWAN roaming set up is to [provision]
 
 ## Structure
 
+For the Impatient, 
+
 This document is structured and one can follow sequentially starting with ``` Architecture ```:
 
  * [Architecture]
