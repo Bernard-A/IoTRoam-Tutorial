@@ -1,5 +1,7 @@
 # Provisioning the Client Certificates for the NS and the AS via the Web-Interface
 
+The Server side certificates are configured via the respective `.toml`files. For the NS and the AS, the Client-end certificates are configured via the Web interface.
+
 <p align="center">
   <img width="760" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig25.png?raw=true">
 </p>
