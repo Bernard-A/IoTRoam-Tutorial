@@ -1,0 +1,20 @@
+```sh
+{
+  "CN": "Afnic Intermediate",
+  "key": {
+          "algo": "rsa",
+          "size": 2048
+         },
+         "names": [
+             {
+                 "C": "FR",
+                 "L": "SQY",
+                "O": "Labs",
+                "ST": "Yvelines"
+             }
+        ],
+        "ca": {
+            "expiry": "42720h"
+        }
+}
+```
