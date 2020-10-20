@@ -4,22 +4,22 @@
  4. [Make sure]  that the AS receives data from the NS  
  5. Verify that you have provisioned your NetID and JoinEUI to the [DNS] 
  6. For the Certificates
-    a.) Clone/Copy the required [Files] 
+    * a.) Clone/Copy the required [Files] 
     * b.) The directory structure is as [here]
     * b.) Modify [intermediate-csr.json]  to suit you
     * c.) Modify "Certificate.json" in all subdirectories to suit your "CN" and host "IP addresses"
     * d.) For roaming, You have to modify the directory name to suit your NetId. In the [example], the NetID is "000000"
  7. Install [cfssl]. A Short installation [tutorial]
  8. Following has to done to run the [Makefile]
- a.) Request your intermediate public and private certificate by sending mail to "sandoche.balakrichenan@afnic.fr" AND "antoine.bernard@afnic.fr"
-    b.) Copy the intermediate public and private certificate to the intermediate directory as specified in the directory structure : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Certificates-Tutorial.md#directory-structure
-    c.) Modify the `NetId` in the top of the `Makefile` to suit your `NetId`
-    d.) Run `make`
+    * a.) Request your intermediate public and private certificate by sending mail to `"sandoche.balakrichenan@afnic.fr"` AND `"antoine.bernard@afnic.fr"`
+    * b.) Copy the intermediate public and private certificate to the intermediate directory as specified in the directory structure as [here]: 
+    * c.) Modify the `NetId` in the top of the `Makefile` to suit your `NetId`
+    * d.) Run `make`
  9. Make sure that your `.toml`config files are correctly configured
-    a.) Sample Network-Server-Config files https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Server-Config-Files/chirpstack-network-server.toml. For more information : https://www.chirpstack.io/network-server/install/config/
-    b.) Sample Application-Server-Config files https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Server-Config-Files/chirpstack-application-server.toml. For more information : https://www.chirpstack.io/application-server/install/config/
+    a.) Sample [Network-Server-Config] file. For detailed information, [chirpstack-network-server-config] page
+    b.) Sample [Application-Server-Config] file. For detialed information, [chirpstack-network-server-config] page
 10. Launch the NS and the AS 
-    a.) Initial Configuration of the Web interface : https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup
+    a.) Initial [Configuration] of the Web interface : 
     b.) One needs to add *Certain* Client certificates to the Web interface. 
 
 
@@ -35,3 +35,8 @@
 [cfssl]: https://blog.cloudflare.com/introducing-cfssl/
 [tutorial]: https://computingforgeeks.com/how-to-install-cloudflare-cfssl-on-linux-macos/
 [Makefile]: https://github.com/AFNIC/IoTRoam-Tutorial/edit/master/certificates/Makefile
+[Network-Server-Config]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Server-Config-Files/chirpstack-network-server.toml
+[chirpstack-network-server-config]: https://www.chirpstack.io/network-server/install/config/
+[Application-Server-Config]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Server-Config-Files/chirpstack-application-server.toml
+[chirpstack-network-server-config]: https://www.chirpstack.io/application-server/install/config/
+[Configuration]: [https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup]
