@@ -39,4 +39,4 @@
 [chirpstack-network-server-config]: https://www.chirpstack.io/network-server/install/config/
 [Application-Server-Config]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Server-Config-Files/chirpstack-application-server.toml
 [chirpstack-application-server-config]: https://www.chirpstack.io/application-server/install/config/
-[Configuration]: [https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup]
+[Configuration]: https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/ApplicationServer-Setup.md#web-interface-setup
