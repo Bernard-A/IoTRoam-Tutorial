@@ -17,6 +17,7 @@ Click on the specific Device Name (e.g: d2c4) in the Web interface as shown in F
   <img width="760" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig30.png?raw=true">
 </p>
 
+Click on the `Configuration` tab for the specific Device Name  in the Web interface as shown in Figure 31
 
 <p align="center">
   <img width="760" height="300" src="https://github.com/afnic/IoTRoam-Tutorial/blob/master/Images/Fig31.png?raw=true">
